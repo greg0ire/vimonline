@@ -1,5 +1,5 @@
 <?php 
-// page for adding notes to tips
+// page for submitting news
 require("../include/init.inc");
 require("../include/string_utils.inc");
 require("include/news.inc");
@@ -34,12 +34,12 @@ include("$BASE_DIR/header.php");
 <?php 
 if(!$user->canSubmitNews()){
 ?>
-    <p class="errortext">You do not have access to the news item feature. If you believe
+    <p class="errortext">You do not have access to submit news items. If you believe
     you received this message in error please contact vimonline-support@lists.sourceforge.net.</p>
 
 <?php 
 } else if($HTTP_POST_VARS{"preview"}){
-    $title = strip_tags($HTTP_POST_VARS{"title"});
+    $title = stripslashes(strip_tags($HTTP_POST_VARS{"title"}));
     $news = stripslashes(strip_tags($HTTP_POST_VARS{"news"},"<i>,<a>,<b>,<tt>"));
 ?>
 <h1>Submit News Item : Preview</h1>

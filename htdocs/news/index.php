@@ -1,6 +1,5 @@
 <?php
-// global search page, search for tips and search for scripts
-// 
+// main news item page, displays recent news items
 
 require("../include/init.inc");
 require("../include/string_utils.inc");
