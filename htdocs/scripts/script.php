@@ -130,7 +130,7 @@ for($i=0;$i<sizeof($versions);$i++){
     <?php if($isOwner && sizeof($versions)!=1) { ?>
     <td class="<?=$rowclass?>" valign="top" nowrap><a href="del_script_version.php?script_source_id=<?=$source_data{'script_source_id'}?>"><img alt="delete this version" src="<?=$IMAGES?>/delete.gif" border="0"></a></td>
     <?php } ?>
-    <td class="<?=$rowclass?>" valign="top" nowrap><a href="script_download.php?src_id=<?=$source_data{'script_source_id'}?>"><?=$source_data{'package'}?></a></td>
+    <td class="<?=$rowclass?>" valign="top" nowrap><a href="download_script.php?src_id=<?=$source_data{'script_source_id'}?>"><?=$source_data{'package'}?></a></td>
     <td class="<?=$rowclass?>" valign="top" nowrap><b><?=$source_data{"script_version"}?></b></td>
     <td class="<?=$rowclass?>" valign="top" nowrap><i><?=formatNewsDate($source_data{"creation_date"})?></i></td>
     <td class="<?=$rowclass?>" valign="top" nowrap><?=$source_data{"vim_version"}?></td>

@@ -1,7 +1,7 @@
 <?php
 // page for downloading scripts
 
-require("include/init.inc");
+require("../include/init.inc");
 require("include/script.inc");
 
 db_connect();
