@@ -64,7 +64,7 @@ a place that the community could maintain a list of their favorite vim gems. The
 ?>
     <p>
     <span class="newsdate">[<?=formatNewsDate($tip_data{"creation_date"})?>]</span> 
-    <a href="tip.php?tip_id=<?=$tip_data{"tip_id"}?>">tip #<?=$tip_data{"tip_id"}?></a> - <?=$tip_data{"summary"}?>
+    <a href="tip.php?tip_id=<?=$tip_data{"tip_id"}?>">tip #<?=$tip_data{"tip_id"}?></a> - <?=escapeForHTML($tip_data{"summary"})?>
      (<?=($tip_data{'created_by_email'}==null)?"Anonymous":$tip_data{'created_by_email'}?>)
     </p>
 <?php
