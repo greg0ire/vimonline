@@ -14,25 +14,17 @@
 
 <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
 
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<!-- HEADER, VIM IMAGE AND BOOK AD -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
   <tr>
     <td colspan="7" class="lightbg"><img src="<?=$IMAGES?>/spacer.gif" width="1" height="5" alt=""></td>
   </tr>
   <tr>
-    <td rowspan="2" class="lightbg"><img src="<?=$IMAGES?>/spacer.gif" width="5" height="1" alt=""></td>
-    <td class="lightbg" align="left" width="125"><a href="<?=$BASE?>/index.php"><img src="<?=$IMAGES?>/vim.gif" border="0" alt="Vim logo" width="125" height="60"></a></td>
-    <td rowspan="2" class="lightbg"><img src="<?=$IMAGES?>/spacer.gif" width="10" height="1" alt=""></td>
-    <td valign="middle" class="lightbg" align="center">
-	<a href="<?=$BASE?>/huh.php"><img src="<?=$IMAGES?>/vimonline.gif" border="0" alt="vim online"></a>
-    </td>
-    <td rowspan="2" class="lightbg"><img src="<?=$IMAGES?>/spacer.gif" width="10" height="1" alt=""></td>
-    <td class="lightbg" align="right" width="125"><a href="http://iccf-holland.org/click5.html"><img src="<?=$IMAGES?>/book_ad2.gif" alt="Vim Book Ad" border="0" width="87" height="52"></a></td>
-    <td rowspan="2" class="lightbg"><img src="<?=$IMAGES?>/spacer.gif" width="5" height="1" alt=""></td>
+    <td class="lightbg" align="left" width="125"><a href="<?=$BASE?>/index.php"><img src="<?=$IMAGES?>/vim_header.gif" border="0" alt="Vim logo"></a></td>
+    <td class="lightbg" align="right" width="125"><a href="http://iccf-holland.org/click5.html"><img src="<?=$IMAGES?>/spacer.gif" alt="Vim Book Ad" border="0"></a></td>
   </tr>
   <tr>
-    <td class="lightbg" ><img src="<?=$IMAGES?>/spacer.gif" width="1" height="5" alt=""></td>
-    <td class="lightbg" ><img src="<?=$IMAGES?>/spacer.gif" width="1" height="5" alt=""></td>
-    <td class="lightbg" ><img src="<?=$IMAGES?>/spacer.gif" width="1" height="5" alt=""></td>
+    <td colspan="7" class="lightbg"><img src="<?=$IMAGES?>/spacer.gif" width="1" height="5" alt=""></td>
   </tr>
   <tr>
     <td colspan="7" class="darkbg"><img src="<?=$IMAGES?>/spacer.gif" width="1" height="10" alt=""></td>

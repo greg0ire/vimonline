@@ -14,10 +14,12 @@ em {
 	font-style: italic;
 }
 
-.newsdate {
-	font-style: italic;
-	color: #6666cc;
-	font-size:small;
+.darkbg {
+	background-color: #007f00;
+}
+
+.lightbg {
+	background-color: #cccc99;
 }
 
 .sidebar {
@@ -31,6 +33,12 @@ em {
 	font-size: small;
 	font-weight: bold;
 	color: #000066;
+}
+
+.newsdate {
+	font-style: italic;
+	color: #6666cc;
+	font-size:small;
 }
 
 pre,code {
@@ -100,14 +108,6 @@ textarea {
     width: 100%; 
 }
 
-.darkbg {
-	background-color: #000066;
-}
-
-.lightbg {
-	background-color: #CCCC99;
-}
-
 .prompt {
 	font-family: arial,helvetica,sans-serif;
 	font-weight: bold;
@@ -141,9 +141,10 @@ textarea {
 
 tr.tableheader th {
 	font-family: arial,helvetica,sans-serif;
-	background-color: #DDDDDD;
+	background-color: #999999;
 	text-align: center;
 }
+
 
 td.checker {
 	background-color: #666666;
