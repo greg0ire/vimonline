@@ -110,6 +110,13 @@ include("$BASE_DIR/header.php");
 </table>
 
 <table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+    <td><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+    <td colspan="9">
+Searched tips for "<b><?=stripSlashes($keywords)?></b>"
+    </td>
+    <td><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+</tr>
 <tr><td align="right" colspan="13">Showing <b><?=$start?></b> to <b><?=$end?></b> of <b><?=$result_count?></b> results</td></tr>
 <tr><td colspan="13"><img src="images/spacer.gif" height="4" width="1" alt=""></td></tr>
 <tr>
