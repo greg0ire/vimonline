@@ -22,6 +22,17 @@ are available <a href='logos.php'>here</a>.  There are also a number of
 icons in different formats.
 </p>
 
+<h4>Animation</h4>
+<p>
+Wolfram Esser has made an animation with the Vim logo.
+This is quite a bit of fun to see and hear.
+The animation is available in various formats and two resolutions
+<A HREF="http://www.derwok.de/2d-3d/3d/vimlogo/">here</A>.
+Don't be suprised if downloading is a bit slow, the files are 1.5 to 9
+Mbyte.
+Have fun!
+</p>
+
 <h4>Buttons and Propaganda</h4>
 <p>
 <a href='buttons.php'>This section</a> is replete with buttons suitable for
