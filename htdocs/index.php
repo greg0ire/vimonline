@@ -27,18 +27,20 @@ include("header.php");
 
 <span class="sidebarheader"><a href="links.php">Vim Resources:</a></span>
 <p>
-&nbsp; <a href="whyvim.php">Why use Vim 6?</a><BR>
-&nbsp; <a href="download.php">download</a><BR>
-&nbsp; <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/vim/">CVS</a><BR>
-&nbsp; <a href="http://www.vim.org/">Sven's Vim pages</a><BR>
-&nbsp; <a href="http://nav.webring.yahoo.com/hub?ring=vim&list">Vim webring</a><BR>
+&nbsp; <a href="whyvim.php">Why use Vim 6?</a><br>
+&nbsp; <a href="download.php">download</a><br>
+&nbsp; <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/vim/">CVS</a><br>
+&nbsp; <a href="http://www.vim.org/">Sven's Vim pages</a><br>
+&nbsp; <a href="http://nav.webring.yahoo.com/hub?ring=vim&list">Vim webring</a><br>
 </p>
 
 <span class="sidebarheader">Vim Community:</span>
 <p>
-&nbsp; <a href="http://sourceforge.net/projects/vim">Project</a><BR>
-&nbsp; <a href="http://www.vim.org/iccf/click5.html">the Vim book</a><BR>
-&nbsp; <a href="http://vim.sourceforge.net/vimgor">vimgor</a><BR>
+&nbsp; <a href="http://sf.net/projects/vim">Vim project</a><br>
+&nbsp; <a href="http://www.vim.org/iccf/click5.html">Vim book</a><br>
+&nbsp; <a href="http://vimdoc.sf.net">User manual</a><br>
+&nbsp; <a href="http://vimonline.sf.net">vimonline dev</a><br>
+&nbsp; <a href="http://vim.sf.net/vimgor">vimgor</a><br>
 </p>
 
 <span class="sidebarheader"><a href="thanks.php">Thanks To:</a></span>
