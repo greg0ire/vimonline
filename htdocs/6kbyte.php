@@ -25,7 +25,7 @@ These are plain text files.
 	<li><a href='6k/features.jp.txt'>Japanese</a></li>
 	<li><a href='6k/features.kr.txt'>Korean</a></li>
 	<li><a href='6k/features.pl.txt'>Polish</a></li>
-	<li><a href='6k/features.pt.txt'>Portugese</a></li>
+	<li><a href='6k/features.pt.txt'>Portuguese</a></li>
 	<li><a href='6k/features.ro.txt'>Romanian</a></li>
 	<li><a href='6k/features.ru.txt'>Russian</a></li>
 	<li><a href='6k/features.sk.txt'>Slovakian</a></li>
