@@ -50,7 +50,7 @@ Please log in. You must have cookies enabled.
         <input type="hidden" name="referrer" value="<?=$HTTP_GET_VARS{'referrer'}?>">
     <table cellspacing="4" cellpadding="2" border="0">
         <tr>
-            <td class="prompt">user name</td>
+            <td class="prompt">username or email</td>
             <td><input type="text" name="userName"></td>
         </tr>
         <tr>

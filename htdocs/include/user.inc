@@ -1,21 +1,28 @@
 <?php
 
-function authenticateUser($userName, $password) {
+function authenticateUser($userNameOrEmail, $password) {
     global $DB_NAME;
     $passwordHash = md5($password);
-    $select = "select user_id
+    $byUsername = "select user_id
                from vs_users
-               where user_name = '$userName'
+               where user_name = '$userNameOrEmail'
                and password = '$passwordHash'";
-    $result = mysql_db_query($DB_NAME,$select) or die("Query attempt failed: ". mysql_error());
+    $result = mysql_db_query($DB_NAME,$byUsername) or die("Query attempt failed: ". mysql_error());
     if (mysql_num_rows($result) != 1) {
         // authentication failed
-        return false;
-    } else {
-        // authentication successful
-        $resultData = mysql_fetch_array($result);
-        return $resultData['user_id'];
+        // try the email address
+        $byEmail = "select user_id
+                   from vs_users
+                   where email = '$userNameOrEmail'
+                   and password = '$passwordHash'";
+        $result = mysql_db_query($DB_NAME,$byEmail) or die("Query attempt failed: ". mysql_error());
+        if (mysql_num_rows($result) != 1) {
+            return false;
+        }
     }
+    // authentication successful
+    $resultData = mysql_fetch_array($result);
+    return $resultData['user_id'];
 }
 
 function createUser($userName, $password, $firstName, $lastName, $email, $homepage) {
