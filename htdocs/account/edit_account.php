@@ -20,7 +20,8 @@ if($HTTP_POST_VARS{"action"}=="change"){
         updateUser($user->getUserId(),
                     $HTTP_POST_VARS{"firstName"},
                     $HTTP_POST_VARS{"lastName"},
-                    $HTTP_POST_VARS{"email"});
+                    $HTTP_POST_VARS{"email"},
+                    $HTTP_POST_VARS{"homepage"});
         header("Location: index.php");
     }
 }
@@ -41,6 +42,9 @@ include("$BASE_DIR/header.php");
     <?=$error_msg?>
 </p>
 <?php } ?>
+<p>
+Please note we are not going to send you junk email "member updates" or sell your address to spammers. This email exists so that you can receive your password, and/or retrieve it if you forget or so users can contact you if they have problems with your scripts. When we display an email address we remove the @ sign so spammers could not easily harvest this site. For example my address would be displayed as "scrott at users.sf.net."
+</p>
 <form name="edit_account" method="post">
 <table cellpadding="4" cellspacing="2" border="0">
 <tr>
@@ -58,6 +62,10 @@ include("$BASE_DIR/header.php");
 <tr>
     <td class="prompt">email</td>
     <td><input type="text" name="email" maxlength="200" value="<?=$user->getEmail()?>"></td>
+</tr>
+<tr>
+    <td class="prompt">homepage</td>
+    <td><input type="text" name="homepage" maxlength="255" value="<?=$user->getHomepage()?>"></td>
 </tr>
     <tr>
         <td colspan="2" align="right"><input type="submit" name="action" value="change"></td>

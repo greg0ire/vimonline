@@ -1,5 +1,5 @@
 <?php
-// index page for account info
+// displays a user's profile
 
 require("../include/init.inc");
 require("../include/string_utils.inc");
@@ -42,6 +42,20 @@ include("$BASE_DIR/header.php");
 <tr>
     <td class="prompt">email</td>
     <td><?=escapeEmail($user->getEmail())?></td>
+</tr>
+    <td class="prompt">homepage</td>
+    <? if($user->getHomepage()){ 
+        $hp = $user->getHomepage();
+        if(substr($hp,0,7) != "http://"){
+            $hp = "http://" . $hp;
+        } 
+        $hp = escapeForHTML($hp);
+    ?>
+        <td><?=$hp?></td>
+    <? } else { ?>
+        <td></td>
+    <? } ?>
+<tr>
 </tr>
 </table>
 </p>

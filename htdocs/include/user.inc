@@ -18,7 +18,7 @@ function authenticateUser($userName, $password) {
     }
 }
 
-function createUser($userName, $password, $firstName, $lastName, $email) {
+function createUser($userName, $password, $firstName, $lastName, $email, $homepage) {
     global $DB_NAME;
     $passwordHash = md5($password);
     $select = "select 1 from vs_users
@@ -32,18 +32,20 @@ function createUser($userName, $password, $firstName, $lastName, $email) {
                    password   = '$passwordHash',
                    first_name = '$firstName',
                    last_name  = '$lastName',
+                   homepage  = '$homepage',
                    email  = '$email'";
         $result = mysql_db_query($DB_NAME,$insert) or die("Query attempt failed: ". mysql_error());
         return mysql_insert_id();
     }
 }
 
-function updateUser($userId, $firstName, $lastName, $email) {
+function updateUser($userId, $firstName, $lastName, $email, $homepage) {
     global $DB_NAME;
     $update = "update vs_users set
                    first_name = '$firstName',
                    last_name  = '$lastName',
-                   email  = '$email'
+                   email  = '$email',
+                   homepage  = '$homepage'
                  where user_id=$userId";
     mysql_db_query($DB_NAME,$update);
 }
@@ -119,10 +121,12 @@ class User {
     var $lastName;
     var $email;
     var $access;
+    var $homepage;
 
     function User($userId) {
         global $DB_NAME;
-        $select = "select user_id, user_name, password, first_name, last_name, email, access
+        $select = "select user_id, user_name, password, first_name, last_name, 
+                          email, access, homepage
                    from vs_users
                    where user_id = $userId";
     	$result = mysql_db_query($DB_NAME,$select) or die("Query attempt failed: ". mysql_error());
@@ -133,6 +137,7 @@ class User {
         $this->firstName = $userData['first_name'];
         $this->lastName  = $userData['last_name'];
         $this->email  = $userData['email'];
+        $this->homepage  = $userData['homepage'];
         if(!$userData['access']){
             $this->access  = 0;
         } else {
@@ -168,6 +173,9 @@ class User {
     // submit news is bit 1
     function canSubmitNews(){
         return $this->access & 2;
+    }
+    function getHomepage() {
+        return $this->homepage;
     }
 
 }
