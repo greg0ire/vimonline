@@ -1,0 +1,7 @@
+# -*- apache -*-
+# FILE: "/home/joze/pub/vim/htdocs/cvsdocs/.htaccess"
+# LAST MODIFICATION: "Mon, 02 Okt 2000 19:27:00 +0200 (joze)"
+# (C) 2000 by Johannes Zellner, <johannes@zellner.org>
+# $Id: .htaccess,v 1.1 2003/02/09 18:57:27 scrott Exp $
+
+AddType 'text/html; charset=ISO-8859-1' .html

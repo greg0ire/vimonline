@@ -1,0 +1,170 @@
+        "Beth yw Vim?"
+        Esboniad yn chwe kilobeit.
+        
+Vim ("Vi IMproved") ydy "clo^n vi", sef
+rhaglen tebyg i'r golygydd testun "vi".
+
+Mae Vim yn gweithio yn modd testun ym mhob terfynell,
+ond hefyd mae gynno fo ryngwyneb defnyddiwr graffig (GUI), sef 
+dewislenni a chefnogaeth i'r llygoden.
+
+Caffaeledd:
+Mae Vim ar gael ar gyfer lawer blatfform, efo llawer 
+o nodweddion newydd o'i cymharu efo Vi.
+(Gweler http://www.vim.org/viusers.php).  Mae Vim yn 
+gytu^n efo bron pob orchymyn Vi - ac eithrio'r bygiau. ;-)
+
+Systemau Weithredu:
+Mae Vim ar gael ar gyfer llawer system weithredu:
+ AmigaOS, Atari MiNT, BeOS, DOS,
+MacOS, NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS, Win16 + Win32
+(Windows95/98/00/NT) - ac yn arbennig FreeBSD a Linux.  :-)
+
+Hawlfraint:
+Mae'r hawlfraint yn nwylo'r prif awdur a chynhaliwr
+, Bram Moolenaar <bram@vim.org>.
+Mae Vim yn "charity-ware", sef croeso i chi wneud rhodd ar gyfer
+plant amddifad yn Uganda (gweler ":help uganda"). 
+
+Tarddiad:
+Mae Vim yn TarddiadAgored (OpenSource) a chroeso i bawb i helpu 
+ei wella!      
+
+=== Nodweddion 
+
+Golygydd i ddechreuwyr - Cyfeillgar
+Mae Vim yn llawer haws ar gyfer ddechreuwyr na Vi, yn achos ei 
+Help Arlein helaeth, gorchmynion "dadwneud" ac "ailwneud" 
+(peidiwch a phoeni am gamgymeriadau - dim ond defnyddiwch dadwneud+ailwneud), 
+cefnogaeth i'r llygoden a delwau a dewislenni ffurffweddiol (GUI).
+
+Codau Nodau a Therfynellau:
+Mae Vim yn cefnogi set nodau iso-latin1 a termcap. (mae gan Vi fanila 
+broblemau efo hyn.)
+
+Nodau a Ieithoedd:
+Mae Vim yn cefnogi golygu de-i-chwith (ee. efo Arabeg, Ffarsi, Hebraeg),
+a thestunau aml-beit, sef ieithoedd efo nodau graffig wedi'u cynrychioli
+gan mwy nag un "beit", fel Tseineeg, Japaneaidd, Korean (Hangul),
+(a siarad yn dechnegol, mae Vim yn cefnogi testun yn UTF-8 a Unicode.)	
+
+Fformatio Testun a Modd Gweledol:
+Efo Vim medrwch chi ddewis testun yn weledol (efo amlygu) cyn i chi 
+"weithio" arno fo, ee. copi, dileu, amnewid, syflyd i'r dde neu i'r chwith,
+newid achos llythrennau neu fformat y testun, yn cynnwys cadw testun wedi'i
+fewnoli.  Mae Vim yn caniatau detholiadau a gweithredoedd ar flociau 
+petryalog, hefyd.
+
+Gorchmynion Cwblhad:
+Mae gan Vim orchmynion sy'n cwblhau eich mewnbwn - 
+naill ai efo gorchmynion, enwau ffeil neu eiriau.
+
+Gorchmynion Awtomatig:
+Mae gan Vim "awto-orchmynion" hefyd, ar gyfer weithrediad o orchmynion
+(ee. dadgywasgiad awtomatig o ffeiliau cywasgedig).  
+
+Mewnbwn Deugraffau:
+Mae Vim yn eich caniatau i roi i mewn nodau arbennig efo cyfuniad o 
+ddau nod (ee. cyfuniad o " ac a yn cynhyrchu \xe4) - ac yn caniatau
+diffinio cyfuniadau eraill hefyd.
+
+Datgeliad a Thrawsnewidiad Fformat Ffeiliau:
+Mae Vim yn adnabod yn awtomatig math ffeiliau (DOS, Mac, Unix) ac
+yn caniatau i chi arbed nhw mewn unrhyw fformat arall - dim rhaid
+i unix2dos ar Windows o hyn ymlaen!
+
+Hanes:
+Mae gan Vim "hanes" ar gyfer gorchmynion a chwiliadau, er mwyn i chi 
+medru atgofio gorchmynion neu batrwmau chwilio blaenorol a'u golygu nhw.
+
+Recordio Macros:
+Mae Vim yn caniatau "recordio" eich golygu, er mwyn ailchwarae tasgau 
+eilaidd.
+
+Terfynau Cof:
+Mae gan Vim terfynau cof llawer uwch na Vi fanilla ar gyfer hyd leiniau 
+a maint byfferau.
+
+Byfferau Amryfal a Sgrin Hollt:
+Mae Vim yn caniatau i chi golygu byfferau amryfal, a medrwch chi 
+hollti'r sgrin i mewn llawer o is-ffenestri (llorweddol a fertigol), er
+mwyn i chi medru gweld llawer o ffeiliau neu lawer rhan o sawl ffeiliau.
+
+Rhagddodiad Rhif i Orchmynion:
+Mae Vim yn caniatau rhagddodiad rhif efo mwy o orchmynion na Vi
+(ee. efo "rhoi").
+
+Ffeiliau Amser Rhedeg (Ffeiliau Cymorth a Cystrawen):
+[Ffeiliau ychwanegol sy'n cael eu defnyddio tra bod y rhaglen yn 
+rhedeg ond sy ddim yn cynnwys co^d sy'n gorfod cael ei grynhoi a'i 
+gysylltu.]
+Mae'na 70 o ffeiliau cymorth (tua 2080K o destun) efo Vim-5.7, ar 
+orchmynion, dewision, a chyngor ar ffurfweddu a golygu.
+(Vim-6.0x [010311]: 85 o ffeiliau, tua 2796K o destun.)
+Mae rhai ffeiliau yn benodol i ddefnyddio Vim ar bob system 
+weithredu [010311].
+
+Sgriptio:
+Mae gan Vim iaith sgriptio wedi'i ymgorffori er mwyn estyn yn hawdd.
+
+Atred Chwilio: 
+Mae Vim yn caniatau atredau ar gyfer orchmynion chwilio,
+felly dach chi'n rhoi'r rhedwr *ar o^l* y testun wedi'i ddarganfod.
+
+Adferiad Sesiwn:
+Mae Vim yn caniatau cadw gwybodaeth o sesiwn golygu i mewn ffeil ("viminfo") 
+i gael ei ddefnyddio efo'r sesiwn golygu nesaf, ee. rhestr byffer, marciau
+ffeil, cofrestri, hanes gorchmynion a chwilio.
+
+Ehangiad Tabiau:
+Mae Vim yn medru ehangu tabiau i mewn y testun efo bylchau (expandtab, :retab).
+
+System Tag:
+Mae Vim yn cynnig dod o hyd i destun yn ffeiliau gan ddefnyddio mynegai efo "tagiau"
+ynghyd a llawer o orchmynion stac tagiau.
+
+Gwrthrychau Testun:
+Mae Vim yn nabod mwy o wrthrychau testun (paragraffau, brawddegau, geiriau a 
+GEIRIAU - popeth 
+efo a heb bylchau gwyn o'u cwmpas) ac yn caniatau ffurfweddu diffiniad y gwrthrychau hyn. 
+
+Lliwiad Cystrawen:
+Mae Vim yn dangos testun mewn lliwiau - yn o^l ei "iaith (rhaglennu)".
+Medrwch chi diffinio "iaith" ("cystrawen") y ffeiliau eich hun.
+
+Mae Vim yn dod efo 200+ o ffeiliau cystrawen ar gyfer lliwio testun mewn ieithoedd
+rhaglennu cyffredin (Ada, C, C++, Eiffel, Fortran, 
+Haskell, Java, Lisp, Modula, Pascal, Prolog, Python,
+Scheme, Smalltalk, SQL, Verilog, VisualBasic),
+rhaglenni mathemategol (Maple, Matlab, Mathematica, SAS), testun markup 
+(DocBook, HTML, LaTeX, PostScript, SGML-LinuxDoc, TeX, WML, XML),
+allbwn rhaglenni (diff, man), ffeiliau lwytho rhaglenni (4DOS, Apache,
+autoconfig, BibTeX, CSS, CVS, elm, IDL, LILO, pine, procmail, samba, slrn),
+sgriptiau plisgyn (shells: sh, bash, csh, ksh, zsh),
+ieithoedd sgriptio (awk, Perl, sed, yacc)
+ffeiliau system (printcap, .Xdefaults) ac, wrth gwrs, Vim a'i destunau cymorth.
+
+Co^d Arbennig:
+Mae gan Vim gyfannu dewisol efo Perl, Tcl a Python.
+Mae Vim yn medru actio fel gweinyddwr awtomasiwn OLE o dan Windows.
+Mae hi'n bosib hefyd arsefydlu Vim efo co^d ar gyfer X-windows, sy'n ychwanegu
+dewislenni ffurfweddiol a chefnogaeth i'r llygoden.  
+A mwy.  Llawer mwy!
+
+=== Cysylltau
+
+Gwefan Vim ar y we fyd-eang:
+  http://www.vim.org/
+
+I ddisgryfiad mwy fanwl o nodweddau Vim, gweler y dudalen:
+  http://www.vim.org/about.php
+
+=== Awdur a Chyfiethiwr
+
+Gwaith gwreiddiol gan: Sven Guckes guckes@vim.org
+Diweddariad diwethaf: Mon Mar 12 07:00:00 MET 2001
+
+Wedi'i gyfiethu gan: Magnus Forrester-Barker magnuscanis@linuxmail.org
+Diweddariad diwethaf: Dydd Mawrth, 2002-01-08
+
+vim: tw=70

@@ -1,0 +1,164 @@
+                "What is Vim?"
+        An explanation in six kilobytes.
+
+Vim ("Vi IMproved") is a "vi clone", ie
+a program similar to the text editor "vi".
+
+Vim works in textmode in every terminal,
+but it also has a graphic user interface,
+ie menus and support for the mouse.
+
+Availability:
+Vim is available for many platforms and has many added features
+compared to Vi.  (see http://www.vim.org/viusers.php)
+Vim is compatible to almost all Vi commands - except Vi's bugs. ;-)
+
+Operating Systems:
+Vim is available for many systems: AmigaOS, Atari MiNT, BeOS, DOS,
+MacOS, NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS, Win16 + Win32
+(Windows95/98/00/NT) - and especially FreeBSD and Linux.  :-)
+
+Copyright:
+The copyright is in the hands of the main author
+and maintainer, Bram Moolenaar <bram@vim.org>.
+Vim is "charity-ware", ie you are encouraged to make
+a donation to orphans in Uganda (see ":help uganda").
+
+Source:
+Vim is OpenSource and everybody is welcome to help improve it!
+
+=== Features
+
+Beginner's Editor - User Friendly:
+Vim is much easier for beginners than Vi because of extensive Online Help,
+"undo" and "redo" commands (never mind mistakes - just use undo+redo!),
+support for the mouse and configurable icons and menus (GUI).
+
+Character codes and Terminals:
+Vim has support for the iso-latin1 character set and for termcap.
+(Vanilla Vi has problems with this.)
+
+Characters and Languages:
+Vim supports for right-to-left editing (eg with Arabian, Farsi, Hebrew),
+and multi-byte texts, ie languages with graphical characters represented
+by more than one "byte", such as Chinese, Japanese, Korean (Hangul),
+(Technically speaking, Vim supports text in UTF-8 and Unicode.)
+
+Text Formatting and Visual Mode:
+With Vim you can select text "visually" (with highlighting) before you
+"operate" on it, eg copy, delete, substitute, shift left or right,
+change case of letters or format the text incl preserving indented text.
+Vim allows selection and operations on rectangular text blocks, too.
+
+Completion Commands:
+Vim has commands which complete your input -
+either with commands, filenames, and words.
+
+Automatic Commands:
+Vim also has "autocommands" for automatic execution of commands
+(eg automatic uncompression of compressed files).
+
+Digraph Input:
+Vim allows you to enter special characters by a combination
+of two characters (eg the combination of " and a yields an ä) -
+and allows you to define other combinations, too.
+
+Fileformat detection and conversion:
+Vim automatically recognizes the type of files (DOS, Mac, Unix)
+and also lets you save them in any other format  -
+no need for unix2dos on Windows any more!
+
+History:
+Vim has a "history" for commands and searches, so you can
+recall previous commands or search pattern to edit them.
+
+Macro Recording:
+Vim allows to "record" your editing for replaying for repetitive tasks.
+
+Memory Limits:
+Vim has much higher memory limits for line length
+and buffer sizes than vanilla Vi.
+
+Multiple Buffers and Split Screen:
+Vim allows editing of multiple buffers and you can split the
+screen into many subwindows (both horizontally and vertically),
+so you can see many files or many parts of some files.
+
+Number Prefix to commands:
+Vim allows a number prefix for more
+commands than with Vi (eg for "put").
+
+Runtime Files (Helpfiles and Syntax Files):
+[Additional files which are used when the program runs -
+ but these not contain code which has to be compiled and linked.]
+Vim-5.7 comes with 70 help files (about 2080K of text) on
+commands, options, with tips on configuration and editing.
+(Vim-6.0x [010311]: 85 files, ca 2796K of text).  Some files are
+specific to the use of Vim on each operating system. [010311]
+
+Scripting:
+Vim has a built-in scripting language for easy extension.
+
+Search Offset:
+Vim allows offsets for search commands, so you
+place the cursor *after* the found text.
+
+Session Recovery:
+Vim allows to store information of an editing session into a file ("viminfo")
+which allows them for being used with the next editing session, eg
+buffer list, file marks, registers, command and search history.
+
+Tab expansion:
+Vim can expand tabs within the text with spaces (expandtab, :retab).
+
+Tag system:
+Vim offers to find text in files by using an index with "tags"
+together with many tag stack commands.
+
+Text Objects:
+Vim knows more text objects (paragraphs, sentences, words and WORDS -
+all with and without surrounding whitespace) and allows to configure
+the definition for these objects.
+
+Syntax Coloring:
+Vim shows text in color - according to its "(programming) language".
+You can define the "language" ("syntax") of the files yourself.
+
+Vim comes with 200+ syntax files for colorizing text in
+common programming languages (Ada, C, C++, Eiffel, Fortran,
+Haskell, Java, Lisp, Modula, Pascal, Prolog, Python,
+Scheme, Smalltalk, SQL, Verilog, VisualBasic),
+math programs (Maple, Matlab, Mathematica, SAS), markup text
+(DocBook, HTML, LaTeX, PostScript, SGML-LinuxDoc, TeX, WML, XML),
+program output (diff, man), setup files of programs (4DOS, Apache,
+autoconfig, BibTeX, CSS, CVS, elm, IDL, LILO, pine, procmail, samba, slrn),
+shell scripts and setups (shells: sh, bash, csh, ksh, zsh),
+script languages  (awk, Perl, sed, yacc)
+system files (printcap, .Xdefaults) and
+of course for Vim and its helptexts.
+
+Special code:
+Vim has optional integration with Perl, Tcl and Python.
+Vim can act as an OLE automation server under Windows.
+Vim can also be installed with code for X-windows,
+adding configurable menus and support for the mouse.
+And more.  Lots more!
+
+=== Links
+
+Vim's HomePage in the WWW:
+  http://www.vim.org/
+
+For a more elaborate description
+of Vim's features see the page
+  http://www.vim.org/about.php
+
+=== Author and Translator
+
+Original-by: Sven Guckes guckes@vim.org
+Last update: Mon Mar 12 07:00:00 MET 2001
+
+Translated-by: Your Name <address>
+Last update:   <date>
+
+vim: tw=70

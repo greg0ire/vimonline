@@ -1,0 +1,183 @@
+		"Co to jest Vim?" 
+	Wyja¶nienie w sze¶ciu kilobajtach.
+
+Vim ("Vi IMproved") jest "klonem" vi, 
+czyli programem podobnym do edytora 
+tekstu o nazwie "vi".
+
+Vim pracuje w trybie tekstowym na ka¿dym 
+terminalu, choæ posiada równie¿ interfejs
+graficzny, czyli menu i obs³ugê myszy.
+
+Dostêpno¶æ: 
+Vim jest dostêpny na wiele platform i posiada du¿o
+dodatkowych funkcji w porównaniu z Vi (zobacz
+http://www.vim.org/viusers.php). Polecenia Vim-a s± prawie
+ca³kowicie zgodne z poleceniami Vi - za wyj±tkiem Vi-owych b³êdów. ;-)
+
+Systemy operacyjne: 
+Vim jest dostêpny na takie systemy jak:
+AmigaOS, Atari MiNT, BeOS, DOS, MacOS, NextStep, OS/2, OSF, RiscOS,
+SGI, UNIX, VMS, Win16 + Win32 (Windows95/98/00/NT) - a zw³aszcza na
+FreeBSD i Linux.  :-)
+
+Prawa autorskie: 
+Prawa autorskie posiada g³ówny autor i szef projektu, Bram Moolenaar
+<bram@vim.org>. Vim jest "oprogramowaniem charytatywnym", to znaczy i¿
+zachêcamy Ciê do z³o¿enia datku na sieroty z Ugandy (zobacz ":help
+uganda").
+
+¬ród³a: 
+Vim jest programem na otwartych ¼ród³ach (OpenSource) i wszyscy 
+chêtni do pomocy przy jego rozwoju, s± zawsze mile widziani!
+
+=== Cechy Vim-a
+
+Edytor dla pocz±tkuj±cych - przyjazny dla u¿ytkownika: 
+Vim jest bardziej przyjazny dla pocz±tkuj±cych ni¿ Vi poniewa¿ posiada
+wbudowany, obszerny system pomocy, polecenia "undo" i "redo" (cofnij i
+ponów), które pozwalaj± na to, by nie przejmowaæ siê pomy³kami. Jego
+dodatkowym atutem jest obs³uga myszy oraz konfigurowalne menu i pasek
+narzêdziowy (GUI).
+
+Kody znakowe i terminale: 
+Vim obs³uguje stronê kodow± iso-latin1 i
+korzysta z bazy terminali termcap.  (oryginalny Vi ma z tym problemy.)
+
+Znaki narodowe i jêzyki: 
+Vim pozwala na pisanie tekstów z prawa na lewo (jak ma to miejsce w
+jêzykach Arabskim, Perskim czy Hebrajskim) oraz zawieraj±cych znaki
+wielobajtowe - tzn. reprezentowane przez wiêcej ni¿ jeden bajt (jak
+np. w jêzyku Chiñskim, Japoñskim czy Koreañskim). Innymi s³owy, Vim
+obs³uguje teksty pisane w UTF-8 i Unikodzie.
+
+Formatowanie tekstu i tryb wizualny (visual mode):
+U¿ywaj±c Vim-a, mo¿na zaznaczaæ tekst w sposób "widzialny" (z
+pod¶wietleniem zaznaczonego tekstu), a nastêpnie dokonaæ na nim takich
+operacji jak: kopiowanie, usuwanie, zastêpowanie, przesuniêcie w lewo
+lub w prawo, zamiana wielko¶ci liter, czy te¿ formatowanie z
+zachowaniem istniej±cych akapitów.
+Vim umo¿liwia równie¿ zaznaczanie i operacje na prostok±tnych blokach
+tekstu.
+
+Polecenia dokañczaj±ce tekst:
+Vim posiada polecenia, które dokañczaj± to co wpisa³e¶ - zarówno
+komendy jak i nazwy plików czy pojedyncze s³owa.
+
+Polecenia automatyczne:
+Vim posiada równie¿ polecenia pozwalaj±ce na automatyczn± reakcjê na
+dane zdarzenia ("autocommands"), np. na automatyczne rozpakowanie
+skompresowanego pliku.
+
+Wstawianie umlaut-ów: 
+Vim pozwala na wstawianie znaków specjalnych poprzez kombinacjê dwóch
+klawiszy (np. kombinacja " oraz a daje w wyniku ä), oraz pozwala na
+zdefiniowanie w³asnych kombinacji.
+
+Wykrywanie formatu pliku oraz konwersja:
+Vim automatycznie rozpoznaje typ edytowanego pliku (DOS, Mac, Unix)
+oraz umo¿liwia zapisanie go w dowolnym innym. Zatem nie ma ju¿
+potrzeby u¿ywania unix2dos na Windows-ach!
+
+Historia:
+Vim posiada historiê poleceñ oraz wyszukiwañ. Mo¿esz zatem przywo³aæ
+poprzednie polecenie lub wyszukiwany ci±g znaków i zmieniæ go.
+
+Nagrywanie makr:
+Vim umo¿liwia zarejestrowanie procesu edycji (wszystkich wpisywanych
+poleceñ), w celu pó¼niejszego wykorzystania przy zadaniach
+powtarzalnych.
+
+Ograniczenia pamiêci:
+Vim ma znacznie wy¿sze limity pamiêci przydzielanej dla poszczególnych
+linii i buforów ni¿ oryginalny Vi.
+
+Wiele buforów i podzia³ ekranu:
+Vim pozwala na edycjê wielu buforów, oraz na podzia³ ekranu na
+kilka mniejszych okien (zarówno w pionie jak i w poziomie), co
+umo¿liwia równoczesne ogl±danie wielu plików, lub wielu ró¿nych czê¶ci
+tego samego pliku.
+
+Zwielokrotnianie poleceñ:
+Vim umo¿liwia zwielokrotnianie dzia³ania poleceñ (poprzez tzw. "number
+prefix"). Obejmuje ono wiêkszy zakres komend, ni¿ ma to miejsce w Vi.
+
+Pliki typu "runtime" (pliki pomocy oraz definiuj±ce sk³adniê):
+[S± to dodatkowe pliki, u¿ywane w trakcie gdy program jest
+uruchomiony, ale nie zawieraj± kodu, który musi byæ skompilowany i
+zlinkowany.]
+Vim-5.7 zawiera 70 plików pomocy (oko³o 2080K tekstu) opisuj±cych
+polecenia, opcje, oraz porady na temat konfiguracji i edycji.
+(Vim-6.0x [010311]: 85 plików, ok. 2796K tekstu). Niektóre pliki
+zawieraj± opis wersji Vim-a na poszczególne systemy operacyjne. [010311]
+
+Skrypty:
+Vim posiada wbudowany jêzyk skryptowy, który mo¿e s³u¿yæ do jego
+³atwej rozbudowy.
+
+Wyszukiwanie z przesuniêciem:
+Vim umo¿liwia przesuniêcia w poleceniach wyszukuj±cych. Oznacza to,
+umieszczenie kursora *za* znalezionym tekstem.
+
+Zapis sesji:
+Vim umo¿liwia zapis informacji o danej sesji do pliku ("viminfo").
+Mo¿e on byæ u¿yty w nastêpnej sesji do odczytania listy buforów,
+znaczników w plikach, rejestrów, historii poleceñ i wyszukiwañ.
+
+Zastêpowanie znaków tabulacji:
+Vim potrafi zastêpowaæ znaki tabulacji w tek¶cie odpowiedni± liczb±
+spacji.
+
+System Tag-ów:
+Vim potrafi korzystaæ z plików indeksowych typu "tags" w celu
+odszukania tekstu w plikach, oraz posiada wiele poleceñ z nich
+korzystaj±cych.
+
+Czê¶ci tekstu:
+Vim rozpoznaje wiele czê¶ci tekstu, takich jak akapity, zdania, s³owa
+i S£OWA - zarówno z otaczaj±cymi je bia³ymi znakami jak i bez nich.
+Pozwala równie¿ na zmianê ich definicji.
+
+Kolorowanie sk³adni:
+Vim wy¶wietla tekst koloruj±c go - zgodnie z jego "jêzykiem
+(programowania)". Mo¿esz samodzielnie zdefiniowaæ "jêzyk" (czyli jego
+sk³adniê).
+
+Vim zawiera ponad 200 plików definiuj±cych sk³adniê do kolorowania
+tekstu w powszechnie znanych jêzykach programowania (Ada, C, C++, Eiffel,
+Fortran, Haskell, Java, Lisp, Modula, Pascal, Prolog, Python,
+Scheme, Smalltalk, SQL, Verilog, VisualBasic),
+jêzykach programów matematycznych (Maple, Matlab, Mathematica, SAS), 
+jêzykach formatowania tekstu (DocBook, HTML, LaTeX, PostScript, 
+SGML-LinuxDoc, TeX, WML, XML), plikach wynikowych (diff,man), plikach
+konfiguracyjnych do ró¿nych programów (4DOS, Apache, autoconfig, 
+BibTeX, CSS, CVS, elm, IDL, LILO, pine, procmail, samba, slrn),
+skryptach pow³oki (sh, bash, csh, ksh, zsh), jêzykach skryptowych 
+(awk, Perl, sed, yacc), plikach systemowych (printcap, .Xdefaults) 
+i oczywi¶cie w plikach pomocy Vim-a.
+
+Dodatki specjalne:
+Vim opcjonalnie posiada zintegrowane ¶rodowiska do pisania w takich
+jêzykach jak Perl, Tcl i Python. Vim mo¿e pe³niæ rolê serwera OLE pod
+Windows. Vim mo¿e byæ równie¿ zainstalowany z obs³ug± X-Windows,
+w³±czaj±c w to konfigurowalne menu i obs³ugê myszy.
+Vim mo¿e jeszcze du¿o innych rzeczy. Naprawdê du¿o!
+
+=== Linki
+
+Strona WWW Vim-a:
+  http://www.vim.org/
+
+Je¶li chcesz poznaæ bardziej szczegó³owy
+opis mo¿liwo¶ci Vim-a, zajrzyj na stronê:
+  http://www.vim.org/about.php
+
+=== Autor i t³umacz
+
+Tekst oryginalny: Sven Guckes guckes@vim.org
+Ostatnia aktualizacja: Mon Mar 12 07:00:00 MET 2001
+
+Przet³umaczy³: Miko³aj Sitarz mik@fatcat.ftj.agh.edu.pl
+Ostatnia aktualizacja: Thu Mar 22 20:01:31 CET 2001
+
+vim: tw=70

@@ -1,0 +1,152 @@
+"Mi a Vim?"
+Magyarázat hat kilobájtban
+
+A Vim ("Vi IMproved" - feljavított Vi) egy "vi klón", vagyis egy program,
+ami a "vi" szövegszerkesztõhöz hasonlít.
+
+A Vim karakteres üzemmódban minden terminálon mûködik, de van grafikus
+felülete is, menükkel és egértámogatással.
+
+Elérhetõség:
+A Vim rengeteg platformon elérhetõ, és rengeteg plusz szolgáltatása van az
+Vi-hoz képest. (lásd http://www.vim.org/viusers.php)
+A Vim szinte mindenben kompatibilis a Vi parancsaival - kivéve a hibákat :)
+
+Operációs rendszerek:
+A Vim számos operációs rendszeren megtalálható:  AmigaOS, Atari MiNT, BeOS, DOS,
+MacOS, NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS, Win16 + Win32
+(Windows95/98/00/NT) - és különösen FreeBSD illetve Linux alatt. :)
+
+Copyright:
+A jogok a fö szerzõ és karbantartó Bram Moolenaar <bram@vim.org> kezében
+vannak. A Vim "adomány-ware", vagyis kérjük, hogy adakozz Uganda árvái
+javára. (lásd ":help uganda").
+
+Forrás:
+A Vim nyílt forrású, és bárki segíthet a fejlesztésben!
+
+=== Jellemzõk
+
+A kezdõk editora - Felhasználóbarát:
+A Vim sokkal könnyebben használható kezdõknek, mint a Vi a részletes online
+súgó, az "undo" (visszavonás) és "redo" (újra) parancsok (ne
+ess kétségbe ha hibázol, csak vond vissza, vagy csináld újra!), az
+egértámogatás, és a beállítható menük és ikonok miatt (GUI).
+
+Karakter kódok és Terminálok:
+A Vim támogatja az iso-latin1 karakterkészletet és a termcap-et. (A 
+Vi-nak ezzel problémái voltak)
+
+Karakterek és nyelvek:
+A Vim támogatja a jobbról balra írást (Arab, Héber), a több byte-os
+szövegeket, olyan nyelvek esetében, ahol a grafikus karaktereket több mint
+egy byte-on ábrázolják, mint például a Kínai, Japán, Koreai. (Technikailag
+a Vim támogatja az UTF-8 és Unicode kódolást.)
+
+Szöveg formázás és Vizuális mód:
+Vim-mel lehtõség van a szíveget vizuálisan (kiemeléssel) kijelölni a
+mûvelet elõtt (másolás, törlés, csere, jobbra, balra eltolás, kis- nagybetû
+váltás, szövegformázás a bekezdések megtartásával)
+A Vim lehetõvé teszi téglalap blokkok kijelölését, és azokon mûveletek
+végzését.
+
+Kiegészítõ parancsok:
+A Vim képes a bevitt szöveg kiegészítésére - legyen az parancs, fájlnév,
+vagy bármilyen szó.
+
+Automata parancsok:
+A Vim rendelkezik automatikus parancsokkal (autocommands) parancsok
+automatikus végrehajtására (pl tömörített állományok kitömörítése)
+
+Repülõ ékezetes (digraph) bevitel:
+A Vim lehetõvé teszi, hogy különleges karaktereket két karakter
+kombinációjaként vigyünk be. (például a " és az a együtt ä-t eredményez)
+Lehetõség van saját kombinációk megadására is.
+
+Fájlformátum azonosítás és konverzió:
+A Vim automatikusan felismeri a fájlok típusát (DOS, Mac, Unix) és
+bármely másikban képes azokat elmenteni - nincs többé szükseg unix2dos-ra
+Windows alatt!
+
+Elõzõ parancsok:
+A Vim nyílván tartja az elõzõ parancsokat és kereséseket, így ezek késõbb
+visszakereshetõk, átszerkeszthetõk.
+
+Makró rögzítés:
+A Vim lehetõvé teszi, a mûveletek "felvételét", amik ismétlõdõ
+feladatokhoz visszajátszhatók.
+
+Memória korlátok:
+A Vim sokkal tágabb korlátokkal rendelkezik sor illetve bufferméretre mint
+az eredeti Vi.
+
+Több Buffer és Osztott Képernyõ:
+A Vim megengedi több buffer használatát, valamint a képernyõ függõlegesen
+és vízszintesen is több ablakra bontható, így egyszerre látható több
+állomány, vagy ugyannak az állománynak több része.
+
+Szám elõtag parancsokhoz:
+A Vim a Vi-nál több parancs elõtt engedi szám elõtag használatát (pl a
+beillesztés)
+
+Runtime Fájlok (Súgó és szintakszis állományok):
+A Vim 70 súgóval érkezik a szerkesztés különbözõ területeit illetõen,
+némelyikük kifejezetten bizonyos operációs rendszerekre vonatkozik.
+
+Script-ek:
+A Vim saját script-nyelvvel rendelkezik a könnyû bõvíthetõségért.
+
+Eltolásos keresés:
+A Vim megengedi eltolás használatát a keresés parancsokkal, így a kurzor
+akár a megtalált szöveg *mögé* is kerülhet.
+
+Munkaállapot visszaállítás:
+A Vim képes a munkaállapot elmentésére egy állományba ("viminfo"), amiket a
+kövektezõ alkalommal vissza lehet állítani. Ezekbe beletartoznak a
+bufferlisták, az könyvjelzõk, regiszterek, az elõzõ parancsok és keresések. 
+
+Tab kifejtés:
+A Vim képes a szövegen belül a tabokat szóközökre cserélni (expandtab,
+:retab).
+
+Tag rendszer:
+A Vim lehetõvé teszi szövegrészletek keresését állományokban "tag" indexek
+segítségével, illetve "tag" verem parancsokkal.
+
+Szöveg objektumok:
+A Vim több szöveg objektumot ismer (bekezdés, mondat, szó és SZÓ - mindezek
+határolókarakterekkel vagy azok nélkül.) és ezek definíciói
+megváltoztathatóak.
+
+Szintaktika kiemelés:
+A Vim színezi a szöveget - a saját "(programozási) nyelvének" megfelelõen. A
+fájlok "nyelve" ("szintaktikája") szabadon beállítható.
+
+A Vim több mint 200 beépített szintaktikai állománnyal rendelkezik a
+népszerûbb programozási nyelvkhez (Ada, C, C++, Eiffel, Fortran,
+Haskell, Java, Lisp, Modula, Pascal, Prolog, Python,
+Scheme, Smalltalk, SQL, Verilog, VisualBasic),
+matematikai programokhoz (Maple, Matlab, Mathematica, SAS), leíró nyelvekhez 
+(DocBook, HTML, LaTeX, PostScript, SGML-LinuxDoc, TeX, WML, XML),
+programok végeredményéhez (diff, man), beállító állományokhoz (4DOS, Apache,
+autoconfig, BibTeX, CSS, CVS, elm, IDL, LILO, pine, procmail, samba, slrn),
+shell szkriptekhez (shells: sh, bash, csh, ksh, zsh),
+szkript nyelvekhez  (awk, Perl, sed, yacc)
+rendszerállományokhoz (printcap, .Xdefaults) és természetesen a VIM saját
+súgóállományaihoz.
+
+Különleges kód:
+A Vim opcionálisan képes együttmûködni Perl-lel, Tcl-lel, Python-nal. Windows
+alatt OLE szerverként mûködik. X-windows támogató kóddal is telepíthetõ,
+átszerkeszthetõ menükkel és egértámogatással. És még többel, sokkal többel.
+
+Vim honlap a weben:
+  http://www.vim.org/
+
+A Vim szolgáltatásainak részletesebb leírása megtalálható a 
+  http://www.vim.org/about.php
+címen.
+
+Írta:  Sven Guckes guckes@vim.org
+Utolsó módosítás: Tue Oct 03 20:00:00 MET DST 2000
+

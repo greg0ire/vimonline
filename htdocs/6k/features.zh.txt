@@ -1,0 +1,139 @@
+﻿		"Vim 是什麼?"
+	       6K 長的簡單說明
+
+Vim ("Vi IMproved") 是 vi 的相容品，也就是說，
+它是一個和 vi 這個文字編輯器相近的程式。
+
+Vim 可以在各種終端機的文字模式下工作，
+而且它也具有圖形使用者介面，例如，選單功能
+以及支援滑鼠。
+
+易取得性:
+Vim 有許多平臺上的版本，而且也增加了許多 Vi 所沒有的功能。
+（詳見 http://www.vim.org/viusers.php）
+Vim 與幾乎全部的 Vi 指令相容，但是沒有 Vi 的 bug ;-)
+
+作業系統:
+Vim 能在各種作業系統上執行，包含: AmigaOS, Atari MiNT, BeOS, DOS,
+MacOS, NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS, Win16 + Win32
+（Windows95/98/00/NT） - 而且當然也包括了 FreeBSD 和 Linux. :-)
+
+版權:
+版權由原始的作者以及主要的維護者, Bram Moolenaar <bram@vim.org> 
+所擁有。Vim 是「慈善軟體」，希望您捐錢幫助烏干達的孤兒們
+（詳見 ":help uganda"）。
+
+原始碼:
+Vim 是開放原始碼軟體，而且歡迎任何人幫忙發展!
+
+
+=== 特性
+
+初學者的編輯器 - 易於使用:
+相較於 Vi，Vim 對初學者來說更加容易使用，除了有完整的線上說明之外，
+"undo"（還原）和 "redo"（重做）指令讓你永遠不用擔心出錯 - 只要會用
+undo+redo！還有支援滑鼠，以及可設定的圖示和選單（在GUI環境下）。
+
+字碼與終端機模式:
+Vim 支援 iso-latin1 字元集以及完整的 termcap 支援。
+（最原始的 Vi 不能正常工作。）
+
+字元與語言:
+Vim 支援右至左編輯模式（例如阿拉伯文、波斯文、希伯來文），以及多位元組
+文字集，亦即使用超過一位元寬度的圖像字型來表示文字的語言，像是中文、日
+文、韓文。（就技術面而言， Vim支援 UTF-8 以及 Unicode 的字元。）
+
+格式化文字與「視覺」模式:
+Vim 可以讓您「視覺化」地選擇文字（以高亮度表示），之後再對其進行操作，
+例如複製、刪除、取代、左右平移、改變字母大小寫，或是保持縮排並且格式化
+文字。Vim 也允許您選取並且對矩形的文字區塊作操作。
+
+補全指令:
+Vim 有指令可以自動替您補全您的輸入，不論是指令、檔案名稱，或是單字。
+
+自動指令:
+Vim 包含有可以自動執行的自動指令（例如自動將檔案解壓縮）。
+
+二合字母(diagraph)輸入:
+Vim 允許您輸入某些由兩個字元所組成的二合字母（例如，由 " 和 a
+所組成的  銦^。並且也可以讓您自行定義其他的組合。
+
+檔案格式偵測與轉換:
+Vim 會自動辨認檔案的格式（DOS, Mac, Unix）而且也讓您轉存為其他
+格式 - 在 Windows 上不再需要 unix2dos 了！
+
+歷史:
+Vim 對於執行過的指令有「歷史」功能，您可以叫出之前輸入過的指
+令並加以修改再次使用。
+
+巨集錄製:
+Vim 可以讓您「錄」下您的編輯過程，並且再次播放，以進行重複性高的工作。
+
+記憶體限制:
+比起最原始的 Vi，Vim 有著更大的每列長度限制以及暫存區的大小。
+
+多重暫存區以及螢幕分割:
+Vim 讓您可以編輯多個暫存區，而且您也可以將視窗分割為多個子視窗（可
+以是水平或是垂直的），以便同時檢視多個檔案的不同位置。
+
+指令前置數字:
+比起原始的 Vi，Vim 可以在更多的指令前面加上數字來表示執行次數（例如 "put
+指令）。
+
+執行時期檔案（說明檔與文法檔）:
+Vim 有七十個包含了各種內容的說明檔；其中某些是特別針對特定的作業
+系統所撰寫的說明。
+
+使用script:
+Vim 內建一套 script 語言，方便使用者作各項功能延伸。
+
+
+搜尋移位:
+Vim 允許搜尋指令附加位移，如此一來您就可以將游標放置在找到的文
+字後面。
+
+歷程回復:
+Vim 允許您將編輯過程中的資訊存入檔案中（"viminfo"），在您下次編輯的時候
+就可以直接使用，例如暫存區列表、檔案標記、暫存器、命令歷史等。
+
+定位字元展開:
+Vim 可以替您用空白來展開文字中的定位字元（expandtab， :retab）。
+
+標籤系統:
+Vim 提供在檔案中根據索引及「標籤」來搜尋文字，或是搭配許多標
+籤堆疊指令來尋找文字。
+
+文字物件:
+Vim 能夠辨認更多的文字物件（段落、句子、單字，以及縮寫字 - 包括或是
+不包括周圍的空白），並且也允許您自由更改對於這些物件的定義。
+
+語法變色:
+Vim 可以使用彩色來顯示文字 - 根據它的語言（或是程式語言）。
+您可以自行定義這些語言（語法）檔案。
+
+Vim 隨附有二百種以上的語法檔案，能夠為各種常見的程式語言檔案（例如：
+例如： Ada, C, C++, Eiffel, Fortran, Haskell, Java, Losp, Modula, Pascal,
+Prolog, Python, Scheme, Smalltalk, SQL, Verilog, VisualBasic），數學程式
+檔案（Maple, Matlab, Mathematica, SAS），標記語言（DocBook, HTML, LaTeX,
+PostScript, SGML-LinuxDoc, TeX, WML, XML），程式的輸出（diff, man），軟體
+設定檔（4DOS, Apache, autoconfig, BibTeX, CSS, CVS, elm, IDL, LILO, pine,
+procmail, samba, slrn），命令處理器語言與設定檔（sh, bash, csh, ksh, zsh），
+script 語言（awk, Perl, sed, yacc），系統檔案（printcap, .Xdefaults）以及
+（當然）Vim 的設定檔和說明檔。
+
+特殊程式碼:
+Vim 可以特別與 Perl, Tcl, 和 Python 整合。
+Vim 在 Windows 下可以作為 OLE automation 伺服器。
+Vim 可以支援 X-windows，以加入可自訂的選單與滑鼠的支援。
+以及更多更多！
+
+Vim 的 WWW 主頁:
+  http://www.vim.org/
+
+如果想要有更詳細的 Vim 功能列表，請見
+  http://www.vim.org/about.php
+
+英文版原作者: Sven Guckes guckes@vim.org
+英文版最後更新時間: Tue Oct 03 20:00:00 MET DST 2000
+中文版翻譯者: Cecil Sheng zcecil@infor.org
+中文版最後更新時間: Wed Nov 15 08:00:00 CST 2000

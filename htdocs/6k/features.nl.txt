@@ -1,0 +1,158 @@
+                "Wat is Vim?"
+        Een uitleg in zes kilobytes.
+
+Vim ("Vi IMproved", "vi verbeterd") is een "vi kloon", ofwel een
+programma dat lijkt op de text editor "vi".
+
+Vim werkt in textmode op iedere terminal, maar heeft ook een grafische
+user-interface, bijvoorbeeld menu's en muis-ondersteuning.
+
+Beschikbaarheid:
+Vim is voor vele platforms beschikbaar en heeft veel toegevoegde
+features vergeleken met Vi. (Zie http://www.vim.org/viusers.php,
+Engelstalige link.)
+Vim is bijna volledig compatible met Vi -- behalve met bugs in Vi ;-)
+
+Operating Systems:
+Vim is verkrijgbaar voor vele systemen: AmigaOS, Atari MiNT, BeOS, DOS,
+MacOS, NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS, WIn16 + Win32
+(Windows95/98/00/NT) - en in het bijzonder FreeBSD and Linux.  :-)
+
+Copyright:
+Het copyright is in handen van de eerste auteur en maintainer,
+Bram Moolenaar <bram@vim.org>.
+Vim is "charity-ware", dat betekent dat je wordt uitgenodigd een donatie
+te doen aan weeskinderen in Oeganda (zie ":help uganda").
+
+Broncode:
+Vim is OpenSource, iedereen is welkom om verbeteringen aan te brengen! 
+
+=== Features
+
+Beginners-editor -- Gebruikersvriendelijk:
+Vim is makkelijker te leren dan Vi vanwege de uitgebreide online help,
+"undo"- en "redo"-commando's (maak gerust fouten -- en maak ze ongedaan,
+of maak ze opnieuw!), muis-ondersteuning en configureerbare pictogrammen
+en menu's (GUI, grafische gebruikersinterface).
+
+Karakter-codes and Terminals:
+Vim ondersteunt de iso-latin1 karakterset en termcap. (Standaard-Vi
+heeft hier problemen mee.)
+
+Karakters and talen:
+Vim ondersteunt van-rechts-naar-links editen (bv. voor Arabisch, Farsi,
+Hebreeuws), en multi-byte-teksten voor talen waar grafische karakters
+door meer dan een byte worden weergegeven, zoals Chinees, Japans,
+Koreaans (Hangul). (In technische bewoordingen, Vim ondersteunt text in
+UTF-8 en Unicode.)
+
+Tekstopmaak en Visual Mode:
+In Vim kun je tekst "zichtbaar" selecteren (door het te highlighten) voor je
+er iets mee doet, bv. kopieren, wissen, vervangen, naar links of naar rechts
+schuiven, hoofdletters in kleine letters veranderen of de tekst opmaken
+(waarbij ingesprongen tekst ingesprongen blijft). Met Vim kun je ook met
+rechthoekige blokken werken.
+
+Automatisch completeren:
+In Vim kan je input automatisch gecompleteerd worden --
+commando's, bestandsnamen of woorden.
+
+Automatische commando's:
+Vim heeft "autocommands" voor het automatisch uitvoeren van commando's (bv.
+automatisch "uncompressen" van gecompresste bestanden tijdens het inladen.)
+
+Digraph-invoer:
+In Vim kun je speciale karakters als een combinatie van twee toetsen
+invoeren (bv. de combinatie van " en a levert een ä op) -- en je kunt
+nieuwe combinaties zelf definiëren.
+
+Bestandsformaat-detectie en -conversie:
+Vim herkent bestandstypes (DOS, Mac of Unix) en laat je bestanden als een
+ander type bewaren -- unix2dos is niet meer nodig onder DOS of Windows!
+
+History:
+Vim houdt een lijst bij ("history") van gebruikte commando's en zoektermen,
+die je kunt hergebruiken en wijzigen.
+
+Macro's opnemen:
+In Vim kun je je toetsaanslagen "opnemen" en weer "afspelen" om taken te
+herhalen.
+
+Geheugenlimiet:
+Vim heeft een veel hogere limiet voor regellengte en buffergrootte dan
+standaard-Vi.
+
+Meerdere buffers en gedeeld scherm:
+Met Vim kun je meerdere buffers editen en je kunt het scherm in vele
+subwindows splitsen (zowel horizontaal als verticaal), zodat je
+verschillende bestanden kunt zien of verschillende delen van één
+bestand.
+
+Getal voor een commando:
+In Vim kun je meer commando's laten voorafgaan door een getal dan in Vi
+(bv. voor "put").
+
+Runtime-bestanden (hulpbestanden en syntax-bestanden):
+Bij Vim worden 70 hulp-bestanden over verschillende aspecten van editen
+geleverd; sommige teksten zijn specifiek voor het gebruik op een bepaald
+besturingssysteem.
+
+Scripttaal:
+Vim heeft een ingebouwde scripttaal voor eenvoudige uitbreidingen.
+
+Offset bij zoeken:
+In Vim kun je een offset opgeven bij zoekopdrachten, zodat de cursor
+*na* de gevonden tekst komt te staan.
+
+Sessies terugroepen:
+Vim bewaart informatie over "edit-sessies" in een bestand ("viminfo")
+die dan weer gebruikt kan worden in een volgende sessie, bv. de lijst
+van buffers, bladwijzers in bestanden, registers, commando's en
+zoekopdrachten.
+
+Tab-expansie:
+Vim kan TAB-karakters in een tekst vervangen door spaties (expandtab,
+:retab);
+
+Tag-systeem:
+Met behulp van Vim kun je tekst in bestanden vinden door een index van
+"tags" te gebruiken, samen met een groot aantal "tag stack"-commando's.
+
+Tekstobjecten:
+Vim kent meer tekstobjecten (alinea's, zinnen. woorden en WORDS -- alle
+met of zonder omringend wit) en laat je zelf de definitie van deze
+objecten aanpassen.
+
+Syntaxkleuring:
+Vim laat tekst in kleur zien -- overeenkomstig de (programmeer-)taal. Je
+kunt de "taal" ("syntax") van de bestanden zelf definiëren.
+
+Vim heeft standaard meer dan 200 syntax-bestanden om tekst te kleuren in
+veelgebruikte programmeertalen (Ada, C, C++, Eiffel, Fortran, Haskell,
+Java, Lisp, Modula, Pascal, Prolog, Python, Scheme, Smalltalk, SQL,
+Verilog, VisualBasic), wiskundige programma's (Maple, Matlab,
+Mathematica, SAS), tekst met opmaak (DocBook, HTML, LaTeX, PostScript,
+SGML-LinuxDoc, TeX, WML, XML), programma-output (diff, man),
+setup-bestanden van programma's (4DOS, Apache, autoconfig, BibTeX, CSS,
+CVS, elm, IDL, LILO, pine, procmail, samba, slrn), shell scripts
+(shells: sh, bash, csh, ksh, zsh), scripttalen  (awk, Perl, sed, yacc)
+systeembestanden (printcap, .Xdefaults) en natuurlijk Vim en de
+helpteksten.
+
+Speciale code:
+Vim heeft de mogelijkheid tot integratie met Perl, Tcl en Python. Vim
+kan als OLE automation server werken onder Windows. Vim kan ook
+geïnstalleerd worden met code voor X-windows, met configureerbare menu's
+en ondersteuning voor de muis.
+En meer. Veel meer!
+
+De weblocatie van Vim (Engelstalig):
+  http://www.vim.org/
+
+Voor een uitgebreidere beschrijving van de features van Vim, zie
+  http://www.vim.org/about.php (Engelstalig)
+
+Geschreven door:    Sven Guckes guckes@vim.org
+Laatste update:     Tue Sep 26 12:00:00 MET DST 2000
+Vertaling:          Dion Nicolaas dion@erebus.demon.nl
+Laatste update:     Vrij 6 Apr 20:00:00 MET DST 2001

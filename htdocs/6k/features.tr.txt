@@ -1,0 +1,165 @@
+			"Vim nedir?"
+		Alti kilobytelik bir aciklama
+
+Vim ("Vi Gelistirilmis") bir vi "kopyasidir", yani metin editoru vi
+benzeri bir programdir.
+
+Vim metin modundaki her terminalde calisir, ayrica menu ve fare icin
+destegi olan bir grafik kullanici arayuzune sahiptir.
+
+Varlik:
+Vim bir cok degisik platform icin varlik gosterir ve vi'da bulunmayan
+bir cok ozellik icerir. (bkz. http://www.vim.org/viusers.php). Vim
+hemen hemen tum vi komutlari ile uyumludur - vi hatalari haric ;)
+
+Isletim Sistemleri:
+Vim bir cok isletim sistemi uzerinde calismaktadir:AmigaOS, Atari MiNT,
+BeOS, DOS, MacOS, NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS, WIn16 + Win32
+(Windows95/98/00/NT) - ve ozellikle FreeBSD ve Linux
+
+Telif Hakki:
+Vim'in telif hakki, kodun bas yazari ve bakimcisi Bram Moolenar'in
+<bram@vim.org> elinde  bulunmkatadir. Vim "yardim-ware" tipinde bir
+programdir ve kullanicilarinin Uganda'daki yetimler yararina bagista
+bulunmalari tavsiye olunur.
+
+Kaynak:
+Vim'in kod kaynagi Acik Kaynak formunda olup, herkes gelistirmeye
+yardim icin davetlidir.
+
+=== Ozellikler
+
+Yeni basliyanlarin Editoru - Kullanisli
+Vim, genis online yardimi, "undo(geri cevir)" ve "redo(tekrar yap)"
+komutlari (hatalar umrunuzda olmasin - sadece undo+redo'yu kullanmaniz
+yeterli!), fare, degistirilebilir ikon ve menu destegi (GUI) sayesinde
+yeni baslayan kullanicilara Vi'dan cok daha kolay gelicektir.
+
+Karakter Kodlari ve Terminaller:
+Vim iso-latin1 karakter setini ve termcap'i desteklemektedir. (Orjinal
+Vim'in bununla ilgili sorunlari var.)
+
+Karakterler ve Yabanci Diller:
+Vim sagdan sola yazma (ornek: Arapca, Farsca ve Ibranice) ve coklu byte
+ozelligi tasiyan metinleri, yani grafiksel karakterleri birden fazla
+byte ile temsil edilen Cince, Japonca, Korece benzeri dilleri
+desteklemektedir. (Teknik olarak konusacak olursak VIM UTF-s ve Unicode
+Metinleri desteklemektedir.)
+
+Metin Formatlama ve Gorsel Mod:
+Vim ile metine mudahale etmeden, mesela kopyalamadan, silmeden,
+degistirmeden, saga ve sola kaydirmadan, buyuk-kucuk  harf degisimden
+veya ,ice alinmis metinlerde dahil olmak uzere, formati degistirmeden once
+metni gorsel olarak secebilirsiniz. Ayrica Vim dikdortgensel metin bloklari
+secimi ve bunlar uzerinde islemlere olanak vermektedir.
+
+Komut Tamamlama:
+Vim girdiyi - komutlar, dosya isimleri ve kelimeleri- tamamlayan
+komutlara sahip.
+
+Otomatik Komutlar:
+Vim otomatik calistirma icin kullanilan "otokomutlara" da sahip.
+(mesela sikistirilmis dosyalarin otomatik olarak acilmasi)
+
+Digraf Girdi:
+Vim, iki karakteri kombine olarak kullanarak ozel karakter girilmesine
+ve yeni kombinasyonlar tanimlanmasina izin verir. Ornegin [c,]
+kombinasyonu ç harfinin basilmasini sagliyacaktir.
+
+Dosya formati tanima ve cevirme:
+Vim dosya tiplerini (DOS, Mac, Unix) otomatik olarak tanir ve bu
+dosyalari baska bir formatta kaydetmenize izin verir - Windows'ta artik
+unix2dos kullanmaya gerek yok.
+
+Gecmis Listesi:
+Vim , onceki komut ve aramalara erisim saglamak veya onlari degistirmek
+icin, girilen komutlarin ve yapilan aramalarin listesini "gecmis
+liste"sinde saklamaktadir.
+
+Makro kayitlama:
+Vim tekrarlanan isleri yeniden oynatabilmek icin yazdiklarinizi
+kaydetmeye izin verir.
+
+Bellek Limitleri:
+Vim satir uzunlugu ve tampon bolge hacmi acisindan orjinal Vi'a oranla
+cok daha esnektir.
+
+Birden cok tampon bolge ve bolunmus ekran:
+Vim birden cok tampon bolgenin ayni anda degistirlmesine olanak verir
+ve vim penceresi (hem yatay hem dikey olmak uzere) altpencerelere
+bolunebilir, boylece birden cok dosya veya bir dosyanin degisik
+parcalari ayni anda gorulebilir.
+
+Komutlar icin sayisal on ekler:
+Vim, Vi'dan daha cok komut icin saysisal on ek destegi saglamaktadir.
+
+Yurutme zamani Dosyalari (Yardim ve Sozdizim Dosyalari):
+[Programin calisma esnasinda kullanilan ek dosyalar -  bunlara derlenicek ve 
+baglanicak kod dahil degildir]
+Vim 5.7'nin beraberinde komutlar, secenekler ve duzenleme uzerine ipuclari 
+hakkinda 70 adet yardim dosyasi gelmektedir. (Vim-6.0x [010311]: 85 dosya, 
+2796K'lik yazi). Bazi dosyalar vim'in degisik isletim sistemleri ustunde 
+kullanimina mahsustur.
+
+Betikleme:
+Vim kolay genisletme amacli betikleme dili ile birlikte gelmektedir.
+
+Goreli Konum ile Arama:
+Vim arama komutlari icin "goreli konum" (ofset) olanagi saglar, boylece 
+imgeci yaziyi buldugunuz yerin sonrasina koyabilirsiniz.
+
+Oturum kurtarma:
+Vim duzenleme oturumunuzu bir dosyaya (viminfo) kaydetme imkani saglar, 
+boylece bir sonraki oturumda tampon listesine, dosya imlerine, yazmaclara 
+(registers), komut ve arama gecmisine kolay ulasim saglar.
+
+Sekme genisletme:
+Vim sekmelerin, ara bosluklari olan metinlerde genisletilmesine olanak 
+saglar (expandtab, :retab)
+
+Imleme (tag) Sistemi:
+Vim dosyalari icinde metin (yazi, isim, vb) arama, "tags" indeksi ve imleme 
+yigini komutlari sayesinde cok daha kolaylasmistir.
+
+Metin Objeleri:
+Vim'in paragraf, cumle ve kelime (bosluklarla cevrilmis yada cevrilmemis) 
+gibi metin objeleri hakkinda daha cok bilgisi vardir ve bu objelerin 
+tanimini degistirmeye imkan saglar.
+
+Bicim Renklendirme:
+Vim metni yazildigi programlama diline bagimli olarak metni renklendirir. 
+Eger isterseniz doyalarinizin programlama dillerini kendinize gore 
+degistirebilrisiniz.
+
+Vim C, programlama dilleri (Ada, C, C++, , Fortran,
+Haskell, Java, Lisp, Modula, Pascal, Prolog, Python,
+Scheme, Smalltalk, SQL, Verilog, VisualBasic), matematik programlari (Maple, 
+Matlab, Mathematica, SAS),  bicimleme metinleri (markup) (DocBook,HTML, 
+LaTeX, PostScript, SGML-LinuxDoc, TeX, WML, XML), kurulum programlarinin 
+dosyalari (4DOS, Apache,
+autoconfig, BibTeX, CSS, CVS, elm, IDL, LILO, pine, procmail, samba, slrn), 
+kabuk komutlari ve kurumlari, (shells: sh, bash, csh, ksh, zsh), betikleme 
+dilleri (awk, Perl, sed, yacc), sistem dosyalari ve elbette vim ile vim'in 
+yardimci dosyalari icin 200'un uzerinde renklendirme sozdizimi dosyasi ile 
+birlikte gelmektedir.
+
+Ozel Kod:
+Vim Perl, Tcl ve Python ile entegrasyon secenegine sahiptir. Vim, Windows 
+altinda OLE otomasyon sunucusu olarak calisabilir. Vim ayrica X-windows 
+destegi ile yuklenebilir. Bu islem fare icin destek ve ayarlanabilir menu 
+olanagi saglar.
+Ve daha nicesi!
+
+=== Baglantilar:
+WWW'de vim anasayfasi: http://www.vim.org
+
+Daha detayli aciklama icin vim'in ozellikleri sayfasini ziyaret edin. 
+http://www.vim.org/about.php
+
+=== Yazan ve Ceviren:
+Yazan: Sven Guckes guckes@vim.org
+Son Guncelleme: Mon Mar 12 07:00:00 MET 2001
+
+Ceviren: Kutlay Topatan kutlay@hotmail.com
+Son Guncelleme :6 Haziran 2001 Pazartesi
+

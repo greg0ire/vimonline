@@ -1,0 +1,106 @@
+/* -*- css -*-
+ * FILE: "/home/joze/pub/vim/htdocs/css/vimcvs.css"
+ * LAST MODIFICATION: "Mon, 02 Okt 2000 16:20:11 +0200 (joze)"
+ * (C) 1999 - 2000 by Johannes Zellner, <johannes@zellner.org>
+ * $Id: vimcvs.css,v 1.1 2003/02/09 18:57:26 scrott Exp $
+ */
+
+
+body {
+    font-family:  arial, helvetica, sans-serif;
+    margin: 2% 10% 0% 10%;
+    padding: 0pt;
+    border-width: 0pt;
+    background-color: white;
+}
+
+body.banner {
+    margin: 0pt;
+    padding: 0pt;
+    border-width: 0pt;
+    background-color: red;
+}
+
+/*
+H1 {
+    font: normal normal bold medium;
+    width: 100%;
+    font-size: 140%;
+}
+*/
+
+table {
+    border-style: none;
+}
+
+td.desc {
+    background-color: #ffcccc;
+}
+
+td.val {
+    background-color: #ccccff;
+}
+
+blockquote.samp {
+    display: block;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+h1, h2, h3, h4, h5 {
+    color: darkblue;
+}
+
+ADDRESS {
+    display: inline;
+    font-color: magenta;
+    font-size: 60%;
+    font-family:  arial, helvetica, sans-serif;
+}
+
+span.example {
+    color: blue;
+}
+
+span.description {
+    color: magenta;
+}
+
+/*
+PRE,
+BLOCKQUOTE {
+    */
+pre {
+
+    white-space: pre;
+    font-family:  monospace;
+    border: none;
+    margin: 0;
+    padding: 10pt;
+    width: 80%;
+
+    text-align: left;
+    background-color: #eeeeee;
+    text-indent: 0pt;
+}
+
+table.links {
+    margin-top: 20px;
+    border-width: 1pt;
+    border-style: solid;
+    padding: 2px 0 2px 0;
+}
+
+TR.links {
+    background-color: #ffcccc;
+}
+
+TD.links {
+    text-align: center;
+}
+
+div.center {
+    text-align: center;
+}
+
+div.text {}

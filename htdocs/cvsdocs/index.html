@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!--
+FILE: "/home/joze/pub/vim/htdocs/cvsdocs/index.html"
+(C) 1999 - 2001 by Johannes Zellner, <johannes@zellner.org>
+$ Id: $
+-->
+
+<html lang="en">
+  <head>
+    <title>vim CVS Repository</title>
+    <link rev="Made" href="mailto:johannes@zellner.org">
+    <!-- <link rel="Start" href="./"> -->
+    <meta name="author" content=
+    "Johannes Zellner, &lt;johannes@zellner.org&gt;">
+    <meta name="description" content="vim CVS Repository">
+    <meta name="keywords" content="vim, source, CVS, cvs, repository">
+    <!-- <meta http-equiv="Content-Script-Type" content="text/javascript"> -->
+    <link rel="StyleSheet" href="/css/vimcvs.css" type="text/css">
+  </head>
+
+  <body lang="en">
+
+    <div><img src="vimlogo06.png" alt=vimlogo></div>
+
+    <h1>Welcome to vim's CVS repository</h1>
+
+    <div class=text>
+
+      Finally
+      <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/vim/vim/">
+        vim's CVS repository to</a> was moved to
+      <a href="http://sourceforge.net/">sourceforge</a> in the hope that it
+      will be served reliable there.  For more information about the
+      services which are provided together with this site you can
+      start at the <a href="http://sourceforge.net/projects/vim/">
+        project's main page</a>. Note that the mailing lists
+      <a href="http://www.egroups.com/list/vim/">vim@vim.org</a> and
+      <a href="http://www.egroups.com/list/vimdev/">vim-dev@vim.org</a> are
+      mirrored at <a href="http://www.egroups.com/">egroups</a> so we
+      don't use the mailing lists which are provided by sourceforge.
+
+      <p>
+      The CVS repository reflects the latest changes to vim. It is
+      updated using the patches from <a href= 
+        "ftp://ftp.vim.org/pub/vim/patches/">
+        ftp://ftp.vim.org/pub/vim/patches/</a>. Note that that you're
+      looking at a developers release and the usual warnings apply. If
+      you're looking for a stable release you should go to <a href= 
+        "http://www.vim.org/">www.vim.org</a>.</p>
+
+      <p>
+      A summary about how to access the vim source code from anonymous CVS
+      including <a href=#modules>module</a> and <a href=#branches>branch</a>
+      names can be found <a href=#anonymous>below</a>.
+      A good overview of recent patches can be obtained by viewing the change log of
+      <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/vim/vim/src/version.c">
+        src/version.c</a>.</p>
+
+    </div>
+
+    <h1 id = 'anonymous'>Anonymous access to Vim's CVS repository</h1>
+
+    <div class=text>
+      This document gives a brief overview of how to access the vim code using
+      anonymous (readonly) CVS using the CVS pserver method.
+    </div>
+
+    <h3>If you're already familiar with CVS</h3>
+
+    <div class=text>
+      Here are the parameters you need to know:
+    </div>
+
+    <div class=center>
+      <table summary = 'parameters of the anonymous cvs access'>
+        <tr><td class=desc>method     </td><td class=val>pserver                  </td></tr>
+        <tr><td class=desc>repository </td><td class=val>cvs.vim.org:/cvsroot/vim </td></tr>
+        <tr><td class=desc>login      </td><td class=val>anonymous                </td></tr>
+        <tr><td class=desc>password   </td><td class=val>(none)                   </td></tr>
+      </table>
+    </div>
+
+
+    <h3>If you're a CVS newbie</h3>
+
+    <div class=text>
+      First you have to log in:
+    </div>
+
+    <blockquote class=samp><div class=text>
+        cvs -d:pserver:anonymous@cvs.vim.org:/cvsroot/vim login 
+    </div></blockquote>
+
+    <div class=text>
+      When prompted for a password for anonymous, simply press the Enter key. 
+      To check out the <em>MAIN</em> development branch (MAIN trunk) use the
+      cvs command <em>checkout</em> or it's abbreviation <em>co</em>:
+    </div>
+
+    <blockquote class=samp><div class=text>
+        cvs -z3 -d:pserver:anonymous@cvs.vim.org:/cvsroot/vim co vim
+    </div></blockquote>
+
+    <div class=text>
+      The -z3 makes the CVS server compressing the files before transferring them
+      with a gzip level 3. The files are automatically unzipped by your CVS client.
+      <em>Please use always compressed transfer to reduce netload</em>. I recommend
+      to create a file ~/.cvsrc which these lines:
+    </div>
+
+    <blockquote class=samp><div class=text>
+        cvs -z3<br>
+        update -P -d
+    </div></blockquote>
+
+    <div class=text>
+      The line <em>update -P -d</em> makes CVS purging empty directories
+      (<em>-P</em>) and checking out newly added directories on a later
+      update.
+
+      Once you've checked out the code you can easily update it from time to time.
+      Go to the newly created directory and type
+    </div>
+
+    <blockquote class=samp><div class=text>
+        cvs -z3 update
+    </div></blockquote>
+
+    <div class=text>
+      All information about the repository, login, module and branch is stored by CVS in the
+      subdirectories CVS, so that you don't have to care about this any more.  The password
+      (in this case it's empty) is stored in ~/.cvspass.  You can move the checked out
+      source around, you can even move it to another machine without loosing the ability to
+      do a <em>CVS update</em>.
+    </div>
+
+    <h3 id = 'modules'>Modules</h3>
+
+    <div class=text>
+      To check out a specific module you must use
+    </div>
+
+    <blockquote class=samp><div class=text>
+        cvs -d:pserver:anonymous@cvs.vim.org:/cvsroot/vim co &lt;module name&gt;
+    </div></blockquote>
+
+    <div class=text>
+      Currently there's only the vim module
+    </div>
+
+    <div class=center>
+      <table summary = "modules in vim's cvs repository">
+        <tr><td class=desc>vim        </td><td class=val>src, rt, extra, lang</td></tr>
+      </table>
+    </div>
+
+    <h3 id = 'branches'>Branches</h3>
+
+    <div class=text>
+      The MAIN trunk always contains the latest development version.
+      To check out a different branch you must specify the name of the
+      branch with the -r switch:
+    </div>
+
+    <blockquote class=samp><div class=text>
+        cvs -d:pserver:anonymous@cvs.vim.org:/cvsroot/vim co -r &lt;branch&gt; vim
+    </div></blockquote>
+
+    <div class=text>
+      here's a summary of branches for the module vim
+    </div>
+
+    <div class=center>
+      <table summary = "branches for the module vim">
+        <tr><td class=desc>MAIN         </td><td class=val>latest development version. This is what you get if you omit the -r switch.</td></tr>
+        <tr><td class=desc>vim57002     </td><td class=val>vim-5.7 and patches for this version.</td></tr>
+        <tr><td class=desc>vim-5-8      </td><td class=val>vim-5.8 and patches for this version. vim-5.8 is considered a most stable version of vim.</td></tr>
+      </table>
+    </div>
+
+
+    <h1>Credits</h1>
+
+    <div class=text>
+      Thanks to
+    </div>
+    <ul>
+      <li>
+      <a href="mailto:wichert@cistron.nl">Wichert Akkerman</a>
+      for hosting cvs.vim.org from December 1999 - July 2000.
+      </li>
+      <li>
+      <a href="http://sourceforge.net/">sourceforge</a>
+      for providing this service and to the sourceforge
+      team for help during setup.
+      </li>
+    </ul>
+
+    <h1> CVS related pages</h1>
+
+    <ul>
+      <li><a href="http://www.cvshome.org/">cvshome</a></li>
+      <li>Pascal Molli's <a href= "http://www.loria.fr/~molli/cvs-index.html">site</a></li>
+      <li><a href="http://www.wincvs.org/">WinCVS</a> - Windows and MacOs clients</li>
+    </ul>
+
+    <table border=1 class="links" width="80%" summary = "useful links">
+      <tr class = links><td class = "links">
+          [ <a href = "http://www.vim.org/">www.vim.org</a> ]
+          [ <a href = "ftp://ftp.vim.org/pub/vim/">ftp.vim.org</a> ]
+          [ <a href = "http://sourceforge.net/projects/vim/">sourceforge.net/projects/vim</a> ]
+          [ <a href = "http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/vim/vim/">browse the CVS repository</a> ]
+          [ <a href = "http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/vim/vim/src/version.c">src/version.c</a> ]
+      </td></tr>
+    </table>
+
+    <address>
+      LAST MODIFICATION: "Mon, 06 Jun 2001 (joze)"
+      <a href= "mailto:johannes@zellner.org"> johannes@zellner.org</a>
+    </address>
+  </body>
+</html>
+
+

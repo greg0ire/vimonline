@@ -1,0 +1,159 @@
+                 "Èo je to VIM ?"
+       Odpoveï v ¹iestich kilobajtoch.
+
+Vim ("Vi IMproved" - vylep¹ený Vi) je program podobný textovému editoru "vi".
+
+Vim pracuje v textovom re¾ime na ka¾dom terminále, ale má tie¾ grafické 
+u¾ivateµské rozhranie s menu a s podporou my¹i.
+
+Dostupnos»:
+Vim sa dá pou¾íva» na mnohých platformách a v porovnaní s editorom Vi má
+veµa nových vlastností (pozri stránku http://www.vim.org/viusers.php). 
+Vim je spätne kompatibilný s Vi takmer vo v¹etkých príkazoch - samozrejme okrem
+chýb Vi-èka. :-)
+
+Operaèné systémy:
+Vim be¾í na rozlièných systémoch: AmigaOS, Atari MiNT, BeOS, DOS, MacOS,
+NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS, Win16 + Win32 (Windows95/98/00/NT)
+a hlavne FreeBSD a Linux :-)
+
+Autorské práva:
+Dr¾iteµom autorských práv je hlavný autor a správca 
+Bram Moolenar <bram@vim.org>. Vim mo¾no oznaèi» ako "charity-ware", lebo Vás 
+nabáda k príspevku na pomoc sirotám v Ugande (pozri príkaz ":help uganda").
+
+Zdrojový kód:  
+Vim je Open Source a ka¾dý, kto chce prispie» k jeho vylep¹eniu, je vítaný!
+
+=== Vlastnosti
+
+Editor aj pre zaèiatoèníkov
+Vim je ïaleko µah¹í pre zaèiatoèníka ne¾ Vi, preto¾e má rozsiahlu online
+pomoc, "undo" a "redo" príkazy (nevadí ak ste sa pri editácii pomýlili, staèí
+pou¾i» undo+redo), podporuje my¹ a jeho ikony a menu su konfigurovateµné.
+
+Znakové sady a terminály:
+Vim podporuje znakovú sadu ISO-Latin-1 a termcap. (Obyèajný Vi má s týmto
+problémy).
+
+Podpora národných jazykov
+Vim podporuje editovanie z prava do µava (napr. Arab¹tina, jazyk Farsi,
+Hebrejèina) a tzv. multi-byte texty, teda jazyky, ktorých znaky sú 
+reprezentované viac ne¾ jedným bytom (Èín¹tina, Japonèina, Kórejèina).
+Povedané technicky, Vim podporuje texty v UTF-8 a Unicode.
+
+Formátovanie textu a Vizuálny mód:
+Vo Vim mô¾ete vyznaèi» text "vizuálne" (so zvýraznením) predtým ne¾ budete
+s touto èas»ou textu pracova», napr. kopírova», maza», nahradzova», posúva»
+do µava alebo do prava, prepína» medzi veµkými a malými písmenami alebo
+formátova» vyznaèený text so zachovaním predchádzajúceho odsadenia. Vim tie¾
+dovoluje vyznaèi» a pracova» s µubovolným obdå¾nikovým blokom.
+
+Dopåòanie príkazov:
+Vim má príkazy, ktoré doplnia to èo pí¹ete - èi u¾ názvy súborov, slová alebo
+samotné príkazy.
+
+Automatické príkazy:
+Vo Vim mô¾ete automatizova» najrozliènej¹ie úlohy, napr. rozbalenie 
+komprimovanych súborov.
+
+Zvlá¹tne hlásky
+Vim dovoµuje zadáva» ¹peciálne znaky kombináciou dvoch znakov (napr. 
+kombináciou `"' a znaku `a' vlo¾í do textu znak `ä'). Takéto kombinácie
+si mô¾ete aj sami zadefinova».
+
+Rozpoznávanie súborov a konverzia
+Vim sám rozpozná typ súboru (DOS, Mac, Unix) a zároveò Vám umo¾ní ulo¾i»
+súbor v µubovolnom z týchto formátov - u¾ nikdy viac nebudete potrebova» 
+unix2dos vo Windowsoch.
+
+História:
+Vim uchováva príkazy, ktoré ste pou¾ili, v "histórii" tak¾e je mo¾né
+znovu vyvola» predchádzajúce príkazy a editova» ich. To isté platí pre
+vyhµadávania v texte.
+
+Makrá:
+Vim dovoµuje "ulo¾i»" Va¹u editáciu pre prípad opätovného pou¾itia.
+ 
+Pamä»ové obmedzenia:
+Vim má omnoho väè¹iu kapacitu pre då¾ku riadku a veµkosti bufferov ne¾
+obyèajný Vi.
+
+Viacero okien
+Vim dovoµuje editova» viaceré texty naraz a mô¾ete rozdeli» hlavné okno 
+na viacero men¹ích okien (vertikálne aj horizontálne), tak¾e vidíte naraz 
+mnoho súborov alebo èasti súborov.
+
+Èíselné predpony príkazov
+Vim dovoµuje pou¾íva» èíselné predpony pri viacerých príkazoch ne¾ Vi (napr.
+pre "put"). 
+
+Doplnkové súbory (súbory so syntaxov a nápovedou)
+(Tieto súbory sa pou¾ívajú poèas behu programu - neobsahujú v¹ak kód, ktorý
+by bolo potrebné kompilova» a linkova»)
+Vim-5.7 obsahuje 70 help súborov (okolo 2080 K textu) s pomocou k príkazom,
+voµbám, nápovedy ku konfigurácii a editácii.
+(Vim-6.0x: 85 help súborov, cca 2796K textu). Niektoré súbory sú ¹pecifické
+pre ka¾dý operaèný systém.
+
+Skripty:
+Zabudovaný skriptovací jazyk umo¾òuje jednoduché roz¹irovanie Vim.
+
+Odsadenie pri vyhµadávaní
+Vim dovoµuje definova» odsadenie pre vyhµadávacie príkazy, èím dosiahnete, ¾e
+kurzor sa umiestni *za* nájdený text.
+
+Obnovenie sedenia:
+Vim dovoµuje ulo¾i» okam¾itý stav sedenia do súboru ("viminfo") a neskôr obnovi»
+sedenie v plnej miere, vèetne napr. znaèiek v súboroch, registrov, histórie
+vyhµadávania a podobne.
+
+Expanzia tabulátora
+Vim vie expandova» tabulátor v texte na medzery (expandtab, :retab).
+
+Systém tagov
+Tag je identifikátor, ktorým mo¾no oznaèi» urèitý objekt a tak skoèi» kurzorom
+na dané miesto v texte, napr. v zdrojovom texte jazyka C mo¾no meno ka¾dej
+funkcie pou¾i» ako tag. Pre prácu s tag-mi je k dispozícii mnoho príkazov.
+
+Textové objekty
+Vim rozli¹uje mnoho textových objektov (odseky, vety, slová a SLOVÁ - v¹etko
+podµa potreby s alebo bez medzery). Definícia takýchto objektov sa dá meni».
+
+Farebné zvýraznenie syntaxe
+Vim zobrazuje text farebne v súlade s tým, èo práve editujete, napr. zdrojový
+kód jazyka C, shellovský skript a pod. Samozrejme je mo¾né definova» si vlastné
+farebné zvýrazòovanie syntaxe. 
+
+Distribúcia Vim-u obsahuje viac ako 200 súborov s predefinovaním zvýrazòovaním
+syntaxe pre be¾né programovacie jazyky (Ada, C, C++, Eiffel, Fortran, Haskell,
+Java, Lisp, Modula, Pascal, Prolog, Python, Scheme, Smalltalk, SQL, Verilog,
+VisualBAsic), matematické programy (Maple, Matlab, Mathematica, SAS), 
+znaèkovacie jazyky (DocBook, HTML, LaTeX, PostScript, SGML-LinuxDoc, TeX, WML,
+XML), výstupy z programov (diff, man), konfiguraèné súbory programov (4DOS,
+Apache, autoconfig, BibTeX, CSS, CVS, elm, IDL, LILO, pine, procmail, samba,
+slrn), shellovské skripty (sh, bash, csh, ksh, zsh), skriptovacie jazyky 
+(awk, Perl, sed, yacc), systémové súbory (printcap, .Xdefaults) a samozrejme
+pre Vim a jeho súbory s nápovedou.
+
+©peciálne mo¾nosti:
+Vim je mo¾né integrova» s Perl-om, Tcl, Python-om. Vim mô¾e pracova» ako
+OLE automation server pod Windowsami. 
+
+A doká¾e e¹te oveµa viac ! 
+
+=== Odkazy
+
+Domovská stránka Vim-u
+ http://www.vim.org
+ 
+Rozsiahlej¹í popis vlastností Vim-u je na stránke
+ http://www.vim.org/about.php
+ 
+=== Autor a prekladateµ
+
+Originál napísal: Sven Guckes guckes@vim.org
+Posledná zmena  : Mon Mar 12 07:00:00 MET 2001
+
+Preklad         : Ondrej Gál ondrej_gal@yahoo.com
+Posledná zmena  : Pia Aug 24 17:00:00 CEST 2001

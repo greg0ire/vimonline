@@ -1,0 +1,154 @@
+                "O que é Vim?"
+        Uma explicação em seis kilobytes.
+
+Vim ("Vi IMproved") é um "clone do vi", isto é,
+um programa similar ao editor de texto "vi".
+
+O Vim funciona em modo texto em qualquer terminal,
+mas também tem uma interface gráfica com o usuário,
+isto é, menus e suporte para o mouse.
+
+Disponibilidade:
+O Vim está disponível para muitas plataformas e tem muitas características
+adicionais comparado ao Vi.  (veja http://www.vim.org/viusers.php)
+Vim é compatível com quase todos os comandos do Vi - exceto com bugs do Vi. :-)
+
+Sistemas Operacionais:
+O Vim está disponível para muitos sistemas: AmigaOS, Atari MiNT, BeOS, DOS,
+MacOS, NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS, Win16 + Win32
+(Windows95/98/00/NT) - e especialmente FreeBSD e Linux.  :-)
+
+Copyright (Direitos Autorais):
+O copyright está nas mãos do autor principal 
+e mantenedor, Bram Moolenaar <bram@vim.org>.
+O Vim é "charity-ware", isto é, você é incentivado a fazer
+uma doação para órfãos na Uganda (veja ":help uganda").
+
+Fonte:
+O Vim é OpenSource e todos são bem-vindos para ajudar a melhorá-lo!
+
+=== Características
+
+Editor do Principiante - Amigável para o usuário: 
+Vim é muito mais fácil para principiantes do que o Vi por causa da Ajuda Online
+extensiva, comandos "undo" e "redo" (não tem importância os erros - simplesmente
+use undo+redo!), suporte para o mouse, ícones e menus configuráveis (GUI).
+
+Códigos de caracteres e Terminais:
+O Vim tem suporte para o conjunto de caracteres iso-latin1 e para termcap. 
+(O Vi tem problemas com este.)
+
+Caracteres e Línguas:
+O Vim suporta edição da direita-para-esquerda (por exemplo com Árabe, Farsi, 
+Hebreu), e textos multi-byte, isto é, linguagens com caracteres gráficos
+representados por mais de um "byte", como o Chinês, Japonês, Coreano (Hangul),
+(Técnicamente falando, Vim suporta texto em UTF-8 e Unicode.)
+
+Formatando Texto e Modo Visual:
+Com Vim você pode selecionar texto "visualmente" (com destaque) antes que você
+"opere" nele, por exemplo copiar, apagar, substituir, mover para esquerda ou
+direita, mudar as letras ou formatar o texto preservando a indentação.
+O Vim permite também a seleção e operações em blocos de texto retangulares. 
+
+Comandos de Completação:
+O Vim tem comandos que completam sua entrada de dados - 
+seja com comandos, nomes de arquivos, e palavras.
+
+Comandos Automáticos:
+O Vim tem também "autocomandos" para a execução automática de comandos
+(por exemplo descompressão automática de arquivos comprimidos).
+
+Entrada de Caracteres Especiais (Digraphs):
+O Vim permite que você incorpore caracteres especiais por uma combinação 
+de dois caracteres (por exemplo a combinação de " e a produz um ä) -
+e permite também que você defina outras combinações.
+
+Detecção e conversão de Formatos de Arquivo:
+O Vim reconhece automaticamente os tipos de arquivos (DOS, Mac, Unix)
+e também deixa você salvá-lo em algum outro formato -
+não há mais necessidade para unix2dos em Windows!  
+
+História:
+O Vim tem uma "história" para comandos e buscas, assim você pode 
+rever comandos anteriores ou buscar padrão para editá-los.
+
+Gravando Macro:
+O Vim permite "gravar" sua edição para reusar em tarefas repetitivas.
+
+Limites de Memória:
+O Vim tem limites de memória muito mais elevados para comprimento de linha 
+e tamanho de buffer do que o Vi.
+
+Buffers Múltiplos e Tela Dividida:
+O Vim permite edição de buffers múltiplos e você pode dividir a 
+tela em muitas sub-janelas (horizontalmente e verticalmente),
+assim você pode ver muitos arquivos ou muitas partes de algums arquivos.
+
+Prefixo Numérico aos comandos:
+O Vim permite um prefixo numérico para mais 
+comandos do que com Vi (por exemplo para "put").
+
+Arquivos Runtime (Arquivos de Ajuda e Sintaxe):
+O Vim vem com 70 arquivos de ajuda em vários aspectos da edição;
+alguns textos são especificamente para uso em algum sistema operacional.
+
+Scripting:
+O Vim tem uma linguagem de script interna para extensão fácil.
+
+Deslocamento de Busca:
+O Vim permite deslocamentos para comandos de busca, assim você 
+coloca o cursor *após* o texto encontrado.
+
+Recuperação da Sessão:
+O Vim permite armazenar informação de uma sessão de edição em um arquivo
+("viminfo") que os permite usar com a próxima sessão de edição, por exemplo
+lista de buffer, marcas de arquivos, registros, comandos e história de buscas.  
+
+Expansão da Tabulação:
+Vim pode expandir as tabulações dentro do texto com espaços (expandtab, :retab).
+
+Sistema de Etiqueta (Tag):
+O Vim oferece para encontrar texto em arquivos usando um índice com "tags"
+junto com muitas pilhas de comandos.
+
+Objetos de Texto:
+Vim conhece mais objetos de texto (parágrafos, sentenças, palavras e PALAVRAS -
+todas com ou sem espaço em branco em volta) e permite configurar 
+a definição para estes objetos.
+
+Coloração da Sintaxe:  
+O Vim mostra texto em cor - de acordo com sua "linguagem (de programação)".  
+Você mesmo pode definir a ("sintaxe") "da linguagem" dos arquivos.
+
+O Vim vem com 200+ arquivos de sintaxe para a coloração de texto em 
+linguagens de programação comuns (Ada, C, C++, Eiffel, Fortran, 
+Haskell, Java, Lisp, Modula, Pascal, Prolog, Python, 
+Scheme, Smalltalk, SQL, Verilog, VisualBasic),
+programas matemáticos (Maple, Matlab, Mathematica, SAS), texto de marcação
+(DocBook, HTML, LaTeX, PostScript, SGML-LinuxDoc, TeX, WML, XML),
+saída de programa (diff, man), arquivos de configuração (4DOS, Apache, 
+autoconfig, BibTeX, CSS, CVS, elm, IDL, LILO, pine, procmail, samba, slrn), 
+shell scripts e configuração (shells: sh, bash, csh, ksh, zsh), 
+linguagens de script  (awk, Perl, sed, yacc) 
+arquivos de sistema (printcap, .Xdefaults) e 
+é claro para o Vim e seus textos de ajuda.
+
+Código Especial:
+O Vim tem integração opcional com Perl, Tcl e Python.  
+O Vim pode atuar como um servidor de automatização OLE sob o Windows.  
+O Vim pode também ser instalado com código para X-Windows, 
+adicionando menus configuráveis e suporte para o mouse.  
+E mais.  Muito mais!
+
+HomePage do Wim na WWW:
+  http://www.vim.org/
+
+Para uma descrição mais elaborada
+de características do Vim veja a página 
+  http://www.vim.org/about.php
+
+Escrito por:  Sven Guckes guckes@vim.org (Inglês)
+Última atualização: Tue Oct 03 20:00:00 MET DST 2000
+
+Traduzido em Português por:  Douglas Santos dsantos@inf.furb.br 
+Última atualização: Fri Jan 12 04:39:50 BRST 2001 

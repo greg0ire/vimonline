@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!--
+FILE: "/home/joze/pub/vim/htdocs/cvsdocs/anonymous-cvs.html"
+(C) 2000 by Johannes Zellner, <johannes@zellner.org>
+$Id: anonymous-cvs.html,v 1.1 2003/02/09 18:57:27 scrott Exp $
+-->
+<html>
+  <head>
+    <title>Anonymous access to Vim's CVS repository</title>
+    <link rev=Made href="mailto:johannes@zellner.org">
+    <meta name="author" content="Johannes Zellner, <johannes@zellner.org>">
+    <meta name="description" content="Anonymous access to Vim's CVS repository">
+    <meta name="keywords" content="Anonymous access to Vim's CVS repository">
+    <link rel="StyleSheet" href="/css/vimcvs.css" type="text/css">
+  </head>
+
+  <body>
+
+    <h1>Anonymous access to Vim's CVS repository</h1>
+
+    <div class=text>
+      This document gives a brief overview of how to access the vim code using
+      anonymous (readonly) CVS using the CVS pserver method.
+    </div>
+
+    <h3>If you're already familiar with CVS</h3>
+
+    <div class=text>
+      Here are the parameters you need to know:
+    </div>
+
+    <div class=center>
+      <table summary = 'parameters of the anonymous cvs access'>
+        <tr><td class=desc>method     </td><td class=val>pserver                  </td></tr>
+        <tr><td class=desc>repository </td><td class=val>cvs.vim.org:/cvsroot/vim </td></tr>
+        <tr><td class=desc>login      </td><td class=val>anonymous                </td></tr>
+        <tr><td class=desc>password   </td><td class=val>(none)                   </td></tr>
+      </table>
+    </div>
+
+
+    <h3>If you're a CVS newbie</h3>
+
+    <div class=text>
+      First you have to log in:
+    </div>
+
+    <blockquote class=samp><div class=text>
+        cvs -d:pserver:anonymous@cvs.vim.org:/cvsroot/vim login 
+    </div></blockquote>
+
+    <div class=text>
+      When prompted for a password for anonymous, simply press the Enter key. 
+      To check out the <em>MAIN</em> development branch (MAIN trunk) use the
+      cvs command <em>checkout</em> or it's abbreviation <em>co</em>:
+    </div>
+
+    <blockquote class=samp><div class=text>
+        cvs -z3 -d:pserver:anonymous@cvs.vim.org:/cvsroot/vim co vim
+    </div></blockquote>
+
+    <div class=text>
+      The -z3 makes the CVS server compressing the files before transferring them
+      with a gzip level 3. The files are automatically unzipped by your CVS client.
+      <em>Please use always compressed transfer to reduce netload</em>. I recommend
+      to create a file ~/.cvsrc which these lines:
+    </div>
+
+    <blockquote class=samp><div class=text>
+        cvs -z3<br>
+        update -P -d
+    </div></blockquote>
+
+    <div class=text>
+      The line <em>update -P -d</em> makes CVS purging empty directories
+      (<em>-P</em>) and checking out newly added directories on a later
+      update.
+
+      Once you've checked out the code you can easily update it from time to time.
+      Go to the newly created directory and type
+    </div>
+
+    <blockquote class=samp><div class=text>
+        cvs -z3 update
+    </div></blockquote>
+
+    <div class=text>
+      All information about the repository, login, module and branch is stored by CVS in the
+      subdirectories CVS, so that you don't have to care about this any more.  The password
+      (in this case it's empty) is stored in ~/.cvspass.  You can move the checked out
+      source around, you can even move it to another machine without loosing the ability to
+      do a <em>CVS update</em>.
+    </div>
+
+    <h3>Modules</h3>
+
+    <div class=text>
+      To check out a specific module you must use
+    </div>
+
+    <blockquote class=samp><div class=text>
+        cvs -d:pserver:anonymous@cvs.vim.org:/cvsroot/vim co &lt;module name&gt;
+    </div></blockquote>
+
+    <div class=text>
+      Currently there's only the vim module
+    </div>
+
+    <div class=center>
+      <table summary = "modules in vim's cvs repository">
+        <tr><td class=desc>vim        </td><td class=val>src, rt, extra, lang</td></tr>
+      </table>
+    </div>
+
+    <h3>Branches</h3>
+
+    <div class=text>
+      The MAIN trunk always contains the latest development version.
+      To check out a different branch you must specify the name of the
+      branch with the -r switch:
+    </div>
+
+    <blockquote class=samp><div class=text>
+        cvs -d:pserver:anonymous@cvs.vim.org:/cvsroot/vim co -r &lt;branch&gt; vim
+    </div></blockquote>
+
+    <div class=text>
+      here's a summary of branches for the module vim
+    </div>
+
+    <div class=center>
+      <table summary = "branches for the module vim">
+        <tr><td class=desc>MAIN         </td><td class=val>latest development version. This is what you get if you omit the -r switch.</td></tr>
+        <tr><td class=desc>vim57002     </td><td class=val>vim-5.7 and patches for this version.</td></tr>
+        <tr><td class=desc>vim-5-8      </td><td class=val>vim-5.8 and patches for this version. vim-5.8 is considered a most stable version of vim.</td></tr>
+      </table>
+    </div>
+
+    <!-- DATE AND ADDRESS -->
+    <table border=1 class="links" width="80%" summary = "useful links">
+      <tr class = links><td class = "links">
+          [ <a href = "http://www.vim.org/">www.vim.org</a> ]
+          [ <a href = "ftp://ftp.vim.org/pub/vim/">ftp.vim.org</a> ]
+          [ <a href = "http://sourceforge.net/projects/vim/">sourceforge.net/projects/vim</a> ]
+          [ <a href = "http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/vim/vim/">browse the CVS repository</a> ]
+          [ <a href = "http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/vim/vim/src/version.c">src/version.c</a> ]
+      </td></tr>
+    </table>
+
+    <address>
+      LAST MODIFICATION: "Mon, 02 Okt 2000 19:17:56 +0200 (joze)"
+      <a href= "mailto:johannes@zellner.org"> johannes@zellner.org</a>
+    </address>
+  </body> 
+</html> 
+

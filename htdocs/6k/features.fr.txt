@@ -1,0 +1,157 @@
+                               Vim, c'est quoi ?
+                            Une description en 6 Ko
+
+Vim ("Vi IMproved", c'est-a-dire "Vi ameliore") est un clone de Vi,
+a savoir un programme semblable a l'editeur de texte "Vi".
+
+Vim fonctionne en mode texte sur tous les types de terminaux, mais il dispose
+aussi d'une interface graphique, avec menus deroulants et souris.
+
+Disponibilite
+Vim est disponible pour un grand nombre de plateformes et a des fonctionnalites
+supplementaires par rapport a Vi (voyez "http://www.vim.org/viusers.php"
+pour un resume des differences entre Vim et Vi).
+Vim est compatible avec presque toutes les commandes de Vi (excepte les
+bogues ;-).
+
+Systemes d'exploitation
+Vim tourne sur de nombreux systemes d'exploitation : AmigaOS, Atari MiNT, BeOS,
+DOS, MacOS, NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS, Win16 + Win 32
+(Windows 95/98/2k/NT) - et bien entendu FreeBSD et Linux. :-)
+
+Copyright
+Les droits de Vim appartiennent a son auteur principal Bram Moolenaar
+<bram@vim.org>.
+Vim est un "charity-ware" : vous etes encourages a faire une donation aux
+orphelins d'Ouganda (voyez : ":help uganda").
+
+Source
+Vim est OpenSource. Tout le monde est le bienvenu pour aider a son
+developpement !
+
+=== Caracteristiques
+
+Un editeur facile a prendre en main
+Pour les debutants, Vim est beaucoup plus facile a utiliser que Vi. Il offre en
+effet une aide en ligne complete, la possibilite d'annulations et de
+repetitions multiples (peu importe les erreurs, elles sont facilement
+corrigees), le support de la souris, des icones configurables et des menus
+(version GUI).
+
+Codes caracteres et terminaux
+Vim supporte le jeu de caracteres iso-latin1. Par consequent : aucun probleme
+pour les caracteres accentues.
+
+Flexibilite linguistique
+Vim permet de taper du texte de droite a gauche (pratique pour ecrire par
+exemple en Arabe, Farsi ou Hebreu).
+Vim supporte aussi les jeux de caracteres multibytes. Il est donc possible
+d'editer des textes dans des langues necessitant des interfaces graphiques, ou
+les caracteres sont representes par plus d'un byte comme le Chinois, le
+Japonais ou le Coreen (Hangul).  Techniquement, Vim supporte les textes en
+UTF-8 et Unicode.
+
+Formatage de texte et mode visuel
+Avec Vim, vous pouvez selectionner du texte de facon "visuelle" (mise en
+surbrillance) avant d'agir dessus c'est-a-dire copier, effacer, substituer,
+deplacer vers la gauche ou vers la droite, changer la casse, formater le texte
+y compris conserver les indentations. Vim permet egalement la selection et les
+operations sur des blocs de texte rectangulaires.
+
+Commandes de terminaison automatique
+Vim dispose de commandes qui permettent de terminer automatiquement vos
+saisies de noms de commandes, de noms de fichiers ou meme de mots.
+
+Commandes automatiques
+Vim offre aussi des commandes pour l'execution automatique d'instructions (par
+exemple compression/decompression automatique de fichiers).
+
+Saisie de digraphs
+Vim permet de saisir les caracteres high-bit par la combinaison de deux
+caracteres (par exemple "'" et "e" donnent é).
+
+Detection du format de fichier et conversions
+Vim reconnait automatiquement le type de fichier (DOS, Mac, Unix) et vous
+permet de les sauvegarder dans un format different. Plus besoin de unix2dos !
+
+Historique
+Vim conserve un historique des commandes et des recherches. Vous pouvez ainsi
+rappeler des commandes precedemment entrees ou des recherches precedemment
+effectuees pour les editer.
+
+Enregistreur de macros
+Vim offre la possibilite d'enregistrer votre saisie pour la restituer en cas de
+taches repetitives.
+
+Limites memoire
+Vim a des limitations de memoire superieures pour les longueurs de ligne et les
+tailles de tampons (buffers) que vanilla Vi.
+
+Tampons multiples et partage de l'ecran
+Vim permet l'edition de tampons multiples. De plus vous pouvez partager l'ecran
+en plusieurs sous-fenetres (horizontalement ou verticalement) de facon a voir
+simultanement plusieurs fichiers ou differentes parties d'un meme fichier.
+
+Prefixes numeriques aux commandes
+Vim offre la possibilite de prefixes numeriques sur davantage de commandes que
+vi (par exemple pour la commande "put").
+
+Fichiers "Runtime" (fichiers d'aide et fichiers syntaxe)
+Vim offre 70 fichiers d'aide presentant differents aspects de l'edition de
+texte, certains de ces fichiers sont specifiques a un systeme d'exploitation.
+
+Langage de script
+Vim dispose d'un langage de script integre permettant des extensions faciles.
+
+Recherches hors-champs
+Vim permet d'effectuer des recherches hors-champ. Vous pouvez donc placer le
+curseur *apres* le texte trouve.
+
+Recuperation de donnees
+Vim permet de stocker les informations sur une session d'edition dans un
+fichier ("viminfo") qui leur permet d'etre utilisees lors de la session
+suivante. Ces informations sont la liste des tampons, les signets, les
+registres et l'historique des commandes et des recherches.
+
+Reformatage des tabulations
+Vim peut remplacer automatiquement les tabulations par des espaces (expandtab,
+:retab).
+
+Systeme de liens
+Vim peut trouver du texte dans des fichiers en utilisant un systeme d'index et
+de liens. De nombreuses commandes permettent de gerer cela.
+
+Coloration syntaxique
+Vim affiche le texte en couleurs en fonction du langage de programmation. Il
+est possible de definir soi-meme les couleurs.
+Vim est livre avec plus de 200 fichiers syntaxe pour l'affichage en couleur des
+langages de programmation les plus courants (Ada, C, C++, Eiffel, Fortran,
+Haskell, Java, Lisp, Modula, Pascal, Prolog, Python, Scheme, Smalltalk, SQL,
+Verilog, VisualBasic), des programmes de maths (Maple, Matlab, Mathematica,
+SAS), des textes marques (DocBook, HTML, LaTeX, PostScript, SGML-LinuxDoc, TeX,
+WML, XML), des sorties de programmes (diff, man), des fichiers de configuration
+(4DOS, Apache, autoconfig, BibTeX, CSS, CVS, elm, IDL, LILO, pine, procmail,
+samba, slrn), des scripts et configurations shell (shells: sh, bash, csh,
+ksh, zsh), des langages de script (awk, Perl, sed, yacc), des fichiers systeme
+(printcap, .Xdefaults) et bien sur des fichiers d'aide et de configuration de
+Vim.
+
+Integration dans d'autres environnements
+Il est possible - de facon optionnelle - d'integrer Vim avec Perl, Tcl ou
+Python. Vim peut servir de serveur OLE sous Windows. Vim peut aussi etre
+installe avec le support X-Windows, ajoutant ainsi des menu configurable et la
+possibilite d'utiliser la souris.
+
+Tout ceci ne constitue qu'une petite partie des potentialites de Vim. Vim a
+plus a offrir. Beaucoup plus !
+
+Le site de Vim sur la Toile : http://www.vim.org/
+
+Pour un description plus approfondie de Vim (en anglais) :
+http://www/vim.org/about.php.
+
+Redige par  : Sven Guckes guckes@vim.org
+Traduit par : Lyderic Landry lydericlandry@yahoo.fr
+              (merci de me signaler les eventuelles erreurs ...)
+
+Derniere mise a jour : 22 septembre 2000

@@ -1,0 +1,166 @@
+                                 Ce este Vim?
+			     O descriere în 6 Ko
+
+Vim ("Vi IMproved", adicã "Vi ÎMbunãtãþit") este o clonã Vi, un program
+asemãnãtor editorului de text "Vi".
+
+Vim funcþioneazã în mod text pe orice tip de terminal, însã, deasemenea,
+dispune ºi de o interfaþã graficã, avînd meniuri ºi suport pentru mouse.
+
+Disponibilitate:
+Vim este disponibil pentru nenumãrate platforme ºi are multe caracteristici
+în plus, comparativ cu Vi. (vezi http://www.vim.org/viusers.php)
+În ceea ce priveste comenzile, intre Vim ºi Vi existã o mare compatibilitate
+(cu excepþia bug-urilor proprii Vi-ului ;-)
+
+Sisteme de operare:
+Vim este disponibil pentru aproape orice sistem: AmigaOS, Atari MiNT, BeOS, DOS,
+MacOS, NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS, Win16 + Win32
+(Windows95/98/00/NT) - ºi, în mod special, pentru FreeBSD ºi Linux. :-)
+
+Copyright:
+Copyright-ul aparþine principalului sãu autor, Braam Moolenaar <bram@vim.org>.
+Vim este un program de caritate ("charity-ware"), adicã vã îndeamnã sã faceþi
+donaþii orfanilor din Uganda (vezi ":help uganda").
+
+Sursa:
+Vim este OpenSource ºi oricine este binevenit sã ajute la îmbunãtãþirea lui!
+
+=== Caracteristici
+
+Editor pentru începãtori - destul de pietenos cu cel care-l foloseºte:
+Vim este mult mai uºor pentru începãtori decît Vi dacã este sã þinem cont de
+help-ul online, de comenzile "undo" ºi "redo" (comenzi prin care un text poate
+fi refãcut în caz cã este editat greºit), de posibilitatea utilizãrii
+mouse-ului, de icon-uri sau de existenþa unui meniu extrem de configurabil.
+
+Coduri de caractere ºi terminale:
+Vim are suport pentru setul de caractere iso-latin1 ºi pentru termcap.
+Problema diacriticelor este rezolvatã! Puteþi scrie texte în româneºte
+utilizînd fonturi din setul de caractere iso-latin2 în urma unei mapãri
+corespunzãtoate a tastaturii dv. (vezi :help mapping).
+
+Flexibilitate lingvisticã:
+Vim permite culegerea textului de la dreapta la stînga (destul de necesar
+pentru a scrie, spre exemplu, în arabã, persanã sau ebraicã) ºi chiar
+culegerea de text multi-octet, adicã text cu caractere grafice reprezentînd
+mai mult de un octet, cum sînt cele proprii limbilor chinezã, japonezã sau
+coreanã. Tehnic vorbind, Vim suportã text scris în UTF-8 ºi Unicode.
+
+Formatarea textului ºi modul vizual:
+Cu Vim puteþi selecþiona "vizual" o parte dintr-un text (marcat în mod diferit
+de restul textului) ºi sã executaþi diferite "operaþii" asupra acestuia,
+cum sînt cele de copiere, mutare, substituire, poziþionare la stînga sau la
+dreapta, capitalizarea literelor formatarea lui fãrã sã afectaþi indentarea.
+Aceleaºi operaþii le puteþi aplica unui bloc dreptunghiular de text.
+
+Comenzi de completare:
+Vim dispune de posibilitatea de a completa în mod automat numele comenzilor,
+directoarelor, fiºierelor ºi, încã posibilitatea de a completa în mod automat
+cuvintele sau sintagmele cheie din help-ul online.
+
+Comenzi automate:
+Vim oferã, deasemenea, posibilitatea de execuþie automatã a comenzilor (spre
+exemplu: compresia ºi decompresia automata a fiºierelor). 
+
+Introducerea caracterelor speciale (Digraphs):
+Vim vã permite sã introduceþi într-un text caractere speciale folosindu-vã de
+combinaþia a douã caractere (cum ar fi ~ ºi a care rezultã ã) ºi încã vã
+permite sã definiþi o altã combinaþie asemãnãtoare. 
+
+Detectarea ºi conversia formatului fiºierelor:
+Vim recunoaºte în mod automat tipul fiºierelor (DOS, Mac, Unix) ºi vã permite
+salvarea unui fiºier în formate diferite. Nu mai aveþi nevoie de programe de
+conversie gen unix2dos.
+
+Istoric:
+Vim reþine istoricul comenzilor ºi cãutãrilor. Puteþi sã reexecutaþi o comandã
+anterioarã ºi sã reapelaþi o cãutare.
+
+Crearea macrocomenzilor:
+Vim vã permite "înregistrarea" unei serii de acþiuni pentru a le putea executa
+din nou atunci cînd veþi avea de fãcut acelaºi lucru.
+
+Limite de memorie:
+Vim are o limitã de memorie mai mare, atît pentru lungimea unei linii, cît ºi
+pentru mãrimea unui tampon de memorie; --asta în comparaþie cu Vi.
+
+Tampoanele de memorie ºi împãrþirea ecranului.
+Vin acceptã o editare specialã bazata pe tampoane de memorie multiple. În
+plus, exitã posibilitatea împarþirii ecranului (pe orizontalã ºi verticalã) în
+nenumãrate ferestre; prin urmare, pot fi editate simultan mai multe fiºiere ºi
+diferite bucãti de text dintr-un fiºier.
+
+Prefix numeric pentru comenzi:
+Vim permite un prefix numeric pentru mult mai multe comenzi decît Vi (spre
+exemplu, pentru comanda "put").
+
+Fiºierele "Runtime" (fiºierele help ºi cele de sintaxã):
+Vim este distribuit împreunã cu 70 de fiºiere pentru help, acutualizate cu
+fiecare versiune a Vim-ului. Cîteva dintre acestea raspund cerinþelor de
+utilzare a Vim-ului pe diferite sisteme de operare.
+
+Limajul de scripting:
+Vim are un limbaj de scripting incorporat pentru a fi mai uºor extins.
+
+Facilitate pentru operaþiile de cãutare:
+Vim dispune de o facilitate extrem de folositoare în operaþile de cãutare: pur
+ºi simplu, puteþi cãuta în întreg textul cuvîntul aflat sub cursor, 
+utilizînd o singurã comandã.
+
+Recuperarea unei sesiuni de lucru:
+Vim permite salvarea informaþiilor unei sesiuni de lucru într-un
+fiºier ("viminfo') care care face posibilã folosirea acestor informaþii 
+într-o altã sesiune; sînt salvate lista tampoanelor de memorie, marcãrile
+dintr-un fiºier, registrele, istoricul comenzilor ºi cãutãrilor.
+
+Extensia tabulaturii:
+Vim permite expandarea tab-urilor dintr-un text folosind caractere spaþiu
+(expandtab, :retab).
+
+Sistemul de etichete (Tags):
+Vim vã permite sã gãsiþi un text într-un fiºier oarecare utilizînd un indice
+de etichete (tags); referitor la aceasta, Vim are multe alte comenzi prin 
+care se poate manipula un astfel de indice de etichete.
+
+Obiecte de tip text:
+Vim recunoaºte multe obiecte de tip text (paragrafe, propoziþii, cuvinte ºi
+CUVINTE --toate cu sau fãrã spaþiu alãturat) ºi permite configurarea
+definiþiei fiecãruia dintre aceste obiecte.
+
+Colororarea sintacticã:
+Vim permite redarea textului în diferite culori în funcþie de sintaxa
+"limbajului (de programare)" utilizat. Dv. înºivã puteþi defini "limbajul"
+("sintaxa") fiºierelor pe care le folosiþi.
+
+Vim este distribuit cu peste 200 de fiºiere pentru colorarea sintacticã a
+textului scris în diferite limbaje, cum ar fi limbaje le de programare comune
+(Ada, C, C++, Eiffel, Fortran, Haskell, Java, Lisp, Modula, Pascal, Prolog,
+Pyton, Scheme, Smalltalk, SQL, Verilog, VisualBasic), limbajele proprii unor
+programe de matematicã (Maple, Matlab, Mathematica, SAS), limbajele de marcare
+specificã a textului, (DocBook, HTML, LaTeX, PostScript, SGML-LinuxDoc, TeX,
+WML, XML), limbajele programelor de afiºare (diff, man), limbajele folosite în
+fiºierele de setare ale anumitor programe (4DOS, Apache, autoconfig, BibTeX,
+CSS, CVS, elm, IDL, LILO, pine, procmail, samba, slrn), limbajele scripturilor
+de shell ºi setup (shells: sh, bash, csh, ksh, zsh), limbajele de script (awk,
+Perl, sed, yacc), cele ale sintemelor de fiºiere (printcap, .Xdefaults).
+Existã, desigur, o sintaxã coloratã atît pentru fiºierele help care însoþesc
+Vim-ul, cît ºi pentru fiºierele sale de configurare.
+
+Cod special:
+Vim poate fi integrat în mod opþional cu Perl, Tcl ºi Python. Vim poate servi
+drept server OLE sub Windows. Deasemenea, vim poate fi instalat cu suport
+pentru X-Windows avînd meniuri configurabile ºi suport pentru mouse.
+ªi multe, multe alte facilitãþi!
+
+Pagina oficialã a Vim-ului este:
+     http://www.vim.org/
+
+Pentru o descriere mai detaliatã despre Vim, vezi:
+     http://www.vim.org/about.php
+
+Text scris de:  Sven Guckes guckes@vim.org (Englezã)
+Ultima actualizare: Tue Oct 03 20:00:00 MET DST 2000
+
+Text tradus în limba românã de: Nãstasie Nicolaie George george@cyberspace.ro
+Data traducerii: 01 Feb 2001 07:15:07 (EET) 

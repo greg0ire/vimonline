@@ -1,0 +1,185 @@
+                "Apakah Vim itu?"
+        Sebuah keterangan dalam enam kilobytes.
+
+Vim ("Vi IMproved") adalah sebuah "vi clone", yaitu 
+sebuah program yang mirip dengan editor teks "vi".
+
+Vim bekerja dalam mode teks pada semua terminal,
+tetapi juga memiliki antar muka grafis,
+contohnya menu dan dukungan terhadap mouse.
+
+Ketersediaan:
+Vim tersedia dalam platform yang banyak dan memiliki dukungan-dukungan
+tambahan yang lebih banyak dibandingkan dengan Vi. 
+(lihat http://www.vim.org/viusers.php)
+Vim memiliki hampir semua perintah-perintah Vi - kecuali Vi bugs. ;-)
+
+Sistem Operasi:
+Vim tersedia dalam sistem-sistem: AmigaOS, Atari MiNT, BeOS, DOS,
+MacOS, NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS, Win16 + Win32
+(Windows95/98/00/NT) - dan terutama FreeBSD dan Linux.  :-)
+
+Hak cipta:
+Hak cipta berada pada tangan penulis utama
+dan maintainer, Bram Moolenaar <bram@vim.org>.
+Vim bersifat "charity-ware", misalnya anda dapat memberikan donasi
+pada anak-anak yatim piatu di Uganda (lihat ":help uganda").
+
+Source:
+Vim bersifat OpenSource dan setiap orang dipersilakan untuk 
+membuatnya lebih baik!
+
+=== Dukungan
+
+Editor untuk Pemula - User Friendly:
+Vim lebih mudah digunakan untuk pemula dibandingkan dengan Vi karena
+Online Help yang luas, perintah-perintah "undo" dan redo" (jangan
+pedulikan kesalahan - lakukan saja undo+redo!), dukungan terhadap
+mouse dan ikon dan menu yang dapat dikonfigurasikan (GUI).
+
+Kode karakter dan Terminal:
+Vim memiliki dukungan terhadap set karakter iso-latin1 dan termcap.
+(Vi yang asli memiliki masalah terhadap hal ini.)
+
+Karakter dan Bahasa:
+Vim memiliki dukungan untuk penyuntingan kanan ke kiri (contohnya
+Bahasa Arab, Parsi dan Hebrew), dan teks multi-bytes, seperti bahasa
+dengan karakter grafis yang menggunakan lebih dari satu "byte",
+seperti huruf-huruf Cina, Jepang, Korea (Hangul), (Dalam bahasa
+teknis, Vim mendukung teks dalam UTF-8 dan Unicode.)
+
+Pemformatan Teks dan Mode Visual:
+Dengan Vim anda dapat memilih teks secara visual (dengan penyorotan
+karakter) sebelum anda "mengoperasikannya", seperti penyalinan,
+penghapusan, penggantian, shift kiri atau kanan, pengubahan huruf
+besar atau kecil atau memformat teks juga pembuatan teks dengan
+indentasi. Vim juga menyediakan seleksi dan operasi pada blok-blok
+teks bersifat bujursangkar.
+
+Perintah untuk Melengkapi:
+Vim memiliki perintah-perintah untuk melengkapi pengetikan anda - yaitu
+pada perintah-perintah, nama-nama fail dan kata-kata.
+
+Perintah-perintah Otomatis:
+Vim juga memiliki "autocommands" untuk mengeksekusi secara otomatis
+perintah-perintah (contoh: kompresi atau dekompresi fail secara
+otomatis).
+
+Digraph Input:
+Vim memperbolehkan anda memasukkan karakter-karakter istimewa dengan
+sebuah atau dua buah kombinasi karakter (contoh: kombinasi " dan a
+menghasilkan sebuah  ä) - dan memperbolehkan anda untuk mendefinisikan
+kombinasi-kombinasi lainnya.
+
+Deteksi dan konversi format file:
+Vim mengenali secara otomatis tipe dari fail-fail (DOS, Mac, Unix) dan
+anda juga dapat menyimpannya pada format-format lainnya - sehingga
+anda tidak lagi membutuhkan unix2dos pada Windows lagi!
+
+Sejarah:
+Vim memiliki sebuah sejarah (history) untuk perintah-perintah dan
+pencarian, sehingga anda dapat memanggil kembali perintah-perintah dan
+pola pencarian sebelumnya untuk menyuntingnya.
+
+Perekaman Makro:
+Vim memperbolehkan anda untuk "merekam" pengetikan anda untuk
+digunakan kembali untuk pekerjaan-pekerjaan yang berulang-ulang.
+
+Batas Memori:
+Vim memiliki batas memori yang lebih banyak untuk panjang baris dan
+ukuran 'buffer' dibandingkan Vi yang asli.
+
+Multiple Buffers dan Layar Terpisah:
+Vim memperbolehkan penyuntingan pada 'multiple buffers' dan anda juga
+dapat memisahkan layar pada banyak 'subwindows' (baik secara
+horisontal maupun vertikal), sehingga anda dapat melihat banyak fail
+atau banyak bagian dari beberapa fail.
+
+Jumlah prefiks pada perintah-perintah:
+Vim memperbolehkan sejumlah prefiks untuk lebih banyak
+perintah-perintah dibandingkan dengan Vi (contoh: untuk "put").
+
+Runtime Files (Fail bantuan dan Fail Sintaks):
+[Fail-fail tambahan yang digunakan ketika program berjalan - tetapi
+bukan merupakan fail-fail yang berisi kode yang harus dikompilasi dan
+di-'link'.]
+Vim-5.7 disertai dengan 70 fail-fail bantuan (kurang-lebih 2080K teks)
+pada perintah-perintah, pilihan-pilihan, dengan tips untuk konfigurasi
+dan penyuntingan.
+(Vim-6.0x [010311]: 85 fail, k.l 2796K teks). Beberapa fail spesifik
+untuk penggunaan Vim pada setiap sistem operasi. [010311]
+
+Scripting:
+Vim memiliki sebuah bahasa 'scripting built-in' untuk mempermudah
+perluasan.
+
+Offset Pencarian:
+Vim memperbolehkan 'offsets' untuk perintah-perintah pencarian,
+sehingga anda dapat menaruh kursor *setelah* teks yang ditemukan.
+
+Penyimpanan Sesi:
+Vim memperbolehkan menaruh informasi mengenai sebuah sesi penyuntingan
+pada sebuah fail ("viminfo") yang memperbolehkannya untuk digunakan
+pada sesi penyuntingan berikutnya, contoh: daftar 'buffer', penandaan
+fail, 'registers', sejarah (history) perintah dan pencarian.
+
+Ekspansi tab:
+Vim dapan mengekspansi tabs pada teks dengan spasi (expandtab, :retab).
+
+Sistem tag:
+Vim menawarkan untuk mencari teks pada fail-fail dengan menggunakan
+sebuah indeks pada "tags" bersama dengan perintah-perintah 'tag stack'
+yang banyak.
+
+Obyek Teks:
+Vim mengetahui lebih banyak obyek-obyek teks (paragraf,
+kalimat-kalimat, kata-kata dan KATA-KATA - semuanya dengan atau tanpa
+dikelilingi 'whitespace') dan memperkenankan untuk mengkonfigurasi
+definisi dari obyek-obyek ini.
+
+Pewarnaan Sintaks:
+Vim menampilkan teks dalam warna - sesuai dengan "bahasa
+pemrogramannya". Anda dapat mendefinisikan sendiri sintaks (bahasa)
+dari fail-fail.
+
+Vim disertai dengan 200+ fail-fail sintaks untuk mewarnai teks dalam
+bahasa-bahasa pemrograman umum (Ada, C, C++, Eiffel, Fortran,
+Haskell, Java, Lisp, Modula, Pascal, Prolog, Python,
+Scheme, Smalltalk, SQL, Verilog, VisualBasic),
+programs matematika (Maple, Matlab, Mathematica, SAS), markup teks
+(DocBook, HTML, LaTeX, PostScript, SGML-LinuxDoc, TeX, WML, XML),
+output program (diff, man), fail-fail setup program (4DOS, Apache,
+autoconfig, BibTeX, CSS, CVS, elm, IDL, LILO, pine, procmail, samba, slrn),
+shell script dan setup (shells: sh, bash, csh, ksh, zsh),
+bahasa script  (awk, Perl, sed, yacc)
+fail-fail sistem (printcap, .Xdefaults) dan
+tentunya untuk Vim dan teks bantuannya.
+
+Kode istimewa:
+Vim memiliki integrasi opsional untuk Perl, Tcl and Python.
+Vim dapat bersifat sebagai sebuah server otomatis OLE di bawah
+Windows.
+Vim dapat juga di-'instal' dengan kode untuk X-windows, menambahkan
+menu-menu yang dapat dikonfigurasi dan dukungan terhadap mouse.
+Dan banyak lagi. Sangat banyak!
+
+=== Links
+
+HomePage Vim pada WWW:
+  http://www.vim.org/
+
+Untuk deskripsi lebih detail
+dari fitur-fitur Vim kunjungi halaman
+  http://www.vim.org/about.php
+
+=== Author and Translator
+
+Original-by: Sven Guckes guckes@vim.org
+Last update: Mon Mar 12 07:00:00 MET 2001
+
+Translated-by: Dewara Sianipar dewara@gmx.net
+Last update:   Mon Dec 31 22:00:00 WIB 2001
+
+vim: tw=70
+
+

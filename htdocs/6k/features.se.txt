@@ -1,0 +1,165 @@
+                "Vad är Vim?"
+        En beskrivning på sex kilobyte.
+
+Vim ("Vi IMproved") är en "vi klon", dvs
+ett program som liknar editorn "vi".
+
+Vim fungerar i textmode på alla terminaler,
+men erbjuder också ett grafiskt användargränssnitt
+med menyer och stöd för användning av mus.
+
+Tillgänglighet:
+Vim finns för många plattformar och har åtskilliga nya funktioner
+i förhållande till Vi.  (se http://www.vim.org/viusers.php)
+Vim stöder nästan alla Vi-kommandon - förutom Vi:s buggar. ;-)
+
+Operativsystem:
+Vim finns tillgängligt på många olika system: AmigaOS, Atari MiNT,
+BeOS, DOS, MacOS, NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS,
+WIn16 + Win32 (Windows95/98/00/NT) - och särskilt FreeBSD och Linux.
+
+Copyright:
+Rättigheterna ägs av huvudupphovsmannen Bram Moolenaar <bram@vim.org>.
+Vim är så kallad "charity-ware", vilket innebär att du som använder
+programmet uppmanas donera pengar till föräldralösa barn i Uganda
+(se ":help uganda").
+
+Källkod:
+Vim är OpenSource och alla som vill hjälpa till att göra
+förbättringar till programmet välkomnas!
+
+=== Features
+
+Nybörjareditor - användarvänlighet:
+Vim är ett mycket mera lättanvänt program än Vi på grund av
+sin omfattande hjälpfunktionalitet, UNDO- och REDO-kommandon för
+att underlätta när du råkar skriva fel, mus-support samt
+konfigurerbara ikoner och menyer.
+
+Teckenuppsättningar, språk och terminaler:
+Vim har inbyggd support för teckenuppsättningarna iso-latin1 och termcap.
+(Vanilla Vi har vissa problem med detta.) Vidare finns funktioner för att
+skriva från höger till vänster (till exempel på arabiska, farsi eller
+hebreiska), eller att skriva "multi-byte"-texter, dvs på språk med
+grafiska tecken som representeras av mer än en byte. (Uttryckt mera
+tekniskt; Vim har inbyggd support för UTF-8 och Unicode.)
+
+Textformatering och Visual Mode:
+Med Vim kan du markera text "visuellt" (med "highlighting") innan du
+utför "operationer" på den, såsom Kopiera, Klipp ut, Ersätt, Skifta vänster
+eller höger, ändra små bokstäver till stora eller tvärtom eller applicera
+olika format inklusive möjligheten att då behålla indentering.
+Vim tillåter även markering och operationer av godtyckliga rektangulära
+textblock.
+
+Kommandoradskomplettering:
+Vim har funktioner som kompletterar din inmatning -
+både när det gäller kommandon, filnamn och ord.
+
+Automatiska kommandon:
+Vim har också "autocommands" för att automatiskt exekvera olika
+filterfunktioner på din text, till exempel att automatiskt packa
+upp en komprimerad fil.
+
+Digraph Input:
+Vim låter dig skriva specialtecken genom kombinationer av två
+tangenttryckningar (till exempel ger kombinationen av " och A
+tecknet Ä, vilket möjligen inte är så intressant om du har
+ett svenskt tangentbord, men du kan själv definiera kombinationer
+för andra specialtecken.)
+
+Filformat och konvertering mellan sådana:
+Vim känner automatiskt igen olika typer av textfiler (DOS, Mac, Unix)
+och har också funktioner för att konvertera filer dem emellan.
+Detta gör att du inte längre behöver verktyg av typen unix2dos, etc.
+
+History:
+Vim har en "history"-funktion för kommandon och sökningar, så att du
+kan återkalla tidigare givna inmatningar, eventuellt editera dessa
+och sedan exekvera dem igen.
+
+Makrofunktioner:
+Vim tillåter dig att "spela in" din editering för att sedan "spela upp"
+den igen om du gör repetitiva serier av kommandon.
+
+Minnesbegränsningar:
+Med Vim kan du använda mycket större buffertar och skriva mycket
+längre textrader än vad som är möjligt med Vanilla Vi.
+
+Multipla buffertar och skärmsplit:
+Med Vim kan du samtidigt editera flera filer, exempelvis genom att
+dela in skärmen i flera segment, såväl horisontellt som vertikalt.
+
+Numeriska prefix till kommandon:
+Vim tillåter prefix till många fler kommandon än Vi gör, exempelvis
+till "put".
+
+Runtime-filer (hjälp- och syntaxfiler):
+Vim levereras med 70 hjälpfiler rörande olika aspekter på editering;
+en del av texterna är specifika för vissa operativsystem.
+
+Skript:
+Vim har ett inbyggy skript-språk som ger möjlighet att enkelt
+bygga ut funktionaliteten.
+
+Sökoffsetter:
+Vim tillåter offsetter in samband med sökning, så att du
+exempelvis kan placera markören *efter* den funna texten.
+
+Återställning av session:
+Vim kan ställas in att automatiskt spara information om en editering
+som återanvänds nästa gång man startar programmet. Denna information
+inbegriper bland annat listor med buffertar, markeringar i filen samt
+kommando- och sökningslistor.
+
+Tabulatorexpansion:
+Vim har funktioner för att expandera tabbar i texten till ett antal
+mellanslag.
+
+Taggar:
+Vim har en funktionalitet som möjliggör sökning i textfiler genom
+att man anger ett index med en "tag" tillsammans med flera olika
+kommandon mot stackar.
+
+Textobjekt:
+Vim känner igen flera "textobjekt", såsom stycken, meningar och ord -
+i samtliga fall med och utan omliggande blanksteg, samt tillåter dig
+att ändra definitionen av sådana objekt.
+
+Syntaxfärgning:
+Vim visar texten i färg på ett sätt som är knutet till det "språk" eller
+den typ av text som skrivs. Du kan själv definiera syntaxer för
+dina filer som det passar dig. Vim leveraras med över 200 färdiga sådana
+syntaxfiler för att fägsätta text i vanliga programspråk (Ada, C, C++,
+Eiffel, Fortran, Haskell, Java, Lisp, Modula, Pascal, Prolog, Python,
+Scheme, Smalltalk, SQL, Verilog, VisualBasic), matematiska språk
+(Maple, Matlab, Mathematica, SAS), "markup"-språk (DocBook, HTML, LaTeX,
+Postscript, SGML-LinuxDoc, TeX, WML, XML), output från program (diff, man),
+konfigurationsfiler för program (4DOS, Apache, autoconfig, BibTeX, CSS,
+CVS, elm, IDL, LILO, pine, procmail, samba, slrn), shell scripts och
+konfigurationsfiler för shells (sh, bash, csh, ksh, zsh), skriptspråk (awk,
+Perl, sed, yacc), systemfiler (printcap, .Xdefaults) och naturligtvis
+för Vim och dess hjälptexter.
+
+Särskilda funktioner:
+Vim har som tillvalsfunktionalitet särskild integration
+med Perl, Tcl och Python. Programmet kan också fungera
+som en OLE automation server under Windows. Vidare kan Vim
+också installeras med kod för X Window System med stöd
+för konfigurerbara menyer och användning av mus.
+
+Och så finns det mer. Mycket mer!
+
+Vim:s hemsida på WWW:
+  http://www.vim.org/
+
+För en mera omfattande beskrivning av funktionaliteten i Vim,
+se http://www.vim.org/about.php
+
+Written by:  Sven Guckes guckes@vim.org
+Last update: Tue Oct 03 20:00:00 MET DST 2000
+
+Översättning till svenska:
+Christian Andersson <chrisand@cs.lth.se>
+15 dec 2000
+

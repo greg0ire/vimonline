@@ -1,0 +1,158 @@
+=== "Co je to Vim?
+=== Struèný exkurs na ¹esti kilobajtech
+
+Vim (Vi IMproved, tedy vylep¹ené vi) je program podobný textovému
+editoru vi.
+
+Vi pracuje v textovém re¾imu na ka¾dém terminálu, ov¹em obsahuje i 
+grafické rozhraní s menu a dùslednou podporou my¹i.
+
+Dostupnost a kompatibilita:
+Vim je dostupný na mnoha platformách; ve srovnání s vi má mnoho dal¹ích
+mo¾ností (viz http://www.vim.org/viusers.php). Vim je kompatibilní
+prakticky se v¹emi pøíkazy vi --- kromì chyb, samozøejmì :-)
+
+Operaèní systémy:
+Vim je pou¾itelný na mnoha systémech: AmigaOS, Atari MiNT, BeOS, DOS, 
+MacOS, NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS, Win16 + Win32 
+(Windows95/98/00/NT) --- no a samozøejmì FreeBSD a Linux :-)
+
+Copyright:
+Autorská práva jsou v rukou hlavního autora, Brama Moolenaar 
+<bram@vim.org>. Vim je charity-ware, co¾ znamená, ¾e by bylo dobré 
+pøispìt na sirotky v Ugandì (viz ":help uganda"), pokud se vám Vim líbí.
+
+Zdrojový kód:
+Vim je OpenSource a vítán je kdokoliv, kdo chce pøispìt k jeho vylep¹ení.
+
+=== Mo¾nosti
+
+U¾ivatelská pøítulnost:
+Vim je pro zaèáteèníky mnohem pøítulnìj¹í, ne¾ vi. Obsahuje toti¾ 
+rozsáhlou online nápovìdu, undo a redo, podporu pro my¹ a nastavitelné
+menu.
+
+Znakové sady a terminály:
+Vim podporuje znakovou sadu ISO-Latin1 a termcap. Editace textù 
+s nabodeníèky je pod rozumnì nastaveným systémem bezproblémová.
+
+Jazyky:
+Vim má podporu pro psaní zprava doleva (Arab¹tina, Farsi, Hebrej¹tina) a
+multi-byte texty --- tedy podporuje i jazyky, jejich¾ znaky jsou 
+reprezentovány více ne¾ jedním bytem: Èín¹tinu, Japon¹tinu, Korej¹tinu 
+apod. Technicky øeèeno, Vim podporuje UTF-8 a Unicode.
+
+Formátování textu a vizuální re¾im:
+Vim doká¾e oznaèit text do bloku viditelným zpùsobem (oznaèí ho inverznì) a
+následnì na nìm provádìt spoustu operací --- kopírovat, mazat, nahrazovat,
+posouvat doleva/doprava, zmìnit velikost písmen nebo formátovat celý blok se
+zachováním pøedchozího zarovnání apod.
+
+Doplòování:
+Vim doká¾e doplòovat to, co pí¹ete --- a» u¾ jsou to pøíkazy, jména souborù 
+nebo slova.
+
+Automatické pøíkazy:
+Vim umo¾òuje vykonávat pøedem urèené akce, napøíklad dekomprimaci zabalených
+souborù.
+
+Speciální znaky:
+Vim umo¾òuje vkládat speciální znaky kombinací dvou znakù, napøíklad 
+kombinace '"' a 'a' vlo¾í do textu 'ä'.
+
+Zji¹tìní typu souboru a jeho konverze:
+Vim automaticky rozpoznává typ souboru (DOS, Mac, UNIX) a umo¾òuje soubor
+ukládat v libovolném z tìchto typù, tak¾e odpadá nutnost pou¾ití dal¹ích
+konverzních skriptù.
+
+Historie:
+Vim si pamatuje pøíkazy, které jste ji¾ napsali a umo¾òuje vám je opìt
+vyvolat a upravovat.
+
+Makra:
+Vim doká¾e nahrát posloupnost pøíkazù a posléze ji pøehrát, tak¾e
+zjednodu¹uje opakovanou práci s textem.
+
+Pamì»ové limity:
+Vim toho vydr¾í mnohem víc ne¾ tradièní vi, a» u¾ v délce øádky nebo 
+velikosti schránek.
+
+Více schránek a rozdìlení obrazovky:
+Vim umo¾òuje upravovat více rùzných schránek s textem najednou; mù¾ete 
+si celé okno rozdìlit na víc èástí (jak na vý¹ku, tak na ¹íøku) a 
+v ka¾dé z nich upravovat jiný soubor nebo jinou èást tého¾ souboru.
+
+Èíselné pøedpony pøíkazù:
+Èíselná pøedpona umo¾òuje provést urèitý pøíkaz opakovanì (dd = smazat 
+øádek, 3dd = smazat tøi øádky), Vim dovoluje pou¾ít èíselných pøedpon 
+i u pøíkazù, kde to vi nedovoluje (napøíklad "put").
+
+Doprovodné soubory:
+Vim obsahuje celou øadu souborù, které jsou jeho souèástí, ale nemusí 
+být pøekládány spolu s programem, napøíklad soubory s definicí syntaxe 
+nebo soubory s nápovìdou. Vim 5.7 obsahuje 70 souborù s nápovìdou 
+(kolem dvou megabytù textu), ta popisuje ve¹keré pøíkazy, nastavení
+a rùzné tipy ohlednì konfigurace Vimu a úpravy textù. Vim 6.0x obsahuje 
+85 souborù nápovìdy, dohromady necelé tøi megabyty textu. Nìkteré soubory 
+nápovìdy se zaobírají specifiky Vimu na konkrétních operaèních systémech.
+
+Skripty:
+Vim obsahuje skriptovací jazyk pro jednoduché roz¹iøování.
+
+Ulo¾ení stavu:
+Není problém ulo¾it stav celého prostøedí do souboru "viminfo" a pou¾ít 
+ho a¾ po jisté sléze. Ulo¾it se dají napøíklad v¹echny schránky, pozice 
+v souborech a zálo¾ky v nich, registry, pøíkazová historie a historie 
+vyhledávání.
+
+Doplòování tabulátoru:
+Vim umo¾òuje automaticky doplnit tabulátory tam, kde je nìjaký tabulátor
+obklopený mezerami, pøípadnì mù¾e nahradit odpovídajícím poètem tabulátorù
+øetìzec mezer.
+
+Systém tagù:
+Tagy jsou èásti textu, které se dají chápat jako náve¹tí --- lze je
+prohledávat, skákat z jednoho na druhý apod. Napøíklad v C lze jednodu¹e
+odskoèit ze jména funkce na její definici.
+
+Textové objekty:
+Vim chápe jisté èásti textu (slovo, vìta, odstavec) jako ucelené objekty
+a umo¾òuje s nimi jako¾to s celky pracovat. Je mo¾né upravit definici
+tìchto objektù, a tedy zmìnit, co si Vim pøedstaví pod pojmem "slovo" apod.
+
+Barevné odli¹ení syntaxe:
+Vim umí obarvit text podle jeho typu, mù¾ete si také definovat vlastní
+syntaxi --- není tedy problémem tøeba ve spojení s programem ISpell obarvit
+pøeklepy apod.
+
+Vim má pøeddefinované soubory syntaxe pro vìt¹inu pou¾ívaných programovacích
+jazykù (Ada, C, C++, Eiffel, Fortran, Haskell, Java, Lisp, Modula, Pascal,
+Prolog, Python, Scheme, Smalltalk, SQL, Verilog, VisualBasic), matematických
+programù (Maple, Matlab, Mathematica, SAS), znaèkovacích jazykù (DocBook,
+HTML, LaTeX, PostScript, SGML-LinuxDoc, TeX, WML, XML), výstupù z programù
+(diff, man), konfiguraèních souborù (4DOS, Apache, autoconfig, BibTeX, CSS,
+CVS, elm, IDL, LILO, pine, procmail, samba, slrn), shellových skriptù (sh,
+bash, csh, ksh, zsh), skriptovacích jazykù (awk, Perl, sed, yacc),
+systémových souborù (printcap, .Xdefaults) a samozøejmì Vim a jeho
+soubory s nápovìdou.
+
+Dal¹í mo¾nosti:
+Do Vimu je mo¾né integrovat Perl, Tcl nebo Python. Pod Windows se Vim mù¾e
+chovat jako OLE automation server. Pod X Window umo¾òuje Vim vyu¾ívat
+nastavitelná menu a my¹.
+
+=== Odkazy
+
+Domovská stránka Vimu
+  http://www.vim.org
+
+Podrobnìj¹í popis vlastností a mo¾ností Vimu
+  http://www.vim.org/about.php
+
+=== Autor a pøekladatel 
+
+Originál napsal: Sven Guckes guckes@vim.org
+Poslední úprava: Mon Mar 12 07:00:00 MET 2001
+
+Pøeklad: Tomá¹ Znamenáèek tomas.znamenacek@worldonline.cz
+Poslední úprava: So kvì 19 09:04:58 CEST 2001

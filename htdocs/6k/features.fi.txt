@@ -1,0 +1,174 @@
+                "Mikä on Vim?"
+        Selitys kuudessa kilotavussa.
+
+Vim ("Vi IMproved", "paranneltu vi") on "vi klooni", samankaltainen
+ohjelma kuin tekstieditori "vi".
+
+Vim toimii tekstimoodissa kaikissa terminaaleissa, mutta siihen on myös
+graafinen käyttöliittymä, jossa on valikot ja tuki hiirelle.
+
+Saatavuus:
+Vim on saatavilla useille alustoille ja siinä on useita lisäominaisuuksia
+Vi:hin verrattuna. (kts. http://www.vim.org/viusers.php) Vim on 
+yhteensopiva lähes kaikkien vi komentojen kanssa - paitsi bugisten. ;-)
+
+Käyttöjärjestelmät:
+Vim on saatavilla useille järjestelmille: AmigaOS, Atari MiNT,
+BeOS, DOS, MacOS, NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS, Win16 +
+Win32 (Windows95/98/00/NT) - ja erityisesti FreeBSD:lle ja Linuxille. :-)
+
+Tekijänoikeudet:
+Tekijänoikeudet ovat päätekijällä ja ylläpitäjällä,  Bram Moolenaarilla
+<bram@vim.org>. Vim on hyväntekeväisyysohjelma ("charity-ware"), sinua 
+rohkaistaan tekemään lahjoitus esim. Ugandan orvoille 
+(katso ":help uganda").
+
+Lähdekoodi:
+Vim on OpenSource-ohjelma ja kaikki ovat tervetulleita auttamaan sen
+parantamisessa!
+
+=== Ominaisuudet 
+
+Aloittelijan editori - käyttäjäystävällinen:
+Vim on paljon helpompi aloittelijalle kuin Vi, koska siinä on laaja
+online-aputoiminto, "undo" ja "redo" komennot (ei tarvitse välittää
+virheistä - käytä vain undo+redo:ta!), tuki hiirelle ja muunneltavat
+kuvakkeet ja valikot (GUI, graafinen käyttöliittymä).
+
+Merkistöt ja terminaalit:
+Vim:ssä on tuki iso-latin1 merkistölle ja termcap:lle (Vanilla Vi:lla
+on ongelmia tämän kanssa).
+
+Kirjaimet ja kielet:
+Vim:ssä on tuki oikealta-vasemmalle editoinnille (esim. arabia, farsi,
+heprea), ja monitavuisille (multi-byte) teksteille, kuten kielille,
+joissa on kuvamerkkejä, jotka esitetään useammalla kuin yhdellä
+tavulla, esim. kiina, japani, korea (Hangul), (teknisesti, Vim tukee
+UTF-8:ia ja Unicodea).
+
+Tekstin muotoilu ja visuaalinen moodi (Visual Mode):
+Vimillä voi valita tekstiä "visuaalisesti" (maalaamalla) ennen sen
+käsittelyä, esim. kopioida, tuhota, korvata, siirtää vasemmalle tai
+oikealle, vaihtaa kirjaimia isoista pieniksi ja päinvastoin,
+säilyttäen tekstin sisennyksen. Vim sallii tekstin valinnan ja
+käsittelyn myös suorakaiteen muotoisilla valintalaatikoilla.
+
+
+Täydentyvät komennot:
+Vim:ssä on komentoja, jotka täydentävät syötteesi - komennoilla,
+tiedostonimillä tai sanoilla.
+
+Automaattiset komennot:
+Vim:ssä on myös "automaattiset komennot", automaattiseten toimintojen
+suorittamiseksi (esim. automaattinen pakattujen tiedostojen
+purkaminen).
+
+Kaksikirjainsyöte:
+Vim sallii syöttää erikoismerkkejä kahden merkin yhdistelminä (esim.
+yhdistelmä " ja a näkyy merkkinä ä) - ja antaa myös määritellä muita
+yhdistelmiä.
+
+Vim tunnistaa automaattisesti tiedoston tyypin (DOS, Mac, Unix) ja
+myös sallii niiden tallentamisen muun tyyppisenä - enää ei tarvita
+unix2dos-apuohjelmaa Windowsissa!
+
+Historia:
+Vimissä on "historia" komennoille ja hauille, joten sinun ei tarvitse
+muistaa edellistä komentoa tai hakulauseketta muuttaaksesi niitä.
+
+Makrojen tallentaminen:
+Vim:ssä voi tallettaa "editointia" ja ajaa niitä uudelleen toistuvissa
+tehtävissä.
+
+Muistirajoitukset:
+Vimissä on paljon suuremmat muistirajoitukset rivin pituuksille ja
+buffereille kuin vanilla Vi:ssa.
+
+Multibufferit ja jaettu ruutu:
+Vim:ssä voi editoida useita buffereita ja ruutu voidaan jakaa useisiin
+pienempiin ikkunoihin (vaaka- ja pystysuoraan), joten voit katsoa
+useaa tiedostoa tai useaa kohtaa tiedostoista samanaikaisesti.
+
+Numeroetuliite komennoissa:
+Vim sallii numeroetuliitteen useammille komennoille kuin Vi (esim.
+"put":lle).
+
+Ajonaikaiset tiedostot (ohjetiedostot ja syntaksitiedostot):
+[lisätiedostot, joita käytetään kun ohjelmaa ajetaan - mutta jotka
+eivät sisällä ohjelmakoodia, jota tarvitsisi kääntää tai linkittää.]
+Vim-5.7:ssä tulee mukana 70 ohjetiedostoa (noin 2080 kilotavua
+tekstiä) komennoista, valinnoista, vinkkejä konfigurointiin ja
+editointiin. (Vim-6.0x [010311]: 85 tiedostoa, noin 2796 kilotavua
+tekstiä). Osa tiedostoista selvittää Vim:n käyttöä kullakin
+käyttöjärjestelmällä. [010311]
+
+Skriptaus:
+Vim:ssä on sisäänrakennettu skriptikieli helpottamaan lisätoimintojen 
+tekoa. 
+
+Haun vaihesiirto:
+Vim sallii vaihesiirrot hakukomennoissa, voit asettaa kursorin tietyn
+matkan päähän löydetyn tekstin jälkeen.
+
+Istunnon palauttaminen:
+Vim tallettaa tietoa istunnon aikana tapahtuneesta editoinnista
+tiedotoon ("viminfo"), mikä sallii tiedon käyttämisen seuraavan
+editointi-istunnon aikana, esim. bufferilistan, tiedostomerkit,
+rekisterit, komento ja hakuhistorian.
+
+Tabin muuntaminen:
+Vim pystyy näyttämään tekstin tabuloinnit haluttuna määränä
+välilyöntejä (expandtab, :retab).
+
+Taggaus:
+Vim:ssä voi hakea tekstiä tiedostoista käyttäen "tageja" ja liittää
+hakuun komentoja.
+
+Tekstiobjektit:
+Vim tunnistaa monenlaisia rakenteita (kappaleet, lauseet, sanat ja
+SANAT - kaikki tyhjien välimerkkien (whitespace) kanssa tai ilman, ja
+sallii näiden rakenteiden muuntelun ja määrittelyn.
+
+Syntaksiväritys:
+Vim näyttää tekstin väreissä - "ohjelmointikielen" mukaisesti.
+Voit itse määritellä tiedoston "kielen" ("syntaksin").
+
+Vimissä tulee mukana yli 200 syntaksitiedostoa tekstin värittämiseksi
+useiden eri ohjelmointikielien mukaisesti (Ada, C, C++, Eiffel,
+Fortran, Haskell, Java, Lisp, Modula, Pascal, Prolog, Python,
+Scheme, Smalltalk, SQL, Verilog, VisualBasic), matematiikkaohjelmien
+mukaisesti (Maple, Matlab, Mathematica, SAS), markup text
+(DocBook, HTML, LaTeX, PostScript, SGML-LinuxDoc, TeX, WML, XML),
+ohjelma tulosteen (diff, man), ohjelmien asetustiedostojen mukaisesti
+(4DOS, Apache, autoconfig, BibTeX, CSS, CVS, elm, IDL, LILO, pine,
+procmail, samba, slrn), komentorivitulkkien skriptikielien ja
+asetustiedostojen mukaisesti (komentotulkit: sh, bash, csh, ksh, zsh),
+skriptikielet (awk, Perl, sed, yacc), järjestelmätiedostojen
+(printcap, .Xdefaults) ja tietysti Vim:n ja sen ohjetiedostojen
+mukaisesti.
+
+
+Erityiskoodi:
+Vimissä on integrointituki Perlille, Tcl:lle ja Pythonille. Vim voi myös
+toimia OLE-palveluna Windowsissa. Vim voidaan asentaa myös
+X-windowsille tarkoitetun koodin kanssa, jolloin mukana on myös 
+muunneltavat valikot ja tuki hiirelle. Ja enemmän. Paljon enemmän!
+
+
+=== Linkit
+
+Vim:n kotisivut webissä:
+  http://www.vim.org/
+
+Tarkempi kuvaus Vim:n ominaisuuksista sivulla:
+  http://www.vim.org/about.php
+
+=== Tekijä ja kääntäjä
+
+Alkuperäisen kirjoittaja: Sven Guckes guckes@vim.org
+Viimeisin päivitys: Mon Mar 12 07:00:00 MET 2001
+
+Kääntänyt suomeksi: Hiekka <hiekka@helsinki.fi>
+Viimeisin päivitys: Fri Mar 30 13:36:59 EEST 2001 
+
+vim: tw=70

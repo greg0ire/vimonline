@@ -1,0 +1,164 @@
+                "Wat is Vim?"
+        'n Verduideliking in ses kilogrepe
+
+Vim ("Vi IMproved") is 'n "vi kloon", m.a.w.
+'n soortgelyke program as die tekswysiger "vi".
+
+Vim werk in teksmodus in alle terminale, maar dit het ook 'n grafiese
+gebruikerskoppelvlak met ondersteuning vir menu's en 'n muis.
+
+Beskikbaarheid:
+Vim is beskikbaar vir baie platforms, en het baie meer funksies
+as Vi.  (sien http://vim.sourceforge.net/viusers.php)
+Vim is mederwerkend met amper alle Vi instruksies - uitsluitend Vi se
+goggas.  ;-)
+
+Bedryfstelsels:
+Vim is beskikbaar vir baie stelsels: AmigaOS, Atari MiNT, BeOS, DOS,
+MacOS, NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS, Win16 + Win32
+(Windows95/98/00/NT) - en veral FreeBSD en Linux.  :-)
+
+Kopiereg:
+Die kopiereg is in die hande van die hoofouteur
+en onderhouer, Bram Moolenaar <bram@vim.org>.
+Vim is "charity-ware"; jy word aangemoedig om 'n donasie
+aan weeskinders in Uganda te maak (sien ":help uganda").
+
+Bronkode:
+Vim is Open Source en almal is welkom om dit te help verbeter!
+
+=== Eienskappe
+
+'n Beginner se Wysiger - Gebruikersvriendelik:
+Vim is baie maklik vir beginners om te leer, te danke aan die
+ekstensiewe aanlyn hulp, "undo" en "redo" instruksies (maak maar
+foute - ontdoen+herdoen dit net!), ondersteuning vir die muis
+en konfigureerbare ikone en menu's (GUI).
+
+Karakterkodes en Terminale:
+Vim ondersteun die iso-latin1 karakterstel en vir termcap.
+(Standaard Vi het probleme met beide.)
+
+Karakters en Tale:
+Vim ondersteun regs-na-links wysiging (bv. vir Arabies, Farsi,
+Hebreus) en multigreep teks, vir tale wat meer as een greep benodig om
+karakters te stoor, soos Chinees, Japanees, en Koreaans (Hangul).
+(Tegniese sprekend ondersteun Vim UTF-8 en Unicode teks.)
+
+Teksformattering en Visuele Modus:
+Met Vim kan jy teks visueel selekteer (met verligting) voor jy 'n
+instruksie (bv. kopieer, uitwis, vervang, herindenteer,
+herkapitaliseer of herformatteer terwyl indentasie behou word) op dit
+uitvoer.  Vim kan ook vierkantige blokke teks selekteer en verwerk.
+
+Voltooiing:
+Vim het instruksies wat jou toevoer voltooi met
+instruksiename, lêername of woorde.
+
+Outomatiese Instruksies:
+Vim het ook "autocommands" vir die outomatiese uitvoering van
+instruksies (bv. outomatiese ontpakking van gekompakteerde lêers).
+
+Digraaf Invoer:
+Vim laat jou toe om spesiale karakters deur a kombinasie van twee
+karakters in te tik (bv. die kombinasie van " en a lewer 'n ä) - en
+laat jou toe om jou eie kombinasies te definieer.
+
+Lêerformaat Deteksie en Omskakeling:
+Vim herken lêers se formaat (DOS, Mac, Unix) outomaties en kan hulle
+in eniga formaat stoor - unix2dos is nie meer nodig in Windows nie!
+
+Geskiedenis:
+Vim hou 'n "geskiedenis" van instruksies en soektogte, sodat
+jy vorige instruksies en soekterme kan herroep en wysig.
+
+Makro Vaslegging:
+Vim kan jou wysigingsinstruksies "vaslê" en weer herspeel,
+om lang, eentonige take vinnig te herhaal.
+
+Geheuelimiete:
+Vim se geheuelimiete vir lynlengte en buffergrootte is aansienlik
+hoër as die van standaard Vi.
+
+Veelvoudige Buffers en Verdeelde Vensters:
+Vim kan met meer as een buffer werk, en jy kan die skerm in
+horisontale en vertikale sub-vensters deel, sodat jy baie lêers, of
+baie dele van sekere lêers, terselfdertyd kan wysig.
+
+Nommervoorvoegsels vir Instruksies:
+Vim laat nommervoorvoegsels toe vir meer
+instruksies as Vi (bv. vir "put").
+
+Looptydlêers (Hulp- en Sintakslêers):
+[Addisionele lêers wat gebruik word as die program hardloop - maar
+ wat nie kode bevat wat gekompileer of verbind hoef te word nie.]
+Vim-5.7 kom met 70 hulplêers (omtrent 2080KB van teks) oor sy
+instruksies en opsies, met konfigurasie- en wysigingwenke.
+(Vim-6.0x [010311]: 85 lêers, 2796K van teks).  Sekere lêers is
+spesifiek tot die gebruik van Vim op elke Bedryfstelsel.  [010311]
+
+Skripsie:
+Vim kan maklik uitgebrei word d.m.v. 'n ingeboude skripsietaal.
+
+Soekafsette:
+Vim laat afsette vir soekinstruksies toe, sodat
+die wyser *na* die gevonde teks geplaas kan word.
+
+Wysigingsessie Verhaling:
+Vim kan informasie oor jou wysigingsessie in 'n spesiale lêer
+("viminfo") stoor, wat toelaat dat jou wysigingsomgewing, bv. buffer
+lys, instruksie- en soektog geskiedenis, lêer boekmerke, en
+registers, herstel kan word in jou volgende wysigingsessie.
+
+Keepuitbreiding:
+Vim kan keepkarakters outomaties met spasies vervang, en andersom.
+(expandtab, :retab).
+
+Etiketstelsel:
+Met Vim kan jy teks vinnig in lêers find deur die gebruik van 'n index
+van "etikette", en die vele etiketstapel-instruksies.
+
+Teksobjekte:
+Vim ken meer teksobjekte (paragrawe, sinne, woorde en WOORDE - almal
+met en sonder omringende witspasie) as Vi, en laat jou toe om die
+definisies van daardie objekte te verander.
+
+Sintaksverligting:
+Vim wys teks in kleur - na wyse van die teks se "(programmeer-) taal".
+Jy kan die "taal" (sintaks) van lêers self definieer.
+
+Vim kom met meer as 200 sintaksdefinisie-lêers vir die verligting van
+teks in baie programmeertale (Ada, C, C++, Eiffel, Fortran, Haskell,
+Java, Lisp, Modula, Pascal, Prolog, Python, Scheme, Smalltalk, SQL,
+Verilog, VisualBasic), wiskundige programme (Maple, Matlab,
+Mathematica, SAS), opgemerkde teks (DocBook, HTML, LaTeX, PostScript,
+SGML-LinuxDoc, TeX, WML, XML), program uitvoer (diff, man),
+programkonfigurasie-lêers (4DOS, Apache, autoconfig, BibTeX, CSS, CVS,
+elm, IDL, LILO, pine, procmail, samba, slrn), dopskrip en konfigurasie
+lêers (sh, bash, csh, ksh, zsh), skripsietale (awk, Perl, sed, yacc,
+ens.) stelsellêers (soos printcap en .Xdefaults), en natuurlik Vim en
+sy hulptekste.
+
+Spesiale Kode:
+Vim kan optioneel met Perl, Tcl en Python integreer.
+Vim kan as 'n OLE outomatisering bediener optree onder Windows.
+Vim kan ook geïnstalleer word met kode vir X-Windows, vir
+konfigureerbare menu's en muis-ondersteuning.  En veel meer!
+
+=== Webskakels
+
+Vim se tuisblad (in Engels):
+  http://vim.sourceforge.net/
+
+Vir 'n meer omvattende beskrywing van Vim se funksies, sien:
+  http://vimdoc.sourceforge.net/cgi-bin/vim2html2.pl?page=intro.txt
+
+=== Outeur en Vertaler
+
+Oorspronklik deur:      Sven Guckes guckes@vim.org
+Laas geopdateer:       	Mon Mar 12 07:00:00 MET 2001
+
+Vertaal deur:		Piet Delport <pjd@303.za.net>
+Laas geopdateer:  	2002-08-08 01:15:38 SAST
+
+vim: tw=70

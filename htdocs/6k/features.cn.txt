@@ -1,0 +1,102 @@
+				  什么是Vim?
+				一个6K长的说明
+
+Vim ("Vi IMproved") 是一个 vi 的"克隆", 也就是说, 它是一个类似文本编辑器 vi 的程序.  
+
+Vim 在任何终端的文本模式下均能工作, 同时它也有一个图形介面, 包括菜单并支持鼠标.
+
+获得Vim:
+与vi相比, Vim 存在于许多平台上, 并且增添了许多功能. (详见 http://www.vim.org/viusers.php). Vim 和绝大多数的Vi命令兼容 - Vi 的BUG除外:-)
+
+操作系统:
+在许多操作系统上都可以得到Vim: AmigaOS, Atari MiNT, BeOS, DOS, MacOS, NextStep, OS/2, OSF, RiscOS, SGI, UNIX, VMS, WIn16 + Win32 (Windows95/98/00/NT) - 尤其是 FreeBSD and Linux.  :-)
+
+版权信息:
+版权归Vim的主要作者和维护者Bram Moolenaar所有<bram@vim.org>. Vim 是"慈善软件".  意思是鼓励你捐助乌干达的孤儿(详见 ":help uganda").
+
+源代码:
+Vim 是开放源代码软件. 欢迎大家帮忙改进.
+
+=== 特色:
+
+初学者的编辑器 - 用户友好:
+相比Vi, Vim对初学者来的容易多了. 这要归功于其详尽的在线帮助, "undo" 和 "redo" 命令 (你永远不用担心犯错 - 只要会用undo+redo!), 以及对鼠标的支持和可以配置的图标及菜单(GUI).
+
+字符编码和终端:
+Vim支持iso-latin1字符集和termcap(Vi不能正确地支持)
+
+字符和语言:
+Vim 支持从右向左编辑(例如阿拉伯文, Farsi, 希伯来文) 和多字节文字, 比如那些使用图形字符的语言,其字符用多个字节表示. 比如中文, 日文, 韩文, (从技术角度上讲, Vim支持UTF-8和Unicode.)
+
+文本格式化和Visual模式:
+在Vim中, 你可以"可视地"选取文本(高亮显示). 然后对所选文本进行操作, 例如拷贝, 删除, 替换, 左右移动, 大小写变换, 或保持嵌入格式的格式化. Vim 允许对长方形的文本块进行选择和操作.
+
+命令补全:
+Vim 包含补全你的输入的命令 - 无论你输入的是命令, 文件名, 还是单词.
+
+自动命令:
+Vim 还有用于自动执行指令的"自动"命令. (例如 自动解压缩文件.)
+
+(发一个音的)二合字母(Diagraph)输入:
+在Vim中, 你可以用两个字符的组和输入一个特殊字符(例如`和e的组合生成è- 并允许你定义其他组合.
+
+
+文件格式识别和转换:
+Vim自动识别文件的类型(DOS, Mac, Unix)并允许以不同格式存盘 - 不用在Windows上再作unix2dos了!
+
+历史:
+对于命令和查找操作, Vim还有历史机制.  你可以把以前执行过的命令或查找模式调出来进行编辑.
+
+宏录制:
+Vim允许"录制"你的编辑操作, 以便对重复的任务进行"重放".
+
+内存限制:
+Vim中行长和缓冲区长度的上限都比传统Vi高出许多.
+
+多缓冲区和切分窗口:
+Vim允许同时编辑多个缓冲区而且你可以把屏幕分割成许多子窗口(水平和竖直).  这样你就可以看到许多文件或几个文件的许多部分.
+
+命令的数字前缀:
+相比Vi, Vim允许更多的命令附带数字前缀(例如 "put"命令).
+
+运行时文件(帮助和语法文件):
+Vim带有70个帮助文件. 它们包括了编辑的方方面面; 其中一些文件是因操作系统不同而异的.
+
+脚本:
+Vim 包含一个内置的脚本语言以便于括充功能.
+
+偏移查寻:
+Vim 允许查寻命令附带偏移量, 这样你就能把光标直接放在找到的文本后面.
+
+过程(session)恢复:
+Vim允许将一个编辑过程的相关信息保存到一个文件中("viminfo").  在下次编辑中, 该文件使这些信息重新生效, 例如缓冲区列表, 文件标记, 寄存器, 命令和查找历史.
+
+Tab键扩展:
+Vim可以在文本中将TAB键扩展为空格 (expandtab, :retab)
+
+标签(Tag)系统:
+Vim提供在文件中用标签加索引及许多标签堆栈命令查找文本.
+
+文本对象:
+Vim(相比vi)知到更多的文本对象(段落, 句子, words 和 WORDs - 包括和不包括周围的空格.) 并且允许对这些对象重定义.
+
+语法上色:
+Vim用各种颜色显示文本 - 按照其"(编程)语言". 你可以定义文件的语言(语法).  Vim自带200多个为各种语言文件上色的语法文件, 编程语言(Ada, C, C++, Eiffel, Fortran, Haskell, Java, Lisp, Modula, Pascal, Prolog, Python, Scheme, Smalltalk, SQL, Verilog, VisualBasic), 数学程序(Maple, Matlab, Mathematica, SAS), 标记语言(DocBook, HTML, LaTeX, PostScript, SGML-LinuxDoc, TeX, WML, XML), 程序的输出结果(diff, man), 配置和初始化文件(4DOS, Apache, autoconfig, BibTeX, CSS, CVS, elm, IDL, LILO, pine, procmail, samba, slrn), shell 脚本和初始化文件(sh, bash, csh, ksh, zsh), 脚本语言(awk, Perl, sed, yacc), 系统文件(printcap, .Xdefaults). 当然包括Vim本身的系统和帮助文件.
+
+特殊代码:
+Vim 包含与Perl, Tcl 和 Python 集成的选项.
+Vim 在Windows下可以作为OLE自动化服务器运行.
+Vim 安装时可以包含在X-window 中工作的代码,
+这样就可以加入可配置菜单和对鼠标的支持.
+以及其他许多许多功能.
+
+Vim的主页在:
+http://www.vim.org/
+
+一个对Vim的特色更详尽的描述可以从下面的网页找到:
+http://www.vim.org/about.php
+
+作者: Sven Guckes guckes@vim.org
+最近更新时间: 2000年10月3日 20:00:00 MET DST
+译者: 史伟光 Weiguang Shi wgshi@cs.ualberta.ca
+最近更新时间: 2000年11月9日 16:21:17 PST
