@@ -18,7 +18,7 @@ include("header.php");
         <td>Project pages</td>
       </tr>
       <tr>
-        <td><a href="cvsdocs">CVS</a></td>
+        <td><a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/vim/">CVS</a></td>
         <td>The CVS system</td>
       </tr>
       <tr>

@@ -27,7 +27,7 @@ include("header.php");
 <span class="sidebarheader"><a href="links.php">Vim Resources:</a></span>
 <p>
 &nbsp; <a href="http://www.vim.org/dist.html">download</a><BR>
-&nbsp; <a href="cvsdocs">CVS</a><BR>
+&nbsp; <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/vim/">CVS</a><BR>
 &nbsp; <a href="http://www.vim.org/">www.vim.org</a><BR>
 &nbsp; <a href="http://nav.webring.yahoo.com/hub?ring=vim&list">vim webring</a><BR>
 </p>
