@@ -14,7 +14,7 @@
         </small>
         </td>
         <td align="right">
-	<a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=18746" width="88" height="31" border="0" alt="SourceForge Logo"></a>
+	<a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=8" width="88" height="31" border="0" alt="SourceForge Logo"></a>
 	    </td>
     <td><img src="images/spacer.gif" width="5" height="1" alt=""></td>
     </tr>

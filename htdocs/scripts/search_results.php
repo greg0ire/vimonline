@@ -187,8 +187,13 @@ if($has_next){
     <td><select name="order_by">
             <option value="rating">Rating</option>
             <option value="downloads" <?=$HTTP_GET_VARS{'order_by'}=="downloads"?"selected":""?> >Downloads</option>
+            <option value="script_name" <?=$HTTP_GET_VARS{'order_by'}=="script_name"?"selected":""?> >Script Name</option>
             <option value="creation_date" <?=$HTTP_GET_VARS{'order_by'}=="creation_date"?"selected":""?> >Creation Date</option>
-        </select></td>
+        </select>
+    <select name="direction">
+        <option value="descending" <?=$HTTP_GET_VARS{'direction'}!="ascending"?"selected":""?> >Descending</option>
+        <option value="ascending" <?=$HTTP_GET_VARS{'direction'}=="ascending"?"selected":""?> >Ascending</option>
+    </select></td>
 </tr>
 <tr><td colspan="3"><img src="images/spacer.gif" width="1" height="4" alt=""></td></tr>
 <tr>

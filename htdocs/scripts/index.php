@@ -58,7 +58,7 @@ directory and color scheme scripts which need to be sourced from your vimrc.
 
 <hr noshade size="1" color="#000000">
 <br>
-<span class="txth1">Recent Script Updates</span> (<a href="search_results.php">browse all</a> | <a href="search.php">search</a>)
+<span class="txth1">Recent Script Updates</span> (<a href="search_results.php?order_by=creation_date&direction=descending">browse all</a> | <a href="search.php">search</a>)
 <p>
 <table cellpadding="0" cellspacing="0" border="0">
 <?php

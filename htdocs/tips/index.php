@@ -55,7 +55,7 @@ a place that the community could maintain a list of their favorite vim gems. The
 
 <hr noshade size="1" color="#000000">
 <br>
-<span class="txth1">Recent Tip Additions</span> (<a href="search_results.php">browse all</a> | <a href="search.php">search</a>)
+<span class="txth1">Recent Tip Additions</span> (<a href="search_results.php">browse all</a> | <a href="search.php">search</a> | <a href="download.php">download all</a>)
 <?php
     require("include/tip.inc");
     $recent_tips = getRecentTipAdditions(10);

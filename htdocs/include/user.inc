@@ -73,6 +73,43 @@ function getUserByName($userName) {
         return $user;
     }
 }
+
+function getUserByEmail($email) {
+    global $DB_NAME;
+    $select = "select user_id from vs_users
+               where email= '$email'";
+    $result = mysql_db_query($DB_NAME,$select) or die("Query attempt failed: ". mysql_error());
+    if (mysql_num_rows($result) == 0) {
+        return false;
+    } else {
+        $resultData = mysql_fetch_array($result);
+        $user = new User($resultData['user_id']);
+        return $user;
+    }
+}
+
+function generateNewPassword($user){
+    srand ((float) microtime() * 1000000);
+    $randval = rand();
+    $passwd_chars = '0123456789!@#$%&*_' .  
+                    'abcdefghijklmnopqrstuvwxyz' . 
+                    'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    $passwd = ""; 
+    while (strlen($passwd) < 8) { 
+        $passwd .= substr($passwd_chars, (rand() % strlen($passwd_chars)), 1); 
+    }
+    updatePasswd($user->getUserId(),$passwd);
+    return mail($user->getEmail(), 
+            "vim online password request",
+            "Hi " . $user->getFirstName() . ",\n\n" . 
+		"You have requested a new password for the following account:\n\n" .
+                "username : " .$user->getUserName() . " \n" .
+                "passwd   : $passwd \n\n" .
+                "You can change your password on the account page once you login. " .
+                "If you have any questions feel free to contact vimonline-support@lists.sourceforge.net. Thanks for using vim online.");
+}
+
 class User {
 
     var $userId;

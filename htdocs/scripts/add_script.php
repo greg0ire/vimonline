@@ -96,6 +96,7 @@ you should add the new version from the page detailing that script.</span>
         <option value="syntax">syntax</option>
         <option value="indent">indent</option>
         <option value="color scheme">color scheme</option>
+        <option value="ftplugin">ftplugin</option>
         </select>
     </td>
 </tr>

@@ -57,6 +57,22 @@ include("header.php");
      <td valign="top">
 
 <?php
+// report database problems
+if(!$CONN){
+?>
+    <h1>Sourceforge Project Database Problems</h1>
+<p>
+<span class="newsdate">[<?=date('d-M-Y')?>]</span> 
+Sourceforge is currently experiencing sporadic problems with their 
+project database and web server. This means news, scripts and tips 
+are currently unavailable. Thank you for your patience.
+ (<i>Scott Johnston</i>) 
+<br clear="all">
+</p>
+<?php
+}
+?>
+<?php
 $news = getRecentNewsItems(1);
 for($i=0;$i<sizeof($news);$i++){
     $news_data = $news[$i];
