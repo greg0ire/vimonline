@@ -24,6 +24,7 @@ if($HTTP_GET_VARS{"download"}){
         header( "Content-type: text" ); 
         header( "Content-Disposition: filename=vimtips.txt" ); 
         header( "Content-Description: vim tip data" );
+        echo "*vimtips.txt*\n";
         echo "This file comes from the Vim Online tip database.  \n";
         echo "These tips were downloaded on " . date("r") . "\n";
         echo "More tips can be found at http://vim.sf.net/tips\n";
