@@ -173,5 +173,15 @@ function getTipCount(){
     return mysql_result($result,"total");
 }
 
+/**
+ * get the total number of scripts
+ */
+function getTotalTipViews(){
+    global $DB_NAME;
+    $sql = "select sum(viewed) as total from vt_tips";
+    $result = mysql_db_query($DB_NAME,$sql);
+    return mysql_result($result,"total");
+}
+
 
 ?>

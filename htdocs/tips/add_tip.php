@@ -79,9 +79,12 @@ include("$BASE_DIR/header.php");
 </table>
 <p>
 Your tip should include some context to why one might want to use 
-the tip and references to vim help for additional reading. URLs will be turned
-to links (http://...) and the keyword "vimtip" followed by a "#" will be linked to
-the corresponding tip (e.g. vimtip #(tip id)). 
+the tip and references to vim help for additional reading. 
+All HTML in descriptions will be escaped for security reasons. If you want to use 
+links, just enter "http://...." and it will be turned into a link. Spaces and returns 
+will be maintained so the general structure of your tip will be as you entered it. If 
+you want to refer to other tips or scripts you should use the syntax "keyword #id" and 
+it will be linked to the correct place. For example: vimtip #6 or vimscript #10.
 </p>
 <table width="100%">
     <tr>

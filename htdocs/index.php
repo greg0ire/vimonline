@@ -2,6 +2,7 @@
 require("include/init.inc");
 require("include/string_utils.inc");
 require("scripts/include/script.inc");
+require("tips/include/tip.inc");
 require("news/include/news.inc");
 
 # include the page header
@@ -91,7 +92,14 @@ for($i=0;$i<sizeof($news);$i++){
 ?>
 
 
-<h1>Recent Script Updates</h1>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10" alt=""></td></tr>
+<tr>
+    <td width="1000"><span class="txth1">Recent Script Updates</span></td>
+    <td nowrap class="lightbg" align="center"><small>&nbsp;<?=number_format(getScriptCount())?> scripts, <?=number_format(getTotalScriptDownloads())?> downloads&nbsp;</small></td>
+</tr>
+<tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10" alt=""></td></tr>
+</table>
 <table cellpadding="0" cellspacing="0" border="0">
 <?php
     $recent_scripts = getRecentScriptUpdates(4);
@@ -109,14 +117,23 @@ for($i=0;$i<sizeof($news);$i++){
 <?php
     }
 ?>
-<tr><td colspan="2"><a href="scripts/">more...</a></td></tr>
+<tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10" alt=""></td></tr>
+<tr><td colspan="2"><a href="scripts/">more recent</a> | 
+                    <a href="scripts/search_results.php?order_by=downloads">most downloaded</a> | 
+                    <a href="scripts/search_results.php?order_by=rating">top rated</a></td></tr>
 <tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10" alt=""></td></tr>
 </table>
 
 <hr noshade size="1" color="#000000">
-<h1>Recent Tip Additions</h1>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10" alt=""></td></tr>
+<tr>
+    <td width="1000"><span class="txth1">Recent Tip Additions</span></td>
+    <td nowrap class="lightbg" align="center"><small>&nbsp;<?=number_format(getTipCount())?> tips, <?=number_format(getTotalTipViews())?> tip views&nbsp;</small></td>
+</tr>
+<tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10" alt=""></td></tr>
+</table>
 <?php
-    require("tips/include/tip.inc");
     $recent_tips = getRecentTipAdditions(4);
     for($i=0;$i<sizeof($recent_tips);$i++){
         $tip_data = $recent_tips[$i];
@@ -129,10 +146,12 @@ for($i=0;$i<sizeof($news);$i++){
 <?php
     }
 ?>
-<p><a href="tips">more...</a></p>
+<p><a href="tips">more recent</a> |
+                    <a href="tips/search_results.php?order_by=views">most viewed</a> | 
+                    <a href="tips/search_results.php?order_by=rating">top rated</a></td></tr>
+</p>
 
 
-<hr noshade size="1" color="#000000">
         </td>
     </tr>
     </table>

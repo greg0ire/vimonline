@@ -276,4 +276,14 @@ function getScriptCount(){
     return mysql_result($result,"total");
 }
 
+/**
+ * get the total number of scripts
+ */
+function getTotalScriptDownloads(){
+    global $DB_NAME;
+    $sql = "select sum(downloads) as total from vs_scripts";
+    $result = mysql_db_query($DB_NAME,$sql);
+    return mysql_result($result,"total");
+}
+
 ?>

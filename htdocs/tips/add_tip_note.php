@@ -51,6 +51,12 @@ include("$BASE_DIR/header.php");
     <td>
 
 <h1><?=$page_title?></h1>
+<p> All HTML in descriptions will be escaped for security reasons. If you want to use 
+links, just enter "http://...." and it will be turned into a link. Spaces and returns 
+will be maintained so the general structure of your note will be as you entered it. If 
+you want to refer to other tips or scripts you should use the syntax "keyword #id" and 
+it will be linked to the correct place. For example: vimtip #6 or vimscript #10.
+</p>
 
 <?php if($create_message) { ?>
     <p class="errortext"><?=$create_message?></p>
