@@ -1,14 +1,17 @@
 <?php 
+
 class Menu {
 
     var $name;
     var $link;
+    var $isSeparator;
     var $subMenus;
 
     function Menu($name,$link) {
         $this->name  = $name;
         $this->link  = $link;
         $this->subMenus = array();
+        $this->isSeparator = false;
     }
 
     function getName() {
@@ -61,6 +64,14 @@ class Menu {
 
     function getSubMenus(){
         return $this->subMenus;
+    }
+
+    function setSeparator(){
+        $this->isSeparator = true;
+    }
+
+    function isSeparator(){
+        return $this->isSeparator;
     }
 
 }

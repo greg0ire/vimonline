@@ -8,12 +8,12 @@
 
 <!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
 
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr><td colspan="4"><img src="<?=$IMG_DIR?>/spacer.gif" width="1" height="5" alt=""></td></tr>
-  <tr><td colspan="4" bgcolor="#000000"><img src="<?=$IMG_DIR?>/spacer.gif" height="2" width="1" alt=""></td></tr>
-  <tr><td colspan="4"><img src="<?=$IMG_DIR?>/spacer.gif" width="1" height="5" alt=""></td></tr>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
+  <tr><td colspan="4"><img src="<?=$IMAGES?>/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4" bgcolor="#000000"><img src="<?=$IMAGES?>/spacer.gif" height="2" width="1" alt=""></td></tr>
+  <tr><td colspan="4"><img src="<?=$IMAGES?>/spacer.gif" width="1" height="5" alt=""></td></tr>
   <tr>
-    <td><img src="<?=$IMG_DIR?>/spacer.gif" width="5" height="1" alt=""></td>
+    <td><img src="<?=$IMAGES?>/spacer.gif" width="5" height="1" alt=""></td>
 
     <td align="left" valign="top"><small>
       If you have questions or remarks about this site, visit the
@@ -32,9 +32,9 @@
 	<a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge Logo"></a>
     </td>
 
-    <td><img src="<?=$IMG_DIR?>/spacer.gif" width="5" height="1" alt=""></td>
+    <td><img src="<?=$IMAGES?>/spacer.gif" width="5" height="1" alt=""></td>
   </tr>
-  <tr><td colspan="4"><img src="<?=$IMG_DIR?>/spacer.gif" width="1" height="5" alt=""></td></tr>
+  <tr><td colspan="4"><img src="<?=$IMAGES?>/spacer.gif" width="1" height="5" alt=""></td></tr>
 </table>
 
 </body>

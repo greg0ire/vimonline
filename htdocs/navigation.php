@@ -48,13 +48,32 @@ $trivia->addSubMenu(new Menu('Logos',$BASE.'/logos.php'));
 $trivia->addSubMenu(new Menu('Buttons',$BASE.'/buttons.php'));
 $trivia->addSubMenu(new Menu('Weird stuff',$BASE.'/weird.php'));
 
-$help = new Menu('Help',$BASE.'/huh.php');
+$help = new Menu('Site Help',$BASE.'/huh.php');
+
+$sep = new Menu('Sep','Sep');
+$sep->setSeparator();
 
 // construct the top level main menus
-$mainMenus = array($home,$search,$about,$community,$docs,$download,$news,$scripts,$tips,$account,$trivia,$help);
+$mainMenus = array(
+        $home,
+        $search,
+        $sep,
+        $about,
+        $community,
+        $news,
+        $trivia,
+        $docs,
+        $download,
+        $sep,
+        $scripts,
+        $tips,
+        $account,
+        $sep,
+        $help
+    );
 // paint the login status and the menus
 ?>
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
     <tr>
 <?php
 if(isSessionValid()){
@@ -78,32 +97,56 @@ if(isSessionValid()){
     <tr>
         <td><img src="<?=$IMAGES?>/spacer.gif" alt="" border="0" width="1" height="2"></td>
     </tr>
-</table>
 <?php
 // draw the menus
 foreach($mainMenus as $menu){
-    if($menu->isSelected($REQUEST_URI)){
+    if($menu->isSeparator()){
+?>
+    <tr>
+        <td><img src="<?=$IMAGES?>/spacer.gif" alt="" border="0" width="1" height="3"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="<?=$IMAGES?>/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="<?=$IMAGES?>/spacer.gif" alt="" border="0" width="1" height="3"></td>
+    </tr>
+<?php
+    } else if($menu->isSelected($REQUEST_URI)){
         // we are in this nav main
 ?>
-        <span class="sidebarheader"><?=$menu->getName()?></span><br>
+        <tr>
+            <td class="sidebarheader"><?=$menu->getName()?></td>
+        </tr>
 <?php
     } else {
 ?>
-        <span class="sidebarheader"><a href="<?=$menu->getLink()?>"><?=$menu->getName()?></a></span><br>
+        <tr>
+            <td class="sidebarheader"><a href="<?=$menu->getLink()?>"><?=$menu->getName()?></a></td>
+        </tr>
 <?php
     }
     if($menu->isOpen($REQUEST_URI)){
         foreach($menu->getSubMenus() as $subMenu){
             if($subMenu->isSelected($REQUEST_URI)){
 ?>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><?=$subMenu->getName()?></span><br>
+        <tr>
+            <td class="sidebarheader">
+                &nbsp;&nbsp;&nbsp;&nbsp;<?=$subMenu->getName()?>
+            </td>
+        </tr>
 <?php
             } else {
 ?>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="<?=$subMenu->getLink()?>"><?=$subMenu->getName()?></a></span><br>
+        <tr>
+            <td class="sidebarheader">
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="<?=$subMenu->getLink()?>"><?=$subMenu->getName()?></a>
+            </td>
+        </tr>
 <?php
             }           
         }
     }
 }
 ?>
+</table>

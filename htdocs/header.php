@@ -66,7 +66,7 @@ include($page_sid);
       </table>
     </td>
 
-    <td class="checker"><img src="<?=$IMAGES?>/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
+    <td class="darkbg"><img src="<?=$IMAGES?>/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
     <td>
       <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
         <tr>
