@@ -4,12 +4,14 @@
 
 require("../include/init.inc");
 require("../include/string_utils.inc");
+require("include/script.inc");
 
 if($HTTP_GET_VARS{"cancel"}){
     header("Location: index.php");
     exit;
 }
 $keywords = $HTTP_GET_VARS{"keywords"};
+$type = $HTTP_GET_VARS{"script_type"};
 $order_by = $HTTP_GET_VARS{"order_by"};
 $direction = $HTTP_GET_VARS{"direction"};
 $result_ptr = $HTTP_GET_VARS{"result_ptr"};
@@ -31,6 +33,10 @@ if($keywords){
     // they searched for keywords, add the join
     $sql = $sql . " and match (summary,description,install_details) against ('$keywords')";
     $return_link = $return_link . "&keywords=$keywords";
+}
+if($script_type && $script_type != "all"){
+    $sql = $sql . "and script_type = '" . $script_type . "' " ;
+    $return_link = $return_link . "&script_type=$script_type";
 }
 if($order_by=='rating'){
     $order_by_clause = " order by rating_score ";
@@ -96,7 +102,18 @@ include("$BASE_DIR/header.php");
 </table>
 
 <table cellpadding="0" cellspacing="0" border="0" width="100%">
-<tr><td align="right" colspan="11">Showing <b><?=$start?></b> to <b><?=$end?></b> of <b><?=$result_count?></b> results</td></tr>
+<tr>
+    <td><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+    <td colspan="9">
+Searched <?=$type?> scripts for "<b><?=$keywords?></b>"
+    </td>
+    <td><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+</tr>
+<tr>
+    <td><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+    <td colspan="9" align="right">Showing <b><?=$start?></b> to <b><?=$end?></b> of <b><?=$result_count?></b> results</td>
+    <td><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+</tr>
 <tr><td colspan="11"><img src="images/spacer.gif" height="4" width="1" alt=""></td></tr>
 <tr>
     <td><img src="images/spacer.gif" height="1" width="20" alt=""></td>
@@ -165,7 +182,8 @@ if($has_next){
 }
 ?>
     </td>
-    <td align="right" colspan="7">Showing <b><?=$start?></b> to <b><?=$end?></b> of <b><?=$result_count?></b> results</td>
+    <td align="right" colspan="4">Showing <b><?=$start?></b> to <b><?=$end?></b> of <b><?=$result_count?></b> results</td>
+    <td><img src="images/spacer.gif" width="1" height="1" alt=""></td>
 </tr>
 <tr><td colspan="11"><img src="images/spacer.gif" height="4" width="1" alt=""></td></tr>
 </table>
@@ -180,7 +198,16 @@ if($has_next){
     <td class="prompt">keywords</td>
     <td><input type="text" name="keywords" size="60" value="<?=$keywords?>"></td>
 </tr>
-<tr><td colspan="3"><img src="images/spacer.gif" width="1" height="4" alt=""></td></tr>
+<tr>
+    <td><img src="images/spacer.gif" width="5" height="1" alt=""></td>
+    <td class="prompt">type</td>
+    <td>
+        <select name="script_type">
+        <option value="">-- all -- </option>
+        <?=getScriptTypeDropDown($HTTP_GET_VARS{'script_type'})?>
+        </select>
+    </td>
+</tr>
 <tr>
     <td><img src="images/spacer.gif" width="5" height="1" alt=""></td>
     <td><b>sort by</b></td>

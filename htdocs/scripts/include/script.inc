@@ -1,4 +1,28 @@
 <?php
+
+/**
+ * list of supported script types, not stored as a mysql enum because
+ * I would rather not make ddl changes to add types
+ */
+$SCRIPT_TYPES = array("utility","syntax","indent","color scheme","ftplugin");
+
+/**
+ * Get the drop down list of script types
+ */
+function getScriptTypeDropDown($selected){
+    global $SCRIPT_TYPES;
+    $dd = "";
+    foreach($SCRIPT_TYPES as $type){
+        $dd = $dd . "<option value=\"".$type."\"";
+        if($selected == $type){
+            $dd = $dd . " selected ";
+        } 
+        $dd = $dd . ">".$type."</option>\n";
+    }
+    return $dd;
+}
+
+
 /**
  * save script header info (this doesn't upload the script, just save the header info)
  * @return the script id of the new script
