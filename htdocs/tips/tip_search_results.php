@@ -129,7 +129,7 @@ include("../header.php");
 ?>
 <?php
 for($i=0;$i<$show_me and $tip_data=mysql_fetch_array($result);$i++){
-    $rowclass = ($i & 0x1)?"rowodd":"roweven";
+    $rowclass = ($i & 0x1)?"roweven":"rowodd";
 ?>
 <tr>
     <td class="<?=$rowclass?>" nowrap><img src="images/<?=$tip_data{'complexity'}?>.gif" alt="<?=$tip_data{'complexity'}?>"> <a href="tip.php?tip_id=<?=$tip_data{'tip_id'}?>"><?=$tip_data{'tip_id'}?></a></td>

@@ -132,7 +132,7 @@ Searched <?=$type?> scripts for "<b><?=$keywords?></b>"
 ?>
 <?php
 for($i=0;$i<$show_me and $script_data=mysql_fetch_array($result);$i++){
-    $rowclass = ($i & 0x1)?"rowodd":"roweven";
+    $rowclass = ($i & 0x1)?"roweven":"rowodd";
 ?>
 <tr>
     <td class="<?=$rowclass?>"><a href="script.php?script_id=<?=$script_data{'script_id'}?>"><?=$script_data{'script_name'}?></a></td>
