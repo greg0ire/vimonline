@@ -2,9 +2,6 @@
 // Maillists about Vim
 require_once("include/init.inc");
 $page_title = "mailing lists";
-$nav_main = "community";
-$nav_sub = "maillist";
-$page_sid = "sid_empty.php";
 
 include("header.php");
 ?>

@@ -2,12 +2,8 @@
 // news overview page
 require_once("../include/init.inc");
 require_once("../include/string_utils.inc");
-
 $page_title = "news";
-$nav_main = "news";
-$nav_sub = "news";
 $page_sid = "sid_news.php";
-$page_con = "con_news.php";
 
 include("../header.php");
 ?>

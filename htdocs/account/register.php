@@ -1,9 +1,7 @@
 <?php
+// new user registration
 require_once("../include/init.inc");
 $page_title = "create an account";
-$nav_main = "account";
-$nav_sub = "register";
-$page_sid = "$BASE_DIR/sid_empty.php";
 
 // if an account was requested, attempt to create it
 $errorMessage = "";

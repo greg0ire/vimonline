@@ -4,10 +4,7 @@ require_once("../include/init.inc");
 require_once("../include/string_utils.inc");
 require_once("include/news.inc");
 $page_title = "Submit News Item";
-$nav_main = "news";
-$nav_sub = "submit";
 $page_sid = "sid_news.php";
-
 
 if (!isSessionValid()) {
     redirectToLoginPage("/news/submit.php");

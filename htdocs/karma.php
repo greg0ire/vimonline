@@ -1,11 +1,7 @@
 <?php
 // Explanation about tip and script karma
 require_once("include/init.inc");
-
 $page_title = "karma";
-$nav_main = "scripts";
-$nav_sub = "karma";
-$page_sid = "sid_empty.php";
 
 include("header.php");
 ?>

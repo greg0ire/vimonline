@@ -1,12 +1,7 @@
 <?php
 // 6 Kbyte on Vim page
 require_once("include/init.inc");
-
 $page_title = "Vim in 6 Kbyte";
-$nav_main = "about";
-$nav_sub = "6kbyte";
-$page_sid = "sid_empty.php";
-$page_con = "con_6kbyte.php";
 
 include("header.php");
 ?>

@@ -4,13 +4,8 @@ require_once("../include/init.inc");
 require_once("../scripts/include/script.inc");
 require_once("../include/string_utils.inc");
 $page_title = "account info";
-$nav_main = "account";
-$nav_sub = "account";
-$page_sid = "$BASE_DIR/sid_empty.php";
-
 
 // handle actions
-
 if (!isSessionValid()) {
     redirectToLoginPage("");
 }

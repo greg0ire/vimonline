@@ -2,10 +2,6 @@
 // Vim logos
 require_once("include/init.inc");
 $page_title = "logos";
-$nav_main = "trivia";
-$nav_sub = "logos";
-$page_sid = "sid_empty.php";
-$page_con = "con_logos.php";
 
 include("header.php");
 ?>

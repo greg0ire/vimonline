@@ -1,10 +1,7 @@
 <?php
-// index page for account info
+// allows a user to request a new password
 require_once("../include/init.inc");
 $page_title = "password help";
-$nav_main = "account";
-$nav_sub = "forgot";
-$page_sid = "$BASE_DIR/sid_empty.php";
 
 // handle actions
 $success = "";

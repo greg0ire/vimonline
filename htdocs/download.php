@@ -1,10 +1,7 @@
 <?php
 // Downloading Vim
 require_once("include/init.inc");
-
 $page_title = "download";
-$nav_main = "download";
-$nav_sub = "download";
 $page_sid = "sid_download.php";
 
 include("header.php");

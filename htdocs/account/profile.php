@@ -1,12 +1,12 @@
 <?php
 // displays a user's profile
+// this is the page that is visible to the world when people
+// click through a name as oppose to account.php which shows 
+// a user their account info
 require_once("../include/init.inc");
 require_once("../include/string_utils.inc");
 require_once("../scripts/include/script.inc");
 $page_title = "user profile";
-$nav_main = "scripts";
-$nav_sub = "profile";
-$page_sid = "$BASE_DIR/sid_empty.php";
 
 $userId = $HTTP_GET_VARS{"user_id"};
 if(!$user_id){

@@ -2,9 +2,6 @@
 // Vim buttons
 require_once("include/init.inc");
 $page_title = "buttons";
-$nav_main = "trivia";
-$nav_sub = "buttons";
-$page_sid = "sid_empty.php";
 
 include("header.php");
 ?>

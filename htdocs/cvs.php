@@ -1,12 +1,7 @@
 <?php
 // Vim Documentation
 require_once("include/init.inc");
-
 $page_title = "Vim from CVS";
-$nav_main = "download";
-$nav_sub = "cvs";
-$page_sid = "sid_empty.php";
-$page_con = "con_cvs.php";
 
 include("header.php");
 ?>

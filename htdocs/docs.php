@@ -1,12 +1,7 @@
 <?php
 // Vim Documentation
 require_once("include/init.inc");
-
 $page_title = "Vim documentation";
-$nav_main = "docs";
-$nav_sub = "docs";
-$page_sid = "sid_empty.php";
-$page_con = "con_docs.php";
 
 include("header.php");
 ?>

@@ -55,6 +55,9 @@ require("$BASE_DIR/navigation.php");
 
 <!-- INCLUDE THE PAGE SIDEBAR TEXT -->
 <?php
+if(!$page_sid){
+    $page_sid = $BASE_DIR . "/sid_empty.php";
+}
 include($page_sid);
 ?>
 

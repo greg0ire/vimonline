@@ -1,10 +1,7 @@
 <?php
+// login to vim online
 require_once("include/init.inc");
 $page_title = "account info";
-$nav_main = "account";
-$nav_sub = "login";
-$page_sid = "$BASE_DIR/sid_empty.php";
-
 
 // if a login was submitted, attempt to authenticate
 if($HTTP_POST_VARS{"authenticate"}){

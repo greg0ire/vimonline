@@ -1,12 +1,7 @@
 <?php
 // General info about Vim
 require_once("include/init.inc");
-
 $page_title = "about Vim";
-$nav_main = "about";
-$nav_sub = "about";
-$page_sid = "sid_empty.php";
-$page_con = "con_about.php";
 
 include("header.php");
 ?>

@@ -1,11 +1,7 @@
 <?php
 // explanation about vim online tips and scripts
 require_once("include/init.inc");
-
 $page_title = "huh?";
-$nav_main = "scripts";
-$nav_sub = "huh";
-$page_sid = "sid_empty.php";
 
 include("header.php");
 ?>

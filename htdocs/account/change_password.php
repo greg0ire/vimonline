@@ -1,11 +1,7 @@
 <?php
 // index page for account info
 require_once("../include/init.inc");
-// include the page header
 $page_title = "update password";
-$nav_main = "account";
-$nav_sub = "account_passwd";
-$page_sid = "$BASE_DIR/sid_empty.php";
 
 // handle actions
 if (!isSessionValid()) {

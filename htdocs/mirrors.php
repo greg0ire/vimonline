@@ -1,11 +1,7 @@
 <?php
 // Vim ftp mirrors
 require_once("include/init.inc");
-
 $page_title = "ftp mirrors";
-$nav_main = "download";
-$nav_sub = "mirrors";
-$page_sid = "sid_empty.php";
 
 include("header.php");
 ?>

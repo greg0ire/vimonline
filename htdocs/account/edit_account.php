@@ -1,10 +1,7 @@
 <?php
-// index page for account info
+// allows users to edit their accout info
 require_once("../include/init.inc");
 $page_title = "edit account info";
-$nav_main = "account";
-$nav_sub = "account_edit";
-$page_sid = "$BASE_DIR/sid_empty.php";
 
 // handle actions
 if (!isSessionValid()) {

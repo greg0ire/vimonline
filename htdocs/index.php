@@ -7,7 +7,6 @@ require_once("tips/include/tip.inc");
 require_once("news/include/news.inc");
 
 $page_title = "welcome home";
-$nav_main = "home";
 $page_sid = "sid_index.php";
 
 include("header.php");
