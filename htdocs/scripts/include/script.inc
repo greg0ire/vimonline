@@ -68,10 +68,11 @@ function updateScript($userId,$script_id,$script_name,$summary,$description,$ins
  * save the script source for a script
  * @return the new script source id
  */
-function saveScriptSource($userId,$script_id,$vim_version,$script_version,$version_comment,$mime_type,$data){
+function saveScriptSource($userId,$script_id,$package,$vim_version,$script_version,$version_comment,$mime_type,$data){
     global $DB_NAME;
     $insert = "insert into vs_script_source set 
                     script_id='$script_id',
+                    package='$package',
                     vim_version='$vim_version',
                     mime_type='$mime_type',
                     created_by = $userId,
@@ -92,7 +93,8 @@ function loadScript($script_id){
     $script_data;
     $select = "select s.script_id, s.script_name, s.script_type, s.summary, s.description,
                        s.install_details, s.ratings, s.rating_score, s.downloads, s.last_updated_by,
-                       s.last_update_date, unix_timestamp(s.creation_date) as creation_date, u.user_id, u.first_name, u.last_name
+                       s.last_update_date, unix_timestamp(s.creation_date) as creation_date, 
+                       u.user_id, u.first_name, u.last_name
                  from vs_scripts s,
                       vs_users u
                  where script_id = $script_id
@@ -109,7 +111,7 @@ function loadScript($script_id){
 function loadScriptVersions($script_id){
     global $DB_NAME;
     $versions = array();
-    $select = "select ss.script_source_id, ss.vim_version, ss.script_version, ss.version_comment, 
+    $select = "select ss.script_source_id, ss.package, ss.vim_version, ss.script_version, ss.version_comment, 
                       unix_timestamp(ss.creation_date) as creation_date, u.user_id, 
                       u.first_name, u.last_name
                  from vs_script_source ss,
@@ -127,6 +129,29 @@ function loadScriptVersions($script_id){
     return $versions;
 }
 /**
+ * load a single script version by id
+ * @return array of script source information. I would like to use a class but I didn't
+ * learn about php classes until after I wrote this...maybe some day.
+ */
+function loadScriptVersion($script_source_id){
+    global $DB_NAME;
+    $select = "select ss.script_source_id, ss.package, ss.vim_version, ss.script_version, ss.version_comment, 
+                      unix_timestamp(ss.creation_date) as creation_date, u.user_id, 
+                      u.first_name, u.last_name, s.script_name, s.script_id
+                 from vs_script_source ss,
+                      vs_users u,
+                      vs_scripts s
+                where ss.script_source_id = $script_source_id
+                  and ss.script_id = s.script_id
+                  and ss.created_by = u.user_id";
+    $result = mysql_db_query($DB_NAME,$select);
+    if(mysql_error()){
+        echo mysql_error();
+    }
+    $version_data = mysql_fetch_array ($result);
+    return $version_data;
+}
+/**
  * load the most recent version
  */
 function loadLatestScriptVersion($script_id){
@@ -139,6 +164,14 @@ function loadLatestScriptVersion($script_id){
     $result = mysql_db_query($DB_NAME,$select);
     // only return the first
     return mysql_fetch_array ($result);
+}
+/**
+ * delete a script version
+ */
+function deleteScriptVersion($script_source_id){
+    global $DB_NAME;
+    $delete = "delete from vs_script_source where script_source_id = $script_source_id";
+    mysql_db_query($DB_NAME,$delete);
 }
 /**
  * get info on the $count most recent scripts
@@ -210,7 +243,7 @@ function rateScript($ip,$script_id,$rating){
  */
 function loadScriptSource($src_id){
     global $DB_NAME;
-    $query = "select s.script_id, s.script_name, ss.mime_type, ss.src 
+    $query = "select s.script_id, s.script_name, ss.package, ss.mime_type, ss.src 
                 from vs_script_source ss, vs_scripts s
                where ss.script_id = s.script_id
                  and script_source_id=$src_id";
@@ -284,6 +317,16 @@ function getTotalScriptDownloads(){
     $sql = "select sum(downloads) as total from vs_scripts";
     $result = mysql_db_query($DB_NAME,$sql);
     return mysql_result($result,"total");
+}
+
+/**
+ * get the total number of scripts
+ */
+function getTotalScriptVersions($script_id){
+    global $DB_NAME;
+    $sql = "select count(*) as versions from vs_script_source where script_id = $script_id";
+    $result = mysql_db_query($DB_NAME,$sql);
+    return mysql_result($result,"versions");
 }
 
 ?>

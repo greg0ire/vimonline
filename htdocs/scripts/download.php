@@ -17,7 +17,7 @@ if(!$script_data{"script_id"}){
     exit;
 }
 incrementDownload($REMOTE_ADDR,$script_data{"script_id"});
-$script_name = $script_data{"script_name"};
+$package = $script_data{"package"};
 // don't use stored mime type so people are always prompted
 // to save
 $mime_type = "application/octetstream";
@@ -25,10 +25,10 @@ Header( "Content-type: $mime_type");
 if(ereg('MSIE',getenv('HTTP_USER_AGENT'))){
     // IE handles force download much better if we don't include the "attachment"
     // specifier as defined by the HTTP spec
-    Header( "Content-Disposition: filename=$script_name");
+    Header( "Content-Disposition: filename=$package");
 } else {
     // Most normal browsers do it right
-    Header( "Content-Disposition: attachment; filename=$script_name");
+    Header( "Content-Disposition: attachment; filename=$package");
 }
 echo $script_data{"src"};
 ?>

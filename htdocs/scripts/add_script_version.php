@@ -13,21 +13,21 @@ if (!isSessionValid()) {
 // handle actions
 if($HTTP_POST_VARS{"add_script"}=="upload"){
     // handle save
-    $script_name = basename($HTTP_POST_FILES["script_file"]["name"]);
+    $package_name = basename($HTTP_POST_FILES["script_file"]["name"]);
     $script_id = $HTTP_POST_VARS{"script_id"};
     $script_version = $HTTP_POST_VARS{'script_version'};
     $vim_version = $HTTP_POST_VARS{'vim_version'};
     $version_comment = $HTTP_POST_VARS{'version_comment'};
-    if(!$script_version || !$vim_version || !$version_comment || !$script_name){
+    if(!$script_version || !$vim_version || !$version_comment || !$package_name){
         $error_msg = "All fields are required.";
     } else if($HTTP_POST_FILES["script_file"]["size"]==0) {
-        $error_msg = "$script_name is empty, are you sure you specified the correct path?";
+        $error_msg = "$package_name is empty, are you sure you specified the correct path?";
     } else {
         $mime_type = $HTTP_POST_FILES["script_file"]["type"];
         $data = addslashes(fread(fopen($HTTP_POST_FILES["script_file"]["tmp_name"], "r"),
                     $HTTP_POST_FILES["script_file"]["size"]));
         $user = getSessionUser();
-        saveScriptSource($user->getUserId(),$script_id,$vim_version,$script_version,$version_comment,$mime_type,$data);
+        saveScriptSource($user->getUserId(),$script_id,$package_name,$vim_version,$script_version,$version_comment,$mime_type,$data);
         if(mysql_errno()){
             $msg = mysql_error();
             include("$BASE_DIR/error.php");
@@ -83,11 +83,11 @@ Current script version is <?=$recent_version{'script_version'}?>
 <input type="hidden" name="MAX_FILE_SIZE" value="10485760">
 <table cellpadding="2" cellspacing="2" border="0" width="100%">
 <tr>
-    <td class="prompt">script</td>
+    <td class="prompt">script *</td>
     <td width="2000"><input type="file" name="script_file"><?=$HTTP_POST_VARS{"script_file"}?></td>
 </tr>
 <tr>
-    <td nowrap class="prompt">vim version</td>
+    <td nowrap class="prompt">vim version *</td>
     <td>
         <select name="vim_version">
         <option value="5.7">5.7</option>
@@ -96,11 +96,11 @@ Current script version is <?=$recent_version{'script_version'}?>
     </td>
 </tr>
 <tr>
-    <td nowrap class="prompt">script version</td>
+    <td nowrap class="prompt">script version *</td>
     <td><input name="script_version" type="text" size="10" maxlength="10" value="<?=$HTTP_POST_VARS{'script_version'}?>"></td>
 </tr>
 <tr>
-    <td class="prompt" valign="top">version comment</td>
+    <td class="prompt" valign="top">version comment *</td>
     <td>
         <textarea wrap="virtual" rows="5" cols="40" name="version_comment"><?=$HTTP_POST_VARS{"version_comment"}?></textarea>
     </td>

@@ -13,19 +13,17 @@ if($HTTP_POST_VARS{"add_script"} == "cancel"){
 } else if($HTTP_POST_VARS{"add_script"} == "upload"){
     require("include/script.inc");
     // handle save
-    $script_name = basename($HTTP_POST_FILES["script_file"]["name"]);
+    $package_name = basename($HTTP_POST_FILES["script_file"]["name"]);
+    $script_name = $HTTP_POST_VARS{"script_name"};
     $script_type = $HTTP_POST_VARS{"script_type"};
     $summary = $HTTP_POST_VARS{"summary"};
     $description = $HTTP_POST_VARS{"description"};
+    $install_details = $HTTP_POST_VARS{"install_details"};
     if($HTTP_POST_FILES["script_file"]["size"]==0) {
-        $error_msg = "$script_name is empty, are you sure you specified the correct path?";
-    } else if(!$script_name || !$script_type || !$summary || !$description){
+        $error_msg = "The package you uploaded ($package_name) is empty, are you sure you specified the correct path?";
+    } else if(!$package_name || !$script_name || !$script_type || !$summary || !$description || !$script_version){
         $error_msg = "All fields are required except install details.";
-        if(!$script_name){
-            $error_msg = $error_msg . " script name";
-        }
     } else {
-        $install_details = $HTTP_POST_VARS{"install_details"};
         $user = getSessionUser();
         $script_id = saveScript($user->getUserId(),$script_name,$script_type,$summary,$description,$install_details);
         if(mysql_errno()){
@@ -39,7 +37,7 @@ if($HTTP_POST_VARS{"add_script"} == "cancel"){
         $mime_type = $HTTP_POST_FILES["script_file"]["type"];
         $data = addslashes(fread(fopen($HTTP_POST_FILES["script_file"]["tmp_name"], "r"),
                     $HTTP_POST_FILES["script_file"]["size"]));
-        saveScriptSource($user->getUserId(),$script_id,$vim_version,$script_version,$version_comment,$mime_type,$data);
+        saveScriptSource($user->getUserId(),$script_id,$package_name,$vim_version,$script_version,$version_comment,$mime_type,$data);
         if(mysql_errno()){
             $msg = mysql_error();
             include("$BASE_DIR/error.php");
@@ -76,20 +74,35 @@ you should add the new version from the page detailing that script.</span>
 <input type="hidden" name="ACTION" value="UPLOAD_NEW">
 <input type="hidden" name="MAX_FILE_SIZE" value="10485760">
 <table border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10"></td></tr><!-- horizontal space -->
 <tr>
     <td colspan="2">
-    Scripts can be standard text files or collections of scripts as a zip or gzip. Please don't upload large binaries 
-    or we will quickly run out of space.  The name of the script will be taken from the file you upload.
+    The script name is the name that vim online users will associate with your script.
+    The script name can be different from the package you upload in the case
+    where your script is made up of several different files. An example is if I was writing
+    a script foo.vim that also had vim help file and a README file I would name the script 
+    foo.vim but my script package would be foo.tar.gz.
     </td>
 </tr>
 <tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10"></td></tr><!-- horizontal space -->
 <tr>
-    <td class="prompt">script</td>
+    <td class="prompt">script name *</td>
+    <td><input type="text" name="script_name" size="40" maxlength="80" value="<?=$HTTP_POST_VARS{'script_name'}?>"></td>
+<tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10"></td></tr><!-- horizontal space -->
+</tr>
+<tr>
+    <td colspan="2">
+    The script package is the script file or a collection of bundled files. 
+    </td>
+</tr>
+<tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10"></td></tr><!-- horizontal space -->
+<tr>
+    <td class="prompt">script package *</td>
     <td width="2000"><input type="file" name="script_file"></td>
 </tr>
 <tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10"></td></tr><!-- horizontal space -->
 <tr>
-    <td class="prompt">type</td>
+    <td class="prompt">type *</td>
     <td>
         <select name="script_type">
         <option value="utility">utility</option>
@@ -102,7 +115,7 @@ you should add the new version from the page detailing that script.</span>
 </tr>
 <tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10"></td></tr><!-- horizontal space -->
 <tr>
-    <td nowrap class="prompt">vim version</td>
+    <td nowrap class="prompt">vim version *</td>
     <td>
         <select name="vim_version">
         <option value="5.7">5.7</option>
@@ -112,12 +125,12 @@ you should add the new version from the page detailing that script.</span>
 </tr>
 <tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10"></td></tr><!-- horizontal space -->
 <tr>
-    <td nowrap class="prompt">initial script version</td>
+    <td nowrap class="prompt">initial script version *</td>
     <td><input name="script_version" type="text" size="6" maxlength="8" value="<?=$HTTP_POST_VARS{'script_version'}?>"></td>
 </tr>
 <tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10"></td></tr><!-- horizontal space -->
 <tr>
-    <td class="prompt">summary</td>
+    <td class="prompt">summary *</td>
     <td><input type="text" name="summary" size="40" maxlength="80" value="<?=$HTTP_POST_VARS{'summary'}?>"></td>
 </tr>
 <tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10"></td></tr><!-- horizontal space -->
@@ -131,7 +144,7 @@ you should add the new version from the page detailing that script.</span>
 </tr>
 <tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10"></td></tr><!-- horizontal space -->
 <tr>
-    <td class="prompt" valign="top">detailed description</td>
+    <td class="prompt" valign="top">detailed description *</td>
     <td>
         <textarea wrap="virtual" rows="10" cols="40" name="description"><?=$HTTP_POST_VARS{"description"}?></textarea>
     </td>
