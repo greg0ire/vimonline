@@ -57,7 +57,6 @@ $sep->setSeparator();
 $mainMenus = array(
         $home,
         $search,
-        $account,
         $sep,
         $about,
         $community,
@@ -65,8 +64,10 @@ $mainMenus = array(
         $trivia,
         $docs,
         $download,
+        $sep,
         $scripts,
         $tips,
+        $account,
         $sep,
         $help
     );
