@@ -31,24 +31,34 @@ $sql = "select s.script_id,
 $return_link = "search_results.php?";
 if($keywords){
     // they searched for keywords, add the join
-    $sql = $sql . " and match (summary,description,install_details) against ('$keywords')";
+    $sql = $sql . " and match (s.summary,s.description,s.install_details) against ('$keywords')";
     $return_link = $return_link . "&keywords=$keywords";
+    $words = preg_split("/ /",$keywords);
+    foreach($words as $word){
+        // add joins for keywords less than 4 letters -- would rather use
+        // fulltext but not a mysql user parameter :(
+        if(strlen($word) < 4){
+            $sql = $sql . " or s.description regexp '[[:<:]]" . $word . "[[:>:]]'";      
+            $sql = $sql . " or s.summary regexp '[[:<:]]" . $word . "[[:>:]]'";      
+            $sql = $sql . " or s.install_details regexp '[[:<:]]" . $word . "[[:>:]]'";      
+        }
+    }
 }
 if($script_type && $script_type != "all"){
-    $sql = $sql . "and script_type = '" . $script_type . "' " ;
+    $sql = $sql . "and s.script_type = '" . $script_type . "' " ;
     $return_link = $return_link . "&script_type=$script_type";
 }
 if($order_by=='rating'){
-    $order_by_clause = " order by rating_score ";
+    $order_by_clause = " order by s.rating_score ";
     $return_link = $return_link . "&order_by=rating";
 } else if($order_by=='downloads'){
-    $order_by_clause = " order by downloads ";
+    $order_by_clause = " order by s.downloads ";
     $return_link = $return_link . "&order_by=downloads";
 } else if($order_by=='script_name'){
-    $order_by_clause = " order by script_name ";
+    $order_by_clause = " order by s.script_name ";
     $return_link = $return_link . "&order_by=script_name";
 } else {
-    $order_by_clause = " order by creation_date ";
+    $order_by_clause = " order by s.creation_date ";
 }
 if($direction!='ascending'){
     $order_by_clause = $order_by_clause . " desc";

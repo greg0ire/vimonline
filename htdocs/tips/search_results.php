@@ -34,6 +34,15 @@ if($keywords){
     // they searched for keywords, add the join
     $sql = $sql . " and match (summary,tip) against ('$keywords')";
     $return_link = $return_link . "&keywords=$keywords";
+    $words = preg_split("/ /",$keywords);
+    foreach($words as $word){
+        // add joins for keywords less than 4 letters -- would rather use
+        // fulltext but not a mysql user parameter :(
+        if(strlen($word) < 4){
+            $sql = $sql . " or summary regexp '[[:<:]]" . $word . "[[:>:]]'";      
+            $sql = $sql . " or tip regexp '[[:<:]]" . $word . "[[:>:]]'";      
+        }
+    }
 }
 if($authors_email){
     // they searched for author, add the join
