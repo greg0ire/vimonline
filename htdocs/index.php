@@ -87,7 +87,7 @@ for($i=0;$i<sizeof($news);$i++){
 </tr>
 <tr>
     <td><img src="images/spacer.gif" width="1" height="1" alt=""></td>
-    <td>(<?=$script_data{"script_version"}?>) <?=escapeForHTMLNoBreaks($script_data{"version_comment"})?> - <i><?=$script_data{"first_name"}?> <?=$script_data{"last_name"}?></i></td>
+    <td>(<?=$script_data{"script_version"}?>) <?=escapeForHTMLNoBreaks(limitStrLength($script_data{"version_comment"}))?> - <i><?=$script_data{"first_name"}?> <?=$script_data{"last_name"}?></i></td>
 </tr>
 <?php
     }

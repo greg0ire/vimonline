@@ -8,6 +8,14 @@ function escapeForHTMLNoBreaks($string){
     return _escapeForHTML($string,false,true,true);
 }
 
+function limitStrLength($string){
+    if(strlen($string) > 400){
+        return substr($string,0,400) . "...";
+    } else {
+        return $string;
+    }
+}
+
 function escapeEmail($email){
     return str_replace("@"," at ",$email);
 }

@@ -127,7 +127,7 @@ include("$BASE_DIR/header.php");
 } // !hasRatedScript 
 ?>
 <span class="txth2">script versions</span> (<a href="add_script_version.php?script_id=<?=$script_data{"script_id"}?>">upload new version</a>)
-<table cellspacing="0" cellpadding="4" border="0">
+<table cellspacing="0" cellpadding="4" border="0" width="100%">
 <tr><td colspan="5"><img src="images/spacer.gif" height="10" width="1" alt=""></td></tr>
 <?php 
 $versions = loadScriptVersions($script_id);
@@ -139,7 +139,7 @@ for($i=0;$i<sizeof($versions);$i++){
     <td valign="top" nowrap>(vim <?=$source_data{"vim_version"}?>)</td>
     <td valign="top" nowrap><a href="download.php?src_id=<?=$source_data{'script_source_id'}?>">Download</a></td>
     <td valign="top"><i><a href="<?=$BASE?>/account/profile.php?user_id=<?=$script_data{'user_id'}?>"><?=$source_data{"first_name"}?> <?=$source_data{"last_name"}?></a></i></td>
-    <td>"<?=escapeForHTML($source_data{"version_comment"})?>"</td>
+    <td width="2000" valign="top">"<?=escapeForHTML($source_data{"version_comment"})?>"</td>
 </tr>
 <?php } ?>
 </table>

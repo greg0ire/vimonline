@@ -16,7 +16,7 @@ $user = getSessionUser();
 if($HTTP_POST_VARS{"submit"}){
     // strip again just to be safe...
     $title = strip_tags($HTTP_POST_VARS{"title"});
-    $news = strip_tags($HTTP_POST_VARS{"news"},"<i>,<a>,<b>");
+    $news = strip_tags($HTTP_POST_VARS{"news"},"<i>,<a>,<b>,<tt>");
     createNewsItem($user->getUserId(),$title,$news);
     header("Location: index.php");
     exit;
@@ -32,9 +32,15 @@ include("$BASE_DIR/header.php");
     <td>
 
 <?php 
-if($HTTP_POST_VARS{"preview"}){
+if(!$user->canSubmitNews()){
+?>
+    <p class="errortext">You do not have access to the news item feature. If you believe
+    you received this message in error please contact vimonline-support@lists.sourceforge.net.</p>
+
+<?php 
+} else if($HTTP_POST_VARS{"preview"}){
     $title = strip_tags($HTTP_POST_VARS{"title"});
-    $news = stripslashes(strip_tags($HTTP_POST_VARS{"news"},"<i>,<a>,<b>"));
+    $news = stripslashes(strip_tags($HTTP_POST_VARS{"news"},"<i>,<a>,<b>,<tt>"));
 ?>
 <h1>Submit News Item : Preview</h1>
 <hr noshade size="1" color="#000000">
@@ -60,13 +66,19 @@ if($HTTP_POST_VARS{"preview"}){
 
 <h1><?=$page_title?></h1>
 <p>
-You can include HTML links (&lt;a&gt;), Italic (&lt;i&gt;) and bold (&lt;b&gt;) tags in the body of news items. All other html will be stripped. I don't currently validate the structure of the news item so please be sure to close your tags.
+You can include HTML links (&lt;a&gt;), Italic (&lt;i&gt;), tt (&lt;tt&gt;) and bold (&lt;b&gt;) tags in the body of news items. All other html will be stripped. I don't currently validate the structure of the news item so please be sure to close your tags.
 </p>
 
 <form name="add_news_item" method="post">
 <table cellpadding="0" cellspacing="4" border="0" width="100%">
     <tr>
+        <td class="prompt">title</td>
+    </tr>
+    <tr>
         <td><input type="textfield" name="title" size="60" maxlength="60" value="<?=$HTTP_POST_VARS{'title'}?>"></td>
+    </tr>
+    <tr>
+        <td class="prompt">news item</td>
     </tr>
     <tr>
         <td>
