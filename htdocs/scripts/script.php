@@ -33,7 +33,7 @@ include("$BASE_DIR/header.php");
     <td><img src="images/spacer.gif" width="5" height="1" alt=""></td>
     <td width="2000">
 <br>
-<span class="txth1"><?=$script_data{"script_name"}?> : <?=$script_data{"summary"}?></span> 
+<span class="txth1"><?=$script_data{"script_name"}?> : <?=escapeForHTML($script_data{"summary"})?></span> 
 
 <?php
 if (isSessionValid() ) {

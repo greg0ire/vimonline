@@ -48,7 +48,7 @@ include("$BASE_DIR/header.php");
     <td><img src="images/spacer.gif" width="5" height="1" alt=""></td>
     <td width="2000">
 
-<h1><img src="images/<?=$tip_data{'complexity'}?>.gif" alt="<?=$tip_data{'complexity'}?>">&nbsp;Tip #<?=$tip_data{'tip_id'}?>: <?=$tip_data{'summary'}?></h1>
+<h1><img src="images/<?=$tip_data{'complexity'}?>.gif" alt="<?=$tip_data{'complexity'}?>">&nbsp;Tip #<?=$tip_data{'tip_id'}?>: <?=escapeForHTML($tip_data{'summary'})?></h1>
 
 <!-- karma table -->
 <table cellpadding="0" cellspacing="0" border="0" bordercolor="#f00000">
@@ -158,10 +158,10 @@ include("$BASE_DIR/header.php");
     ?>
 <small>
     <?php if($prev_tip){ ?>
-      <a href="tip.php?tip_id=<?=($prev_tip{'tip_id'})?>">&lt;&lt;<?=$prev_tip{'summary'}?></a> | 
+      <a href="tip.php?tip_id=<?=($prev_tip{'tip_id'})?>">&lt;&lt;<?=escapeForHTML($prev_tip{'summary'})?></a> | 
     <?php } ?>
     <?php if($next_tip){ ?>
-        <a href="tip.php?tip_id=<?=($next_tip{'tip_id'})?>"><?=$next_tip{'summary'}?> &gt;&gt;</a> 
+        <a href="tip.php?tip_id=<?=($next_tip{'tip_id'})?>"><?=escapeForHTML($next_tip{'summary'})?> &gt;&gt;</a> 
     <?php } ?>
 </small>
 

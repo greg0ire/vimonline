@@ -145,7 +145,7 @@ for($i=0;$i<$show_me and $tip_data=mysql_fetch_array($result);$i++){
     <td class="<?=$rowclass?>"><img src="images/spacer.gif" height="1" width="5" alt=""></td>
     <td class="<?=$rowclass?>" nowrap><?=formatNewsDate($tip_data{'creation_date'})?></td>
     <td class="<?=$rowclass?>"><img src="images/spacer.gif" height="1" width="5" alt=""></td>
-    <td class="<?=$rowclass?>" width="1000"><a href="tip.php?tip_id=<?=$tip_data{'tip_id'}?>"><?=$tip_data{'summary'}?></a></td>
+    <td class="<?=$rowclass?>" width="1000"><a href="tip.php?tip_id=<?=$tip_data{'tip_id'}?>"><?=escapeForHTML($tip_data{'summary'})?></a></td>
     <td class="<?=$rowclass?>"><img src="images/spacer.gif" height="1" width="5" alt=""></td>
 </tr>
 <tr><td class="<?=$rowclass?>" colspan="13"><img src="images/spacer.gif" height="3" width="1" alt=""></td></tr>

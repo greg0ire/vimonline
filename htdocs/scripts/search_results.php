@@ -154,7 +154,7 @@ for($i=0;$i<$show_me and $script_data=mysql_fetch_array($result);$i++){
     <td class="<?=$rowclass?>"><img src="images/spacer.gif" height="1" width="5" alt=""></td>
     <td class="<?=$rowclass?>" align="right"><?=$script_data{'downloads'}?></td>
     <td class="<?=$rowclass?>"><img src="images/spacer.gif" height="1" width="5" alt=""></td>
-    <td class="<?=$rowclass?>" width="1000"><a href="script.php?script_id=<?=$script_data{'script_id'}?>"><?=$script_data{'summary'}?></a></td>
+    <td class="<?=$rowclass?>" width="1000"><a href="script.php?script_id=<?=$script_data{'script_id'}?>"><?=escapeForHTML($script_data{'summary'})?></a></td>
     <td class="<?=$rowclass?>"><img src="images/spacer.gif" height="1" width="5" alt=""></td>
 </tr>
 <tr><td class="<?=$rowclass?>" colspan="11"><img src="images/spacer.gif" height="3" width="1" alt=""></td></tr>
