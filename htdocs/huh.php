@@ -13,7 +13,7 @@ include("header.php");
     <td width="2000">
 <h1>Huh?</h1>
 <p>
-This is a place where users of the Vim editor can add their 
+This is a place where users of the vim editor can add their 
 favorite scripts, commands, macros and other assorted tips to a common database. 
 The concept started as in two places: vim-tips.sourceforge.net and the VUR (vim user
 repository started by Sylvian Vart). Jonathan Morace and I extended the VUR concept and 
@@ -24,10 +24,11 @@ Both scripts and tips have <a href="karma.php">karma</a> allowing the community
 to rate their usefulness.
 </p>
 <p>
-If you have feedback on the site feel free to contact vimonline-support@lists.sourceforge.net or
-directly at scrott@users.sourceforge.net and jmorace@users.sourceforge.net.
+If you have feedback on the site feel free to contact 
+<a href="mailto:vimonline-support@lists.sourceforge.net">vimonline-support@lists.sourceforge.net</a> or
+directly at <a href="mailto:scrott@users.sourceforge.net">scrott@users.sourceforge.net</a> and <a href="mailto:jmorace@users.sourceforge.net">jmorace@users.sourceforge.net</a>.
 If it is an idea you would like to discuss please include the vim (vim@vim.org) 
-community in the discussion. Be sure to check the <b><a href="todo.php">todo list</a></b>
+community in the discussion. Be sure to check the <a href="todo.php">todo list</a>
 before suggesting a feature.
 </p>
 <h3>Scripts</h3>

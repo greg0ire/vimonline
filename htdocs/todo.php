@@ -60,6 +60,14 @@ Index vim docs and have them searchable on vim online
     <td>
     </td>
 </tr>
+<tr>
+    <td class="rowodd">
+    Add the ability to delete news items
+    </td>
+    <td class="rowodd">
+    bram
+    </td>
+</tr>
 </table>
 
 

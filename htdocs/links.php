@@ -22,10 +22,6 @@ include("header.php");
         <td>The CVS system</td>
       </tr>
       <tr>
-        <td><a href="http://vimonline.sf.net">vim online dev</a></td>
-	    <td>The vim online development site</td>
-      </tr>
-      <tr>
         <td><a href="http://vim.sourceforge.net/vimgor">vimgor</a></td>
 	    <td>Vim &amp; Vigor, the evil assistant</td>
       </tr>

@@ -69,6 +69,8 @@ if(sizeof($scripts)==0){
 <tr>
     <td class="<?=$rowclass?>"><a href="<?=$BASE?>/scripts/script.php?script_id=<?=$script_data{'script_id'}?>"><?=$script_data{'script_name'}?></a></td>
     <td class="<?=$rowclass?>"><?=$script_data{'summary'}?></td>
+    <td class="<?=$rowclass?>"><a href="<?=$BASE?>/scripts/add_script_version.php?script_id=<?=$script_data{"script_id"}?>">upload new version</a></td>
+    <td class="<?=$rowclass?>"><a href="<?=$BASE?>/scripts/edit_script.php?script_id=<?=$script_data{"script_id"}?>">edit details</a></td>
 </tr>
 <?php
     }

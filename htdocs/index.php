@@ -26,16 +26,17 @@ include("header.php");
 
 <span class="sidebarheader"><a href="links.php">Vim Resources:</a></span>
 <p>
-&nbsp; <a href="http://www.vim.org/dist.html">download</a><BR>
+&nbsp; <a href="whyvim.php">Why use Vim 6?</a><BR>
+&nbsp; <a href="download.php">download</a><BR>
 &nbsp; <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/vim/">CVS</a><BR>
-&nbsp; <a href="http://www.vim.org/">www.vim.org</a><BR>
-&nbsp; <a href="http://nav.webring.yahoo.com/hub?ring=vim&list">vim webring</a><BR>
+&nbsp; <a href="http://www.vim.org/">Sven's Vim pages</a><BR>
+&nbsp; <a href="http://nav.webring.yahoo.com/hub?ring=vim&list">Vim webring</a><BR>
 </p>
 
 <span class="sidebarheader">Vim Community:</span>
 <p>
 &nbsp; <a href="http://sourceforge.net/projects/vim">Project</a><BR>
-&nbsp; <a href="http://www.vim.org/iccf/click5.html">the vim book</a><BR>
+&nbsp; <a href="http://www.vim.org/iccf/click5.html">the Vim book</a><BR>
 &nbsp; <a href="http://vim.sourceforge.net/vimgor">vimgor</a><BR>
 </p>
 
@@ -131,15 +132,15 @@ for($i=0;$i<sizeof($news);$i++){
 <p>
 Vim is a highly configurable text editor built to enable efficient text editing.
 It is an improved version of the vi editor distributed with most UNIX systems.
-Vim is distrubuted free as charityware. If you find vim a useful addition to
+Vim is distributed free as charityware. If you find Vim a useful addition to
 your life please consider <a href="http://www.vim.org/iccf/">helping the children in Uganda</a>.
 </p>
-<span class="sidebarheader"><a href="huh.php">What is vim online?</a></span>
+<span class="sidebarheader"><a href="huh.php">What is Vim online?</a></span>
 <p>
-Vim online is a central place for the vim community to store useful vim tips and tools.
+Vim online is a central place for the Vim community to store useful Vim tips and tools.
 Vim has a scripting language that allows for plugin like extensions to enable
 IDE behavior, syntax highlighting, colorization as well as other advanced features.
-These scripts can be uploaded and maintained using vim online. 
+These scripts can be uploaded and maintained using Vim online. 
 </p>
      </td>
      </tr>

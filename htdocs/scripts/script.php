@@ -33,7 +33,21 @@ include("$BASE_DIR/header.php");
     <td><img src="images/spacer.gif" width="5" height="1" alt=""></td>
     <td width="2000">
 <br>
-<h1><?=$script_data{"script_name"}?> : <?=$script_data{"summary"}?></h1>
+<span class="txth1"><?=$script_data{"script_name"}?> : <?=$script_data{"summary"}?></span> 
+
+<?php
+if (isSessionValid() ) {
+    $user = getSessionUser();
+    if($script_data{'user_id'} == $user->getUserId()){
+?>
+        (<a href="edit_script.php?script_id=<?=$script_data{"script_id"}?>">edit details</a>)
+<?php
+    }
+}
+?>
+
+<br>
+<br>
 
 <!-- karma table -->
 <table cellpadding="0" cellspacing="0" border="0" bordercolor="#f00000">

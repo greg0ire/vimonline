@@ -23,6 +23,24 @@ function saveScript($userId,$script_name,$script_type,$summary,$description,$ins
     return mysql_insert_id();
 }
 /**
+ * save script header info (this doesn't upload the script, just save the header info)
+ * @return the script id of the new script
+ */
+function updateScript($userId,$script_id,$script_name,$summary,$description,$install_details){
+    global $DB_NAME;
+    $insert = "update vs_scripts set 
+                    script_name='$script_name',
+                    summary='$summary',
+                    description='$description',
+                    install_details='$install_details',
+                    last_updated_by = $userId,
+                    last_update_date = now()
+               where script_id = $script_id
+                    ";
+    mysql_db_query($DB_NAME,$insert);
+    return mysql_insert_id();
+}
+/**
  * save the script source for a script
  * @return the new script source id
  */
