@@ -83,7 +83,7 @@ Current script version is <?=$recent_version{'script_version'}?>
 <input type="hidden" name="MAX_FILE_SIZE" value="10485760">
 <table cellpadding="2" cellspacing="2" border="0" width="100%">
 <tr>
-    <td class="prompt">script *</td>
+    <td class="prompt" nowrap>script package *</td>
     <td width="2000"><input type="file" name="script_file"><?=$HTTP_POST_VARS{"script_file"}?></td>
 </tr>
 <tr>

@@ -68,7 +68,7 @@ include("$BASE_DIR/header.php");
     <p><span class="errortext">* * * <?=$error_msg?></span></p>
 <?php } ?>
 
-<form name="script" method="post" enctype="multipart/form-data">
+<form name="script" method="post">
 <input type="hidden" name="script_id" value="<?=$script_data{'script_id'}?>">
 <table border="0" width="100%" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10" alt=""></td></tr><!-- horizontal space -->

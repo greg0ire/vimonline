@@ -32,16 +32,23 @@ $sql = "select tip_id,
 $return_link = "search_results.php?";
 if($keywords){
     // they searched for keywords, add the join
-    $sql = $sql . " and match (summary,tip) against ('$keywords')";
     $return_link = $return_link . "&keywords=$keywords";
     $words = preg_split("/ /",$keywords);
+    $index_words = "";
     foreach($words as $word){
         // add joins for keywords less than 4 letters -- would rather use
         // fulltext but not a mysql user parameter :(
         if(strlen($word) < 4){
-            $sql = $sql . " or summary regexp '[[:<:]]" . $word . "[[:>:]]'";      
+            $sql = $sql . " and (";
+            $sql = $sql . " summary regexp '[[:<:]]" . $word . "[[:>:]]'";      
             $sql = $sql . " or tip regexp '[[:<:]]" . $word . "[[:>:]]'";      
+            $sql = $sql . " )";
+        } else {
+            $index_words = $index_words . " $word";
         }
+    }
+    if($index_words){
+        $sql = $sql . " and match (summary,tip) against ('$index_words')";
     }
 }
 if($authors_email){
@@ -205,7 +212,7 @@ if($has_next){
 <tr>
     <td><img src="images/spacer.gif" width="5" height="1" alt=""></td>
     <td class="prompt">keywords</td>
-    <td><input type="text" name="keywords" size="60" value="<?=$keywords?>"></td>
+    <td><input type="text" name="keywords" size="60" value="<?=stripSlashes($keywords)?>"></td>
 </tr>
 <tr><td colspan="3"><img src="images/spacer.gif" width="1" height="4" alt=""></td></tr>
 <tr>
