@@ -182,7 +182,7 @@ for($i=0;$i<sizeof($versions);$i++){
     <td class="<?=$rowclass?>" valign="top" nowrap><b><?=$source_data{"script_version"}?></b></td>
     <td class="<?=$rowclass?>" valign="top" nowrap><i><?=formatNewsDate($source_data{"creation_date"})?></i></td>
     <td class="<?=$rowclass?>" valign="top" nowrap><?=$source_data{"vim_version"}?></td>
-    <td class="<?=$rowclass?>" valign="top"><i><a href="<?=$BASE?>/account/profile.php?user_id=<?=$script_data{'user_id'}?>"><?=$source_data{"first_name"}?> <?=$source_data{"last_name"}?></a></i></td>
+    <td class="<?=$rowclass?>" valign="top"><i><a href="<?=$BASE?>/account/profile.php?user_id=<?=$source_data{'user_id'}?>"><?=$source_data{"first_name"}?> <?=$source_data{"last_name"}?></a></i></td>
     <td class="<?=$rowclass?>" valign="top" width="2000"><?=escapeForHTML($source_data{"version_comment"})?></td>
 </tr>
 <?php } ?>
