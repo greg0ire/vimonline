@@ -1,12 +1,9 @@
 <?php
 // global search page, search for tips and search for scripts
 require_once("include/init.inc");
-
+require_once("scripts/include/script.inc");
 $page_title = "search";
-$nav_main = "search";
-$page_sid = "sid_empty.php";
 
-require("scripts/include/script.inc");
 include("header.php");
 ?>
 

@@ -1,11 +1,7 @@
 <?php
-// Maillists about Vim
+// Online info about vim
 require_once("include/init.inc");
-
 $page_title = "Vim web pages";
-$nav_main = "community";
-$nav_sub = "web";
-$page_sid = "sid_empty.php";
 
 include("header.php");
 ?>

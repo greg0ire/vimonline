@@ -2,9 +2,6 @@
 // various Vim items
 require_once("include/init.inc");
 $page_title = "Vim trivia";
-$nav_main = "trivia";
-$nav_sub = "trivia";
-$page_sid = "sid_empty.php";
 
 include("header.php");
 ?>

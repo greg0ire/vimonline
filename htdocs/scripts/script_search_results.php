@@ -6,9 +6,6 @@ require_once("../include/string_utils.inc");
 require_once("include/script.inc");
 
 $page_title = "search results";
-$nav_main = "scripts";
-$page_sid = "../sid_empty.php";
-
 
 if($HTTP_GET_VARS{"cancel"}){
     header("Location: scripts.php");

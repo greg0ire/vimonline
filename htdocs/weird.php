@@ -2,10 +2,6 @@
 // Weird Vim items
 require_once("include/init.inc");
 $page_title = "Weird stuff";
-$nav_main = "trivia";
-$nav_sub = "weird";
-$page_sid = "sid_empty.php";
-$page_con = "con_weird.php";
 
 include("header.php");
 ?>

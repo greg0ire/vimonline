@@ -1,13 +1,7 @@
 <?php
 // thanks page
 require_once("include/init.inc");
-
-// include the page header
 $page_title = "thanks";
-$nav_main = "community";
-$nav_sub = "thanks";
-$page_sid = "sid_empty.php";
-$page_con = "con_thanks.php";
 
 include("header.php");
 ?>

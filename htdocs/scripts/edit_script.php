@@ -53,9 +53,6 @@ if($HTTP_POST_VARS{"save"} == "cancel"){
 
 
 $page_title = "Edit Script - " . $script_data{'script_name'};
-$nav_main = "scripts";
-$nav_sub = "script_edit";
-$page_sid = "$BASE_DIR/sid_empty.php";
 
 // paint the page
 include("../header.php");

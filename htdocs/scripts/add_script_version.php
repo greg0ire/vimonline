@@ -64,9 +64,6 @@ if(mysql_errno()){
 
 // include the page header
 $page_title = "upload new version";
-$nav_main = "scripts";
-$nav_sub = "script_add_version";
-$page_sid = "$BASE_DIR/sid_empty.php";
 
 include("../header.php");
 ?>

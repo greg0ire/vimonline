@@ -34,10 +34,6 @@ if (isSessionValid()) {
     }
 }
 $page_title = $script_data{'script_name'} . ' - ' . $script_data{'summary'};
-$nav_main = "scripts";
-$nav_sub = "script";
-$page_sid = "$BASE_DIR/sid_empty.php";
-$page_con = "con_script.php";
 
 // paint the page
 include("../header.php");

@@ -2,6 +2,8 @@
 // adds a new script to the repository
 require_once("../include/init.inc");
 require_once("include/script.inc");
+$page_title = "upload script";
+
 $error_msg;
 if (!isSessionValid()) {
     redirectToLoginPage("/scripts/add_script.php");
@@ -49,11 +51,6 @@ if($HTTP_POST_VARS{"add_script"} == "cancel"){
 } 
 
 // paint the page
-
-$page_title = "upload script";
-$nav_main = "scripts";
-$nav_sub = "script_add";
-$page_sid = "$BASE_DIR/sid_empty.php";
 
 include("../header.php");
 ?>

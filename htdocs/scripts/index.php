@@ -3,10 +3,7 @@
 require_once("../include/init.inc");
 require_once("../include/string_utils.inc");
 require_once("include/script.inc");
-
 $page_title = "scripts";
-$nav_main = "scripts";
-$nav_sub = "scripts";
 $page_sid = "sid_scripts.php";
 
 include("../header.php");

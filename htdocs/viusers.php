@@ -1,11 +1,7 @@
 <?php
 // for Vi users
 require_once("include/init.inc");
-
 $page_title = "for Vi users";
-$nav_main = "about";
-$nav_sub = "viusers";
-$page_sid = "sid_empty.php";
 
 include("header.php");
 ?>

@@ -1,10 +1,7 @@
 <?php
-// Vim script links
+// Vim runtime details
 require_once("include/init.inc");
-
 $page_title = "Vim runtime files download";
-$nav_main = "download";
-$nav_sub = "runtime";
 $page_sid = "sid_runtime.php";
 
 include("header.php");

@@ -6,10 +6,6 @@ require_once("../include/init.inc");
 require_once("../include/string_utils.inc");
 require_once("include/script.inc");
 $page_title = "confirm delete";
-$nav_main = "scripts";
-$nav_sub = "script_del_version";
-$page_sid = "$BASE_DIR/sid_empty.php";
-
 
 $script_source_id = $HTTP_GET_VARS{'script_source_id'};
 $version_data = loadScriptVersion($script_source_id);

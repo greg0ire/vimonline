@@ -1,11 +1,7 @@
 <?php
 // for Vim 5 users
 require_once("include/init.inc");
-
 $page_title = "for Vim 5 users";
-$nav_main = "about";
-$nav_sub = "vim5users";
-$page_sid = "sid_empty.php";
 
 include("header.php");
 ?>

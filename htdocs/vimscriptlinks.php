@@ -1,12 +1,7 @@
 <?php
 // Vim script links
 require_once("include/init.inc");
-
 $page_title = "Vim script links";
-$nav_main = "download";
-$nav_sub = "scriptlinks";
-$page_sid = "sid_empty.php";
-$page_con = "con_scriptlinks.php";
 
 include("header.php");
 ?>
