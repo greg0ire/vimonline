@@ -153,19 +153,15 @@ include("$BASE_DIR/header.php");
 ?>
 
     <?php
-    $prev_sql = "select summary from vt_tips where tip_id = $tip_id - 1";
-    $prev_result = mysql_db_query($DB_NAME,$prev_sql);
-    $prev_row = mysql_fetch_array($prev_result);
-    $next_sql = "select summary from vt_tips where tip_id = $tip_id + 1";
-    $next_result = mysql_db_query($DB_NAME,$next_sql);
-    $next_row = mysql_fetch_array($next_result);
+    $prev_tip = getPrevTip($tip_id);
+    $next_tip = getNextTip($tip_id);
     ?>
 <small>
-    <?php if(($prev_summary=loadTipSummary($tip_id-1,$db_name))!=""){ ?>
-      <a href="tip.php?tip_id=<?=($tip_id-1)?>">&lt;&lt;<?=$prev_summary?></a> | 
+    <?php if($prev_tip){ ?>
+      <a href="tip.php?tip_id=<?=($prev_tip{'tip_id'})?>">&lt;&lt;<?=$prev_tip{'summary'}?></a> | 
     <?php } ?>
-    <?php if(($next_summary=loadTipSummary($tip_id+1,$db_name))!=""){ ?>
-        <a href="tip.php?tip_id=<?=($tip_id+1)?>"><?=$next_summary?> &gt;&gt;</a> 
+    <?php if($next_tip){ ?>
+        <a href="tip.php?tip_id=<?=($next_tip{'tip_id'})?>"><?=$next_tip{'summary'}?> &gt;&gt;</a> 
     <?php } ?>
 </small>
 

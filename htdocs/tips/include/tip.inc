@@ -42,13 +42,24 @@ function loadTip($tip_id){
     return $tip_data;
 }
 
-function loadTipSummary($tip_id){
+function getNextTip($tip_id){
     global $DB_NAME;
-    $sql = "select summary from vt_tips where tip_id = $tip_id";
-    $result = mysql_db_query($DB_NAME,$sql);
-    $row = mysql_fetch_array($result);
+    $tip_data;
+    $query = "select tip_id, summary from vt_tips where tip_id > $tip_id order by tip_id";
+    $result = mysql_db_query($DB_NAME,$query);
+    $tip_data = mysql_fetch_array ($result);
     mysql_free_result($result);
-    return $row{'summary'};
+    return $tip_data;
+}
+
+function getPrevTip($tip_id){
+    global $DB_NAME;
+    $tip_data;
+    $query = "select tip_id, summary from vt_tips where tip_id < $tip_id order by tip_id desc";
+    $result = mysql_db_query($DB_NAME,$query);
+    $tip_data = mysql_fetch_array ($result);
+    mysql_free_result($result);
+    return $tip_data;
 }
 
 function loadTipNotes($tip_id){
