@@ -1,0 +1,70 @@
+-- VIM Distribution Sites --
+
+Vim can be found at:
+  ftp://ftp.home.vim.org/pub/vim/                       Holland, Nijmegen
+
+Mirrors (working):
+  ftp://ftp.vim.org/pub/vim/                            Holland, Nijmegen
+  ftp://ftp.us.vim.org/pub/vim/                         USA, California
+  ftp://ftp2.us.vim.org/pub/editors/vim/                USA, New York
+  ftp://ftp3.us.vim.org/pub/vim/                        USA, Michigan?
+  ftp://ftp4.us.vim.org/mirrors/ftp/ftp.home.vim.org/pub/vim   USA, Illinois
+  ftp://ftp.nl.vim.org/pub/vim/                         Holland, Nijmegen
+  ftp://ftp.de.vim.org/pub/vim/                         Germany, Berlin
+  ftp://ftp2.de.vim.org/pub/vim/                        Germany, Frankfurt
+  ftp://ftp3.de.vim.org/pub/vim/                        Germany, Oldenburg
+  ftp://ftp.uk.vim.org/pub/vim                          England, London
+  ftp://ftp2.uk.vim.org/pub/vim                         England, London
+  ftp://ftp.fr.vim.org/pub/vim                          France, Gif sur Yvette
+  ftp://ftp2.fr.vim.org/pub/Mirrors/vim/                France, Paris
+  ftp://ftp.at.vim.org/pub/vim/                         Austria, Vienna
+  ftp://ftp.it.vim.org/pub/vim/                         Italy, Pistoia
+  ftp://ftp.dk.vim.org/pub/vim/                         Denmark, Copenhagen
+  ftp://ftp.se.vim.org/pub/vim/                         Sweden, Borlange
+  ftp://ftp.ro.vim.org/pub/vim                          Romania, Iasi
+  ftp://ftp.il.vim.org/pub/vim/                         Israel, Haifa
++ ftp://ftp.pl.vim.org/pub/vim/                         Poland, Warsaw
+? ftp://ftp.au.vim.org/pub/vim/                         Australia, Sydney
+
+Mirrors which lag behind about a week:
+  ftp://ftp.freesoftware.com/pub/vim/                   USA, San Francisco
+  ftp://ftp.za.vim.org/applications/editors/vim/        South Africa
+  ftp://ftp.jp.vim.org/pub/vim/                         Japan, Tokyo
+
+Mirrors which lag behind several weeks:
+- ftp://ftp.gr.vim.org/pub/vim/                         Greece, Crete
+- ftp://ftp.kr.vim.org/pub/vim/                         South Korea, Taejon
+- ftp://ftp.tw.vim.org/Editors/vim/                     Taiwan, HsinChu
+
+Mirrors which are currently not working:
+? ftp://ftp7.us.vim.org/pub/?                           USA, cdrom.com
+? ftp://ftp.ca.vim.org/pub/vim/                         Canada, Ontario
+? ftp://ftp.mx.vim.org/pub/vim/                         Mexico
+? ftp://ftp.hu.vim.org/pub/vim/                         Hungary, Miskolc
+
+        ? Might not always work
+        + Also keeps older versions
+        - Not up to date
+
+You can get the most recent (patched) version through CVS at:
+        http://cvs.vim.org
+See:
+        http://vim.sourceforge.net
+
+A Win32 binary for NT on Alpha can be found at:
+  http://george.reilly.org/vim/                         USA
+
+A mailserver is present at <Ftpmail@Informatik.Uni-Oldenburg.DE>.  Send it a
+message with "help" as the Subject and it will tell you how to use it.  Use
+commands like "CD /pub/vim" and "GET unix/vim-5.7-rt.tar.gz".  It's slow, use
+ftp if you can.
+
+If you set up a mirror:
+- always mirror from ftp://ftp.home.vim.org/pub/vim/
+- please use the "/pub/vim" directory, so we can make an alias
+  "ftp.<country>.vim.org/pub/vim"
+- send a message to Bram@vim.org to get an entry in this list and an
+  ftp.<country>.vim.org alias
+
+If you see an error in this file, please report it to Bram Moolenaar
+<Bram@vim.org>.                                         vim: set et:
