@@ -4,7 +4,7 @@
  * list of supported script types, not stored as a mysql enum because
  * I would rather not make ddl changes to add types
  */
-$SCRIPT_TYPES = array("utility","syntax","indent","color scheme","ftplugin");
+$SCRIPT_TYPES = array("color scheme","ftplugin","game","indent","syntax","utility");
 
 /**
  * Get the drop down list of script types

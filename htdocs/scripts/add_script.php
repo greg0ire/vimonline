@@ -2,6 +2,7 @@
 // adds a new script to the repository
 
 require("../include/init.inc");
+require("include/script.inc");
 $error_msg;
 if (!isSessionValid()) {
     redirectToLoginPage("/scripts/add_script.php");
@@ -11,7 +12,6 @@ if($HTTP_POST_VARS{"add_script"} == "cancel"){
     header("Location: index.php");
     exit;
 } else if($HTTP_POST_VARS{"add_script"} == "upload"){
-    require("include/script.inc");
     // handle save
     $package_name = basename($HTTP_POST_FILES["script_file"]["name"]);
     $script_name = $HTTP_POST_VARS{"script_name"};
@@ -105,11 +105,8 @@ you should add the new version from the page detailing that script.</span>
     <td class="prompt">type *</td>
     <td>
         <select name="script_type">
-        <option value="utility">utility</option>
-        <option value="syntax">syntax</option>
-        <option value="indent">indent</option>
-        <option value="color scheme">color scheme</option>
-        <option value="ftplugin">ftplugin</option>
+        <option value=""></option>
+        <?=getScriptTypeDropDown()?>
         </select>
     </td>
 </tr>
