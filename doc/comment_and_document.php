@@ -1,6 +1,13 @@
 <HTML>
 <HEAD>
-<!-- writer information at the end of the file -->
+<!--
+ comment_and_document.php
+
+ Author: Sylvain Viart (viart@users.sf.net)
+ Date: samedi 26 janvier 2002, 16:51:46 Est
+ Modified: $Date: 2002/01/27 01:01:29 $
+ $Revision: 1.2 $
+-->
 	<TITLE>Comment and document</TITLE>
 <HEAD>
 <BODY BGCOLOR="#FFFFFF">
@@ -43,12 +50,12 @@ Bad documentation is worse than no documentation at all.
 /*
  * name_of_file
  *
- * On sentence of what can be found here.
+ * One sentence of what can be found here.
  *
  * Author: FirstName LastName (e-mail)
  * Date: creation date
- * Modified: $Date: 2002/01/27 00:21:41 $
- * $Revision: 1.1 $
+ * Modified: &#36;Date&#36;
+ * &#36;Revision&#36;
  *
  * Long description if required.
  * 
@@ -56,12 +63,5 @@ Bad documentation is worse than no documentation at all.
  *
  * any other useful information
  */
-<hr noshade size=1 width="50%">
-<small><pre>
- Author: Sylvain Viart (viart@users.sf.net)
- Date: samedi 26 janvier 2002, 16:51:46 Est
- Modified:
-<pre>
-</small>
 </BODY>
 </HTML>

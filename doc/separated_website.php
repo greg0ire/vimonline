@@ -1,6 +1,13 @@
 <HTML>
 <HEAD>
-<!-- writer information at the end of the file -->
+<!--
+ separated_website.php
+
+ Author: Sylvain Viart (viart@users.sf.net)
+ Date: samedi 26 janvier 2002, 16:51:46 Est
+ Modified: $Date: 2002/01/27 01:01:29 $
+ $Revision: 1.2 $
+-->
 	<TITLE>Separated tools and web site</TITLE>
 <HEAD>
 <BODY BGCOLOR="#FFFFFF">
@@ -36,14 +43,8 @@ Collaborative Development System (CDS) and programmer tools. They are only
 available for project members.
 </p>
 <p>
-If you want to become a member, please read <a href="https://sourceforge.net/docman/display_doc.php?docid=9124&group_id=27891">this document</a>.
+If you want to become a member, please read 
+<a href="become_member.php">this document</a>.
 </p>
-<hr noshade size=1 width="50%">
-<small><pre>
- Author: Sylvain Viart (viart@users.sf.net)
- Date: samedi 26 janvier 2002, 16:51:46 Est
- Modified:
-<pre>
-</small>
 </BODY>
 </HTML>

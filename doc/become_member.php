@@ -1,6 +1,13 @@
 <HTML>
 <HEAD>
-<!-- writer information at the end of the file -->
+<!--
+ become_member.php
+
+ Author: Sylvain Viart (viart@users.sf.net)
+ Date: samedi 26 janvier 2002, 16:51:46 Est
+ Modified: $Date: 2002/01/27 01:01:29 $
+ $Revision: 1.2 $
+-->
 	<TITLE>Become member of the development team</TITLE>
 <HEAD>
 <BODY BGCOLOR="#FFFFFF">
@@ -27,12 +34,5 @@ CVS and documentation.
 <p>
 See <a href="http://sourceforge.net/docman/display_doc.php?docid=753&group_id=1">sourceforge documentation</a> for more details.
 </p>
-<hr noshade size=1 width="50%">
-<small><pre>
- Author: Sylvain Viart (viart@users.sf.net)
- Date: samedi 26 janvier 2002, 16:51:46 Est
- Modified:
-<pre>
-</small>
 </BODY>
 </HTML>
