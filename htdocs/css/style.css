@@ -146,5 +146,6 @@ tr.tableheader th {
 
 
 td.checker {
+	background-color: #007f00;
 	background-image: url(http://vim.sourceforge.net/images/checkerboard.gif);
 }

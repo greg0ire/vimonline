@@ -41,7 +41,7 @@ $tips->addSubMenu(new Menu('Browse all',$BASE.'/tips/tip_search_results.php'));
 $tips->addSubMenu(new Menu('Download all',$BASE.'/tips/tip_download.php'));
 $tips->addSubMenu(new Menu('Karma',$BASE.'/karma.php'));
 
-$account = new Menu('Account',$BASE.'/account/index.php');
+$account = new Menu('My Account',$BASE.'/account/index.php');
 
 $trivia = new Menu('Trivia',$BASE.'/trivia.php');
 $trivia->addSubMenu(new Menu('Logos',$BASE.'/logos.php'));
@@ -57,6 +57,7 @@ $sep->setSeparator();
 $mainMenus = array(
         $home,
         $search,
+        $account,
         $sep,
         $about,
         $community,
@@ -64,10 +65,8 @@ $mainMenus = array(
         $trivia,
         $docs,
         $download,
-        $sep,
         $scripts,
         $tips,
-        $account,
         $sep,
         $help
     );
@@ -103,13 +102,13 @@ foreach($mainMenus as $menu){
     if($menu->isSeparator()){
 ?>
     <tr>
-        <td><img src="<?=$IMAGES?>/spacer.gif" alt="" border="0" width="1" height="3"></td>
+        <td><img src="<?=$IMAGES?>/spacer.gif" alt="" border="0" width="1" height="7"></td>
     </tr>
     <tr>
         <td class="checker"><img src="<?=$IMAGES?>/spacer.gif" alt='' border="0" height="1"></td>
     </tr>
     <tr>
-        <td><img src="<?=$IMAGES?>/spacer.gif" alt="" border="0" width="1" height="3"></td>
+        <td><img src="<?=$IMAGES?>/spacer.gif" alt="" border="0" width="1" height="7"></td>
     </tr>
 <?php
     } else if($menu->isSelected($REQUEST_URI)){
