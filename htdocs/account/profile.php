@@ -14,8 +14,8 @@ if(!$user_id){
     include("$BASE_DIR/error.php");
     exit;
 }
-$user = getUserById($userId);
-if(!$user->getUserId()){
+$profileUser = getUserById($userId);
+if(!$profileUser->getUserId()){
     $msg = "profile: " . "unknown user id $user_id";
     include("$BASE_DIR/error.php");
     exit;
@@ -27,24 +27,24 @@ include("../header.php");
 <table cellpadding="4" cellspacing="2" border="0">
 <tr>
     <td class="prompt">user name</td>
-    <td><?=$user->getUserName()?></td>
+    <td><?=$profileUser->getUserName()?></td>
 </tr>
 <tr>
     <td class="prompt">first name</td>
-    <td><?=$user->getFirstName()?></td>
+    <td><?=$profileUser->getFirstName()?></td>
 </tr>
 <tr>
     <td class="prompt">last name</td>
-    <td><?= $user->getLastName()?></td>
+    <td><?= $profileUser->getLastName()?></td>
 </tr>
 <tr>
     <td class="prompt">email</td>
-    <td><?=escapeEmail($user->getEmail())?></td>
+    <td><?=escapeEmail($profileUser->getEmail())?></td>
 </tr>
 <tr>
     <td class="prompt">homepage</td>
-    <? if($user->getHomepage()){ 
-        $hp = $user->getHomepage();
+    <? if($profileUser->getHomepage()){ 
+        $hp = $profileUser->getHomepage();
         if(substr($hp,0,7) != "http://"){
             $hp = "http://" . $hp;
         } 
@@ -59,10 +59,10 @@ include("../header.php");
 
 <h1>Script Contributions</h1>
 <?php
-$scripts = getUsersScripts($user->getUserId());
+$scripts = getUsersScripts($profileUser->getUserId());
 if(sizeof($scripts)==0){
 ?>
-<i><?=$user->getFirstName()?> has not contributed any scripts</i>
+<i><?=$profileUser->getFirstName()?> has not contributed any scripts</i>
 <?php 
 } else {
 ?>
