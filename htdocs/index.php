@@ -53,10 +53,10 @@ for($i=0;$i<sizeof($news);$i++){
  (<i><?=$news_data{"first_name"}?> <?=$news_data{"last_name"}?></i>) 
 <br clear="all">
 </p>
-<a href="news/news.php">more news...</a>
 <?php
 }
 ?>
+<a href="news/news.php">more news...</a>
 
 
 <table cellpadding="3" cellspacing="0" border="0" width="100%">
