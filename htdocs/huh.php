@@ -17,8 +17,8 @@ to rate their usefulness.
 </p>
 <p>
 If you have feedback on the site feel free to contact 
-<a href="mailto:vimonline-support@lists.sourceforge.net">vimonline-support@lists.sourceforge.net</a> or
-directly at <a href="mailto:scrott@users.sourceforge.net">scrott@users.sourceforge.net</a> and <a href="mailto:jmorace@users.sourceforge.net">jmorace@users.sourceforge.net</a>.
+<b>vimonline-support at lists.sourceforge.net</b>
+directly at <b>scrott at users.sourceforge.net</b> and <b>jmorace at users.sourceforge.net</b>.
 Be sure to check the current <a href="https://sourceforge.net/tracker/?atid=391890&group_id=27891&func=browse">feature requests</a> before suggesting a feature. You can also check out the current 
 vim online <a href="https://sourceforge.net/tracker/?atid=391887&group_id=27891&func=browse">bugs</a> as well. I try and keep all the feature requests and bugs in the sourceforge trackers. 
 For more details you can check out the <a href="http://vimonline.sf.net">vimonline development site</a>.
