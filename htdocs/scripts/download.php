@@ -22,6 +22,13 @@ $script_name = $script_data{"script_name"};
 // to save
 $mime_type = "application/octetstream";
 Header( "Content-type: $mime_type");
-Header( "Content-Disposition: filename=$script_name");
+if(ereg('MSIE',getenv('HTTP_USER_AGENT'))){
+    // IE handles force download much better if we don't include the "attachment"
+    // specifier as defined by the HTTP spec
+    Header( "Content-Disposition: filename=$script_name");
+} else {
+    // Most normal browsers do it right
+    Header( "Content-Disposition: attachment; filename=$script_name");
+}
 echo $script_data{"src"};
 ?>
