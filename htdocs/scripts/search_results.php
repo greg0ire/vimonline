@@ -38,6 +38,9 @@ if($order_by=='rating'){
 } else if($order_by=='downloads'){
     $order_by_clause = " order by downloads ";
     $return_link = $return_link . "&order_by=downloads";
+} else if($order_by=='script_name'){
+    $order_by_clause = " order by script_name ";
+    $return_link = $return_link . "&order_by=script_name";
 } else {
     $order_by_clause = " order by creation_date ";
 }

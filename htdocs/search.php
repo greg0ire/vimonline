@@ -24,7 +24,8 @@ include("$BASE_DIR/header.php");
     <td class="prompt">sort by</td>
     <td><select name="order_by">
         <option value="rating">Rating</option>
-        <option value="viewed">Downloads</option>
+        <option value="downloads">Downloads</option>
+        <option value="script_name">Script Name</option>
         <option value="creation_date">Creation Date</option>
     </select>
     <select name="direction">
