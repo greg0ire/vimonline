@@ -30,13 +30,13 @@ include("../header.php");
     <td>&nbsp;<a href="script.php?script_id=<?=$script_data{"script_id"}?>"><?=$script_data{"script_name"}?></a> : <?=escapeForHTML($script_data{"summary"})?></td>
 </tr>
 <tr>
-    <td><img src="<?=$IMG_DIR?>/spacer.gif" width="1" height="1" alt=""></td>
+    <td><img src="<?=$IMAGES?>/spacer.gif" width="1" height="1" alt=""></td>
     <td>(<?=$script_data{"script_version"}?>) <?=escapeForHTMLNoBreaks($script_data{"version_comment"})?> - <i><?=$script_data{"first_name"}?> <?=$script_data{"last_name"}?></i></td>
 </tr>
 <?php
     }
 ?>
-<tr><td colspan="2"><img src="<?=$IMG_DIR?>/spacer.gif" width="1" height="10" alt=""></td></tr>
+<tr><td colspan="2"><img src="<?=$IMAGES?>/spacer.gif" width="1" height="10" alt=""></td></tr>
 <tr><td colspan="2"><small><b>Displaying 10 of <?=getScriptCount()?></b> (<a href="script_search_results.php">more</a>)</small></td></tr>
 </table>
 <?php

@@ -35,9 +35,9 @@ Please log in. You must have cookies enabled.
     <a href="account/register.php">Sign up now</a>.
     </td>
 
-    <td><img src="<?=$IMG_DIR?>/spacer.gif" width="10" height="1" alt=""></td>
-    <td class="darkbg"><img src="<?=$IMG_DIR?>/spacer.gif" width="1" height="1" alt=""></td>
-    <td><img src="<?=$IMG_DIR?>/spacer.gif" width="10" height="1" alt=""></td>
+    <td><img src="<?=$IMAGES?>/spacer.gif" width="10" height="1" alt=""></td>
+    <td class="darkbg"><img src="<?=$IMAGES?>/spacer.gif" width="1" height="1" alt=""></td>
+    <td><img src="<?=$IMAGES?>/spacer.gif" width="10" height="1" alt=""></td>
     
     <td valign="top">
     <h2>Existing vim online users</h2>
