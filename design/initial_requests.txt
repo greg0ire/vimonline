@@ -1,0 +1,21 @@
+x fix rendering problems with ns 4.7 on Suse power pc
+    - check with user about fix
+- put alt tags on images (matt, johannes)
+- add a script "home page" field (jay glanville)
+x fix script rating karma after initial creation (sj)
+x don't make it feel like there are only 10 scripts/tips (more link to search?) (benoit)
+x add reference to 5.6 reference guide (jay glanville)
+x reverse search (Marcelo)
+
+- allow login w/o cookies
+x fix some tip problems or suggest he fixes them (bernd)
+- setup tip of the day functionality (vipin)
+
+Bram
+
+x archive on support pages
+x move book add into the header
+x move what is vim and what is vim online to the right (goal
+  is to make links at the bottom more visible)
+- use vim logo
+

@@ -1,0 +1,119 @@
+1.0 TODO
+
+major remaining pieces...
+- mail my passwd
+
+general pages
+
+- main index
+    x recent script updates
+    x display full name of user who uploaded in "recent scripts"
+    x recent tip updates
+    x what is vim text
+    x what is vim online text
+
+x related sites/links
+    x copy over vim.sourceforge.net links
+x huh
+x ThanksTo
+x karma
+x todo
+x support
+
+- login
+    x layout
+- account
+    x layout
+    x change passwd
+    x change email
+    x change first name/last name
+- profile
+    x layout
+
+x buy the book! ad
+    buy. help. learn.
+    buy the vim book
+    help Uganda
+    learn vim
+
+
+script pages
+
+    - index
+        x plug in recent scripts once user auth is added
+        x navigation
+
+    x script search
+    - search results
+        x layout
+        x basic functionality
+        - where clause for type
+        x where clause for keywords
+        x limit search to x results, add prev, next functionality
+
+    - add new script
+        x validate fields
+        x limit field sizes
+        x decide on script type codes (or use only meanings)
+        x layout
+        - verify script upload size max ok
+        x save user
+
+    - script detail
+        x handle rating
+        x handle unknown script id
+        x layout
+        x escape html
+        x display created by
+        x display "updated by" in version history
+        - link from karma box to karma page
+        - handle malformed (or invalid) script_id
+
+    - download  
+        x basic functionality
+        x handle download unknown script src id
+        x increment downloads counter on download (add ip table)
+
+    - upload new version of a script
+        x basic functionality
+        x validate fields
+        x handle unknown script id
+        - verify script upload size max ok
+        x save user
+
+
+tip pages
+
+    x conversion script
+
+    x index
+        x navigation
+    x search
+    x search results
+    x add_tip
+    x add_note
+    x tip
+        x fix images to not have colors
+        x fix notes layout
+        x handle malformed (or invalid) tip_id
+
+General
+
+- deal with ^M? Necessary? Might be dealt with by script upload....
+x images for different script types? - not for 1.0
+x verify escape html for all dynamic text
+
+Testing
+
+x make sure filename in php always removes path...(could be browser dependent)
+
+1.1
+
+- top rated and most downloaded scripts 
+- top rated and most viewed tips 
+- edit script details 
+- truncate script version comments
+- search by script type (sj)
+- add back tip download 
+
+
