@@ -9,17 +9,15 @@ $page_sid = "sid_empty.php";
 
 include("header.php");
 ?>
-<h1>Huh?</h1>
+<h1>About Vimonline</h1>
 <p>
 This is a place where users of the vim editor can add their 
 favorite scripts, commands, macros and other assorted tips to a common database. 
-The concept started as in two places: vim-tips.sourceforge.net and the VUR (vim user
-repository started by Sylvain Viart). Jonathan Morace and I extended the VUR concept and 
-combined it with vim-tips to form vim online.
-</p>
-<p>
 Both scripts and tips have <a href="karma.php">karma</a> allowing the community
 to rate their usefulness.
+</p>
+<p>
+<b>If you have questions about the vim editor, please use the <a href="community.php">vim mailing list</a>. Not vimonline support.</b>
 </p>
 <p>
 If you have feedback on the site feel free to contact 

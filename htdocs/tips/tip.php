@@ -38,7 +38,7 @@ if(mysql_errno()){
     exit;
 }
 
-$page_title = "Tip #$tip_id";
+$page_title = "Tip #$tip_id" . ' - ' . $tip_data{'summary'};
 $nav_main = "tips";
 $nav_sub = "tip";
 $page_sid = "$BASE_DIR/sid_empty.php";

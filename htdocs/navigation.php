@@ -1,545 +1,109 @@
-<table cellpadding="0" cellspacing="0" border="0" width="90%">
-<tr>
-<td align="left"><span class="sidebarheader">
 <?php
-if ($nav_main == "home") {
+// navigation.php handles the sidebar navigation for vim online
+require_once("$BASE_DIR/include/menu.inc");
+
+// menu setup
+$home = new Menu('Home',$BASE.'/index.php');
+$search = new Menu('Search',$BASE.'/search.php');
+
+$about = new Menu('About Vim',$BASE.'/about.php');
+$about->addSubMenu(new Menu('in 6 Kbyte',$BASE.'/6kbyte.php'));
+$about->addSubMenu(new Menu('for Vi users',$BASE.'/viusers.php'));
+$about->addSubMenu(new Menu('for Vim 5 users',$BASE.'/vim5users.php'));
+$about->addSubMenu(new Menu('for others',$BASE.'/others.php'));
+
+$community = new Menu('Community',$BASE.'/community.php');
+$community->addSubMenu(new Menu('Mailing Lists',$BASE.'/maillist.php'));
+$community->addSubMenu(new Menu('Web Pages',$BASE.'/web.php'));
+$community->addSubMenu(new Menu('Credits',$BASE.'/thanks.php'));
+
+$docs = new Menu('Documentation',$BASE.'/docs.php');
+$docs->addSubMenu(new Menu('help files online &gt;&gt;','http://vimdoc.sourceforge.net/cgi-bin/vim2html2.pl'));
+$docs->addSubMenu(new Menu('the book &gt;&gt;','http://iccf-holland.org/click5.html'));
+$docs->addSubMenu(new Menu('the FAQ &gt;&gt;','http://vimdoc.sourceforge.net/cgi-bin/vimfaq2html3.pl'));
+
+$download = new Menu('Download',$BASE.'/download.php');
+$download->addSubMenu(new Menu('List of Mirrors',$BASE.'/mirrors.php'));
+$download->addSubMenu(new Menu('ftp://ftp.vim.org/pub/vim/','Vim ftp site &gt;&gt;'));
+$download->addSubMenu(new Menu('Vim from CVS',$BASE.'/cvs.php'));
+$download->addSubMenu(new Menu('Script links',$BASE.'/vimscriptlinks.php'));
+$download->addSubMenu(new Menu('Runtime files',$BASE.'/runtime.php'));
+
+$news = new Menu('News',$BASE.'/news/news.php');
+
+$scripts = new Menu('Scripts',$BASE.'/scripts/index.php');
+$scripts->addSubMenu(new Menu('Browse all',$BASE.'/scripts/script_search_results.php'));
+$scripts->addSubMenu(new Menu('Add Script',$BASE.'/scripts/add_script.php'));
+$scripts->addSubMenu(new Menu('Karma',$BASE.'/karma.php'));
+
+$tips = new Menu('Tips',$BASE.'/tips/index.php');
+$tips->addSubMenu(new Menu('Browse all',$BASE.'/tips/tip_search_results.php'));
+$tips->addSubMenu(new Menu('Download all',$BASE.'/tips/tip_download.php'));
+$tips->addSubMenu(new Menu('Karma',$BASE.'/karma.php'));
+
+$account = new Menu('Account',$BASE.'/account/index.php');
+
+$trivia = new Menu('Trivia',$BASE.'/trivia.php');
+$trivia->addSubMenu(new Menu('Logos',$BASE.'/logos.php'));
+$trivia->addSubMenu(new Menu('Buttons',$BASE.'/buttons.php'));
+$trivia->addSubMenu(new Menu('Weird stuff',$BASE.'/weird.php'));
+
+$help = new Menu('Help',$BASE.'/huh.php');
+
+// construct the top level main menus
+$mainMenus = array($home,$search,$about,$community,$docs,$download,$news,$scripts,$tips,$account,$trivia,$help);
+// paint the login status and the menus
 ?>
-Home
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+<?php
+if(isSessionValid()){
+    $user = getSessionUser();
+?>
+        <td><small>welcome <?=$user->getFirstName()?> (<a href="<?=$BASE?>/logout.php">logout</a>)</small></td>
 <?php
 } else {
 ?>
-<a href="<?=$BASE?>/index.php">Home</a>
+        <td><small>not logged in (<a href="<?=$BASE?>/login.php">login</a>)</small></td>
 <?php
-}
+} 
 ?>
-</span></td>
-<td align="right"><span class="sidebarheader">
-<?php
-if ($nav_main == "search") {
-?>
-Search
-<?php
-} else {
-?>
-<a href="<?=$BASE?>/search.php">Search</a>
-<?php
-}
-?>
-</span></td>
-</tr>
+    </tr>
+    <tr>
+        <td><img src="<?=$IMAGES?>/spacer.gif" alt="" border="0" width="1" height="1"></td>
+    </tr>
+    <tr>
+        <td class="darkbg"><img src="<?=$IMAGES?>/spacer.gif" alt='' border="0" height="3"></td>
+    </tr>
+    <tr>
+        <td><img src="<?=$IMAGES?>/spacer.gif" alt="" border="0" width="1" height="2"></td>
+    </tr>
 </table>
 <?php
-if ($nav_main == "home" || $nav_main == "search" || $nav_main == "about") {
+// draw the menus
+foreach($mainMenus as $menu){
+    if($menu->isSelected($REQUEST_URI)){
+        // we are in this nav main
 ?>
-<br>
+        <span class="sidebarheader"><?=$menu->getName()?></span><br>
 <?php
-}
+    } else {
 ?>
-
-
+        <span class="sidebarheader"><a href="<?=$menu->getLink()?>"><?=$menu->getName()?></a></span><br>
 <?php
-if ($nav_sub == "about") {
+    }
+    if($menu->isOpen($REQUEST_URI)){
+        foreach($menu->getSubMenus() as $subMenu){
+            if($subMenu->isSelected($REQUEST_URI)){
 ?>
-<span class="sidebarheader">About Vim</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><?=$subMenu->getName()?></span><br>
 <?php
-} else {
+            } else {
 ?>
-<span class="sidebarheader"><a href="<?=$BASE?>/about.php">About Vim</a></span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="<?=$subMenu->getLink()?>"><?=$subMenu->getName()?></a></span><br>
 <?php
-}
-?>
-<br>
-<?php
-if ($nav_main == "about") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">
-<?php
-if ($nav_sub == "6kbyte") {
-?>
-in 6 Kbyte
-<?php
-} else {
-?>
-<a href="<?=$BASE?>/6kbyte.php">in 6 Kbyte</a>
-<?php
-}
-?>
-</span>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">
-<?php
-if ($nav_sub == "viusers") {
-?>
-for Vi users
-<?php
-} else {
-?>
-<a href="<?=$BASE?>/viusers.php">for Vi users</a>
-<?php
-}
-?>
-</span>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">
-<?php
-if ($nav_sub == "vim5users") {
-?>
-for Vim 5 users
-<?php
-} else {
-?>
-<a href="<?=$BASE?>/vim5users.php">for Vim 5 users</a>
-<?php
-}
-?>
-</span>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">
-<?php
-if ($nav_sub == "others") {
-?>
-for others
-<?php
-} else {
-?>
-<a href="<?=$BASE?>/others.php">for others</a>
-<?php
-}
-?>
-</span>
-<br>
-<br>
-<?php
-}
-?>
-
-
-<?php
-if ($nav_main == "community") {
-?>
-<br>
-<?php
-}
-?>
-<?php
-if ($nav_sub == "community") {
-?>
-<span class="sidebarheader">Community</span>
-<?php
-} else {
-?>
-<span class="sidebarheader"><a href="<?=$BASE?>/community.php">Community</a></span>
-<?php
-}
-?>
-<br>
-<?php
-if ($nav_main == "community") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">
-<?php
-if ($nav_sub == "maillist") {
-?>
-Mailing Lists
-<?php
-} else {
-?>
-<a href="<?=$BASE?>/maillist.php">Mailing Lists</a>
-<?php
-}
-?>
-</span>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">
-<?php
-if ($nav_sub == "web") {
-?>
-Web Pages
-<?php
-} else {
-?>
-<a href="<?=$BASE?>/web.php">Web Pages</a>
-<?php
-}
-?>
-</span>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">
-<?php
-if ($nav_sub == "thanks") {
-?>
-Credits
-<?php
-} else {
-?>
-<a href="<?=$BASE?>/thanks.php">Credits</a>
-<?php
-}
-?>
-</span>
-<br>
-<br>
-<?php
-}
-?>
-
-
-<?php
-if ($nav_main == "docs") {
-?>
-<br>
-<span class="sidebarheader">Documentation</span>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="http://vimdoc.sourceforge.net/cgi-bin/vim2html2.pl">help files online &gt;&gt;</a></span>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="http://iccf-holland.org/click5.html">the book &gt;&gt;</a></span>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="http://vimdoc.sourceforge.net/cgi-bin/vimfaq2html3.pl">the FAQ &gt;&gt;</a></span>
-<br>
-<?php
-} else {
-?>
-<span class="sidebarheader"><a href="<?=$BASE?>/docs.php">Documentation</a></span>
-<?php
-}
-?>
-<br>
-
-
-<?php
-if ($nav_main == "download") {
-?>
-<br>
-<?php
-}
-?>
-<?php
-if ($nav_sub == "download") {
-?>
-<span class="sidebarheader">Download</span>
-<?php
-} else {
-?>
-<span class="sidebarheader"><a href="<?=$BASE?>/download.php">Download</a></span>
-<?php
-}
-?>
-<br>
-<?php
-if ($nav_main == "download") {
-?>
-<?php
-if ($nav_sub == "mirrors") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">List of Mirrors</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="<?=$BASE?>/mirrors.php">List of Mirrors</a></span>
-<?php
-}
-?>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="ftp://ftp.vim.org/pub/vim/">Vim ftp site &gt;&gt;</a></span>
-<br>
-<?php
-if ($nav_sub == "cvs") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">Vim from CVS</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href='<?=$BASE?>/cvs.php'>Vim from CVS</a></span>
-<?php
-}
-?>
-<br>
-<?php
-if ($nav_sub == "scriptlinks") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">Script links</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href='<?=$BASE?>/vimscriptlinks.php'>Script links</a></span>
-<?php
-}
-?>
-<br>
-<?php
-if ($nav_sub == "runtime") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">Runtime files</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href='<?=$BASE?>/runtime.php'>Runtime files</a></span>
-<?php
-}
-?>
-<br>
-<br>
-<?php
-}
-?>
-
-
-<?php
-if ($nav_main == "news") {
-?>
-<br>
-<?php
-}
-?>
-<?php
-if ($nav_sub == "news") {
-?>
-<span class="sidebarheader">News</span>
-<?php
-} else {
-?>
-<span class="sidebarheader"><a href="<?=$BASE?>/news/news.php">News</a></span>
-<?php
-}
-?>
-<br>
-<?php
-if ($nav_main == "news") {
-?>
-<br>
-<?php
-}
-?>
-
-<?php
-if ($nav_main == "scripts" || $nav_main == "tips" || $nav_main == "account") {
-?>
-<br>
-<?php
-}
-?>
-<span class="sidebarheader">
-<?php
-if ($nav_sub == "scripts") {
-?>
-Scripts
-<?php
-} else {
-?>
-<a href="<?=$BASE?>/scripts/index.php">Scripts</a>
-<?php
-}
-?>
-&nbsp;&nbsp;&nbsp;
-<?php
-if ($nav_sub == "tip_index") {
-?>
-Tips
-<?php
-} else {
-?>
-<a href="<?=$BASE?>/tips/index.php">Tips</a>
-<?php
-}
-?>
-</span>
-<br>
-<?php
-if ($nav_main == "scripts" && $nav_sub != "huh" && $nav_sub != "karma") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="script_search.php?order_by=creation_date&direction=descending">Browse all scripts</a></span>
-<br>
-<?php
-if ($nav_sub == "script_add") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">Add script</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="<?=$BASE?>/scripts/add_script.php">Add script</a></span>
-<?php
-}
-?>
-<br>
-<?php
-}
-?>
-<?php
-if ($nav_main == "tips") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="tip_search.php">Browse all tips</a></span>
-<br>
-<?php
-if ($nav_sub == "tip_download") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">Download all tips</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="tip_download.php">Download all tips</a></span>
-<?php
-}
-?>
-<br>
-<?php
-if ($nav_sub == "tip_add") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">Add tip</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="tip_add.php">Add tip</a></span>
-<?php
-}
-?>
-<br>
-<?php
-}
-?>
-<?php
-if ($nav_main == "scripts" || $nav_main == "tips" || $nav_main == "account") {
-?>
-<?php
-if ($nav_sub == "huh") {
-?>
-&nbsp;&nbsp;&nbsp;<span class="sidebarheader">Huh?</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="<?=$BASE?>/huh.php">Huh?</a></span>
-<?php
-}
-?>
-<br>
-<?php
-if ($nav_sub == "karma") {
-?>
-&nbsp;&nbsp;&nbsp;<span class="sidebarheader">Karma</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="<?=$BASE?>/karma.php">Karma</a></span>
-<?php
-}
-?>
-<br>
-<?php
-if ($nav_sub == "account") {
-?>
-&nbsp;&nbsp;&nbsp;<span class="sidebarheader">Account</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="<?=$BASE?>/account/index.php">Account</a></span>
-<?php
-}
-?>
-<br>
-<?php
-if ($nav_main == "account" && $nav_sub != "register" && $nav_sub != "login") {
-?>
-<?php
-if ($nav_sub == "account_passwd") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">Change password</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="<?=$BASE?>/account/change_passwd.php">Change password</a></span>
-<?php
-}
-?>
-<br>
-<?php
-if ($nav_sub == "account_edit") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">Edit info</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="<?=$BASE?>/account/edit_account.php">Edit info</a></span>
-<?php
-}
-?>
-<br>
-<?php
-if ($nav_sub == "logout") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">Logout</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="<?=$BASE?>/logout.php">Logout</a></span>
-<?php
-}
-?>
-<br>
-<?php
-}
-?>
-<br>
-<?php
-}
-?>
-
-
-<?php
-if ($nav_main == "trivia") {
-?>
-<br>
-<?php
-}
-?>
-<?php
-if ($nav_sub == "trivia") {
-?>
-<span class="sidebarheader">Trivia</span>
-<?php
-} else {
-?>
-<span class="sidebarheader"><a href="<?=$BASE?>/trivia.php">Trivia</a></span>
-<?php
-}
-?>
-<br>
-<?php
-if ($nav_main == "trivia") {
-?>
-<?php
-if ($nav_sub == "logos") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">logos</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="logos.php">logos</a></span>
-<?php
-}
-?>
-<br>
-<?php
-if ($nav_sub == "buttons") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">buttons</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="buttons.php">buttons</a></span>
-<?php
-}
-?>
-<br>
-<?php
-if ($nav_sub == "weird") {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader">weird stuff</span>
-<?php
-} else {
-?>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="sidebarheader"><a href="weird.php">weird stuff</a></span>
-<?php
-}
-?>
-<?php
+            }           
+        }
+    }
 }
 ?>

@@ -29,7 +29,7 @@ $sql = "select tip_id,
                unix_timestamp(creation_date) as creation_date
           from vt_tips
          where 1=1 ";
-$return_link = "tip_search.php?";
+$return_link = "tip_search_results.php?";
 if($keywords){
     // they searched for keywords, add the join
     $sql = $sql . " and match (summary,tip) against ('$keywords')";
@@ -190,7 +190,7 @@ if($has_next){
 <hr noshade size="1" color="#000000">
 
 <!-- space -->
-<form name="search" action="tip_search.php">
+<form name="search" action="tip_search_results.php">
 <table cellpadding="4" cellspacing="0" border="0">
 <tr>
     <td class="prompt">keywords</td>

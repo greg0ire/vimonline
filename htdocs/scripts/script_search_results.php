@@ -8,7 +8,6 @@ require_once("include/script.inc");
 $page_title = "search results";
 $nav_main = "scripts";
 $page_sid = "../sid_empty.php";
-$page_con = "con_script_search.php";
 
 
 if($HTTP_GET_VARS{"cancel"}){
@@ -36,7 +35,7 @@ $sql = "select s.script_id,
                unix_timestamp(creation_date) as creation_date
           from vs_scripts s
          where 1=1 "; 
-$return_link = "script_search.php?";
+$return_link = "script_search_results.php?";
 if($keywords){
     // they searched for keywords, add the join
     $sql = $sql . " and match (s.summary,s.description,s.install_details) against ('$keywords')";
@@ -191,7 +190,7 @@ if($has_next){
 <hr noshade size="1" color="#000000">
 
 <!-- space -->
-<form name="search" action="script_search.php">
+<form name="search" action="script_search_results.php">
 <table cellpadding="4" cellspacing="0" border="0">
 <tr>
     <td class="prompt">keywords</td>

@@ -32,7 +32,6 @@ em {
 	font-family: arial,helvetica,sans-serif;
 	font-size: small;
 	font-weight: bold;
-	color: #000066;
 }
 
 .newsdate {
@@ -141,7 +140,7 @@ textarea {
 
 tr.tableheader th {
 	font-family: arial,helvetica,sans-serif;
-	background-color: #999999;
+	background-color: #cccc99;
 	text-align: center;
 }
 
