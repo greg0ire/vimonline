@@ -13,7 +13,7 @@ if($HTTP_POST_VARS{"add_script"} == "cancel"){
 } else if($HTTP_POST_VARS{"add_script"} == "upload"){
     require("include/script.inc");
     // handle save
-    $script_name = $HTTP_POST_FILES["script_file"]["name"];
+    $script_name = basename($HTTP_POST_FILES["script_file"]["name"]);
     $script_type = $HTTP_POST_VARS{"script_type"};
     $summary = $HTTP_POST_VARS{"summary"};
     $description = $HTTP_POST_VARS{"description"};

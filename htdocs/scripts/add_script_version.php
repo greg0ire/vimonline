@@ -13,7 +13,7 @@ if (!isSessionValid()) {
 // handle actions
 if($HTTP_POST_VARS{"add_script"}=="upload"){
     // handle save
-    $script_name = $HTTP_POST_FILES["script_file"]["name"];
+    $script_name = basename($HTTP_POST_FILES["script_file"]["name"]);
     $script_id = $HTTP_POST_VARS{"script_id"};
     $script_version = $HTTP_POST_VARS{'script_version'};
     $vim_version = $HTTP_POST_VARS{'vim_version'};
