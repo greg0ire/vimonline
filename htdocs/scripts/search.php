@@ -19,7 +19,7 @@ include("$BASE_DIR/header.php");
 <h1>Search for Scripts</h1>
 <form name="search" action="search_results.php">
 <table cellpadding="2" cellspacing="0" border="0">
-<tr><td class="prompt">keywords</b></td><td><input type="textfield" name="keywords" size="40"></td></tr>
+<tr><td class="prompt">keywords</b></td><td><input type="text" name="keywords" size="40"></td></tr>
 <tr>
     <td class="prompt">sort by</td>
     <td><select name="order_by">

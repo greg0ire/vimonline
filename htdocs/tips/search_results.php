@@ -43,9 +43,9 @@ if($authors_email){
 if($order_by=='rating'){
     $order_by_clause = " order by rating_score ";
     $return_link = $return_link . "&order_by=rating";
-} else if($order_by=='viewed'){
+} else if($order_by=='views'){
     $order_by_clause = " order by viewed ";
-    $return_link = $return_link . "&order_by=viewed";
+    $return_link = $return_link . "&order_by=views";
 } else {
     $order_by_clause = " order by creation_date ";
 }
@@ -111,7 +111,7 @@ include("$BASE_DIR/header.php");
     <td><img src="images/spacer.gif" height="1" width="20" alt=""></td>
     <th>rating</th>
     <td><img src="images/spacer.gif" height="1" width="20" alt=""></td>
-    <th>viewed</th>
+    <th>views</th>
     <td><img src="images/spacer.gif" height="1" width="20" alt=""></td>
     <th>created</th>
     <td><img src="images/spacer.gif" height="1" width="20" alt=""></td>
@@ -189,7 +189,7 @@ if($has_next){
 <tr>
     <td><img src="images/spacer.gif" width="5" height="1" alt=""></td>
     <td class="prompt">keywords</td>
-    <td><input type="textfield" name="keywords" size="60" value="<?=$keywords?>"></td>
+    <td><input type="text" name="keywords" size="60" value="<?=$keywords?>"></td>
 </tr>
 <tr><td colspan="3"><img src="images/spacer.gif" width="1" height="4" alt=""></td></tr>
 <tr>
@@ -197,7 +197,7 @@ if($has_next){
     <td><b>sort by</b></td>
     <td><select name="order_by">
             <option value="rating">Rating</option>
-            <option value="viewed" <?=$HTTP_GET_VARS{'order_by'}=="viewed"?"selected":""?> >Viewed</option>
+            <option value="views" <?=$HTTP_GET_VARS{'order_by'}=="views"?"selected":""?> >Viewed</option>
             <option value="creation_date" <?=$HTTP_GET_VARS{'order_by'}=="creation_date"?"selected":""?> >Creation Date</option>
         </select></td>
 </tr>

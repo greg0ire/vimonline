@@ -97,7 +97,7 @@ Current script version is <?=$recent_version{'script_version'}?>
 </tr>
 <tr>
     <td nowrap class="prompt">script version</td>
-    <td><input name="script_version" type="textfield" size="10" maxlength="10" value="<?=$HTTP_POST_VARS{'script_version'}?>"></td>
+    <td><input name="script_version" type="text" size="10" maxlength="10" value="<?=$HTTP_POST_VARS{'script_version'}?>"></td>
 </tr>
 <tr>
     <td class="prompt" valign="top">version comment</td>

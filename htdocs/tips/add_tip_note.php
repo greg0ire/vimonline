@@ -61,7 +61,7 @@ include("$BASE_DIR/header.php");
 <table cellpadding="0" cellspacing="4" border="0">
     <tr>
         <td class="prompt">email</td>
-        <td colspan="6"><input type="textfield" name="email" size="60" maxlength="100" value="<?=$HTTP_POST_VARS{'email'}?>"></td>
+        <td colspan="6"><input type="text" name="email" size="60" maxlength="100" value="<?=$HTTP_POST_VARS{'email'}?>"></td>
     </tr>
 </table>
 <table cellpadding="4" cellspacing="0" border="0" width="100%">

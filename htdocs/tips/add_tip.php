@@ -52,7 +52,7 @@ include("$BASE_DIR/header.php");
 <form name="add_tip" method="post">
 <table cellpadding="0" cellspacing="4" border="0">
     <tr>
-        <td><b>author</b></td><td colspan="5"><input type="textfield" name="author" size="60" maxlength="100" value="<?=$HTTP_POST_VARS{'author'}?>"></td>
+        <td><b>author</b></td><td colspan="5"><input type="text" name="author" size="60" maxlength="100" value="<?=$HTTP_POST_VARS{'author'}?>"></td>
     </tr>
     <tr>
         <td><b>as of</b></td>
@@ -74,7 +74,7 @@ include("$BASE_DIR/header.php");
         <td><img src="images/spacer.gif" width="4" height="1" alt=""></td>
     </tr>
     <tr>
-        <td><b>summary</b></td><td colspan="5"><input type="textfield" size="60" maxlength="200" name="summary" value="<?=$HTTP_POST_VARS{'summary'}?>"></td>
+        <td><b>summary</b></td><td colspan="5"><input type="text" size="60" maxlength="200" name="summary" value="<?=$HTTP_POST_VARS{'summary'}?>"></td>
     </tr>
 </table>
 <p>

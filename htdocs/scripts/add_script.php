@@ -112,12 +112,12 @@ you should add the new version from the page detailing that script.</span>
 <tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10"></td></tr><!-- horizontal space -->
 <tr>
     <td nowrap class="prompt">initial script version</td>
-    <td><input name="script_version" type="textfield" size="6" maxlength="8" value="<?=$HTTP_POST_VARS{'script_version'}?>"></td>
+    <td><input name="script_version" type="text" size="6" maxlength="8" value="<?=$HTTP_POST_VARS{'script_version'}?>"></td>
 </tr>
 <tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10"></td></tr><!-- horizontal space -->
 <tr>
     <td class="prompt">summary</td>
-    <td><input type="textfield" name="summary" size="40" maxlength="80" value="<?=$HTTP_POST_VARS{'summary'}?>"></td>
+    <td><input type="text" name="summary" size="40" maxlength="80" value="<?=$HTTP_POST_VARS{'summary'}?>"></td>
 </tr>
 <tr><td colspan="2"><img src="images/spacer.gif" width="1" height="10"></td></tr><!-- horizontal space -->
 <tr>
