@@ -42,7 +42,7 @@ include("header.php");
 <span class="sidebarheader"><a href="thanks.php">Thanks To:</a></span>
 <p>
 &nbsp; <a href="http://www.moolenaar.net/">Bram Moolenaar</a><br>
-&nbsp; The Vim Community<br>
+&nbsp; The Vim Group<br>
 &nbsp; <a href="http://www.php.net">Colin Viebrock</a><br>
 </p>
 </td>

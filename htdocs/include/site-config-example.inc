@@ -16,6 +16,6 @@ $DB_NAME="vimscripts";
 // root of vimonline relative to your apache
 // root. If you have apache pointing at htdocs
 // of this project the base should be ""
-$BASE = "/vimscripts/htdocs";
+$BASE = "/vimonline/htdocs";
 
 ?>

@@ -13,7 +13,7 @@ include("header.php");
     <td width="2000">
 <h1>Huh?</h1>
 <p>
-This is a place where users of the <a href="www.vim.org">vim editor</a> can add their 
+This is a place where users of the Vim editor can add their 
 favorite scripts, commands, macros and other assorted tips to a common database. 
 The concept started as in two places: vim-tips.sourceforge.net and the VUR (vim user
 repository started by Sylvian Vart). Jonathan Morace and I extended the VUR concept and 
