@@ -26,7 +26,7 @@ if (!isSessionValid()) {
 }
 // handle actions
 if($HTTP_POST_VARS{"save"} == "cancel"){
-    header("Location: account.php");
+    header("Location: $BASE/account/index.php");
     exit;
 } else if($HTTP_POST_VARS{"save"} == "update"){
     // handle save
