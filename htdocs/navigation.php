@@ -24,7 +24,7 @@ $docs->addSubMenu(new Menu('the FAQ &gt;&gt;','http://vimdoc.sourceforge.net/cgi
 
 $download = new Menu('Download',$BASE.'/download.php');
 $download->addSubMenu(new Menu('List of Mirrors',$BASE.'/mirrors.php'));
-$download->addSubMenu(new Menu('Vim ftp site &gt;&gt;','ftp://ftp.vim.org/pub/vim/',));
+$download->addSubMenu(new Menu('Vim ftp site &gt;&gt;','ftp://ftp.vim.org/pub/vim/'));
 $download->addSubMenu(new Menu('Vim from CVS',$BASE.'/cvs.php'));
 $download->addSubMenu(new Menu('Script links',$BASE.'/vimscriptlinks.php'));
 $download->addSubMenu(new Menu('Runtime files',$BASE.'/runtime.php'));
