@@ -1,12 +1,12 @@
 <HTML>
 <HEAD>
 <!--
-index.php
+	index.php
 
-Author: Sylvain Viart (viart@users.sf.net)
-Date: samedi 26 janvier 2002, 18:54:14 Est
-Modified: $Date: 2002/01/27 00:21:41 $
-$Revision: 1.1 $
+	Author: Sylvain Viart (viart@users.sf.net)
+	Date: samedi 26 janvier 2002, 18:54:14 Est
+	Modified: $Date: 2002/01/27 00:29:27 $
+	$Revision: 1.2 $
 -->
 	<TITLE>vimonline developer's documentation</TITLE>
 <HEAD>
@@ -14,16 +14,20 @@ $Revision: 1.1 $
 <H1>vimonline developer's documentation</H1>
 
 <ul>
-<li><a href="become_member.html">become_member.html</a>
-<li><a href="comment_and_document.html">comment_and_document.html</a>
-<li><a href="conventions_and_rules.html">conventions_and_rules.html</a>
-<li><a href="follow_design.html">follow_design.html</a>
-<li><a href="index.html">index.html</a>
-<li><a href="page_type.html">page_type.html</a>
-<li><a href="separated_website.html">separated_website.html</a>
-<li><a href="What_is_vimonline.html">What_is_vimonline.html</a>
-<li><a href="where_to_find_the_doc.html">where_to_find_the_doc.html</a>
-<ul>
+	<li>Getting Started
+	<ul>
+		<li><a href="what_is_vimonline.php">What is vimonline ?</a>
+		<li><a href="separated_website.php">Separated tools and web site</a>
+		<li><a href="become_member.php">Become member of the development team</a>
+	</ul>
+	<li>Development guidelines
+	<ul>
+		<li><a href="follow_design.php">Follow design</a>
+		<li><a href="conventions_and_rules.php">Follow convention and rules</a>
+		<li><a href="comment_and_document.php">Comment and document</a>
+	<ul>
+	<li>Developer's notes (private)
+</ul>
 </BODY>
 </HTML>
-
+<!-- vim: set ts=3 sw=3 tw=78: -->
