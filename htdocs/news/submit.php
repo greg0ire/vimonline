@@ -75,7 +75,7 @@ You can include HTML links (&lt;a&gt;), Italic (&lt;i&gt;), tt (&lt;tt&gt;) and 
         <td class="prompt">title</td>
     </tr>
     <tr>
-        <td><input type="textfield" name="title" size="60" maxlength="60" value="<?=$HTTP_POST_VARS{'title'}?>"></td>
+        <td><input type="text" name="title" size="60" maxlength="60" value="<?=$HTTP_POST_VARS{'title'}?>"></td>
     </tr>
     <tr>
         <td class="prompt">news item</td>

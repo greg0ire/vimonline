@@ -175,7 +175,7 @@ if($has_next){
 <tr>
     <td><img src="images/spacer.gif" width="5" height="1" alt=""></td>
     <td class="prompt">keywords</td>
-    <td><input type="textfield" name="keywords" size="60" value="<?=$keywords?>"></td>
+    <td><input type="text" name="keywords" size="60" value="<?=$keywords?>"></td>
 </tr>
 <tr><td colspan="3"><img src="images/spacer.gif" width="1" height="4" alt=""></td></tr>
 <tr>
