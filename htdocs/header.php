@@ -9,7 +9,7 @@
   <title><?=$page_title?> : vim online</title>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
-  <link rel="shortcut icon" type="image/x-icon" href="images/vim_shortcut.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="<?=$IMAGES?>/vim_shortcut.ico">
 </head>
 
 <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
