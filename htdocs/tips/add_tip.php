@@ -2,9 +2,6 @@
 // page for add a tip to the tip database
 require_once("../include/init.inc");
 $page_title = "add a tip";
-$nav_main = "tips";
-$nav_sub = "tip_add";
-$page_sid = "$BASE_DIR/sid_empty.php";
 
 $create_message;
 # handle the add tip action...

@@ -1,9 +1,6 @@
 <?php
 require_once("../include/init.inc");
 $page_title = "download tips";
-$nav_main = "tips";
-$nav_sub = "tip_download";
-$page_sid = "$BASE_DIR/sid_empty.php";
 
 // handle the download action
 if($HTTP_GET_VARS{"download"}){

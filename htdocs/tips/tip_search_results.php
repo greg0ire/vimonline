@@ -1,7 +1,6 @@
 <?php
 // handles a search action
 // optional http get vars: keywords, sort_by, show_me
-
 require_once("../include/init.inc");
 require_once("../include/string_utils.inc");
 
@@ -99,9 +98,6 @@ if(mysql_errno()){
 }
 
 $page_title = "search results";
-$nav_main = "tips";
-$nav_sub = "tip_search";
-$page_sid = "$BASE_DIR/sid_empty.php";
 
 // paint the page
 include("../header.php");

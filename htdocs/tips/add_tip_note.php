@@ -42,10 +42,6 @@ if($HTTP_POST_VARS{"cancel"}){
 }
 
 $page_title = "Add a Note to Tip #" . $HTTP_GET_VARS{'tip_id'};
-$nav_main = "tips";
-$nav_sub = "tip_add_note";
-$page_sid = "$BASE_DIR/sid_empty.php";
-$page_con = "con_tip_add_note.php";
 
 include("../header.php");
 ?>

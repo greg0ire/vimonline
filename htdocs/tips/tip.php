@@ -39,9 +39,6 @@ if(mysql_errno()){
 }
 
 $page_title = "Tip #$tip_id" . ' - ' . $tip_data{'summary'};
-$nav_main = "tips";
-$nav_sub = "tip";
-$page_sid = "$BASE_DIR/sid_empty.php";
 // paint the page
 include("../header.php");
 ?>

@@ -3,10 +3,7 @@
 require_once("../include/init.inc");
 require_once("../include/string_utils.inc");
 require_once("include/tip.inc");
-
 $page_title = "tips";
-$nav_main = "tips";
-$nav_sub = "tips";
 $page_sid = "sid_tip_index.php";
 
 include("../header.php");
